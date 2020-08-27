@@ -1,370 +1,305 @@
 @extends('welcome')
-@section('titlepage','Euro UPVC - The Best uPVC Quality, you can Trust.')
+@section('titlepage','Musim Panen.co.id')
 <?php $y = Date('Y'); ?>
-@section('deschomepage','Beli UPVC terdekat di Medan dan di Jakarta berkualitas dengan harga murah terbaru '.$y.' di
-euroupvc.co.id! Pembayaran mudah, pengiriman cepat, desain bisa custom!')
+@section('deschomepage','')
+@section('sliderhomepage')
+<div class="slider-inner">
+
+    <div class="swiper-container swiper-parent">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide dark">
+                <div class="container">
+                    <div class="slider-caption slider-caption-center">
+                        <h2 data-animate="fadeInUp">Welcome to Musim Panen</h2>
+                        <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Quisquam, illo. Similique molestiae eum esse dolorem unde
+                            iusto, eveniet laudantium beatae nesciunt sunt, aspernatur suscipit? Saepe recusandae
+                            expedita nemo reiciendis ea!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide-bg"
+                    style="background-image: url('{!!asset('homepage/images/slider/swiper/1.jpg')!!}');">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="slider-caption">
+                        <h2 data-animate="fadeInUp">Great Performance</h2>
+                        <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be
+                            surprised to see the Final Results of your Creation &amp; would crave for more.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide-bg"
+                    style="background-image: url('{!!asset('homepage/images/slider/swiper/2.jpg')!!}'); background-position: center top;">
+                </div>
+            </div>
+        </div>
+        <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+        <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+        <div class="slide-number">
+            <div class="slide-number-current"></div><span>/</span>
+            <div class="slide-number-total"></div>
+        </div>
+    </div>
+
+</div>
+
+@endsection
 @section('content')
-<div id="slider" class="inspiro-slider dots-creative" data-height-xs="360" data-autoplay="3200" data-animate-in="fadeIn"
-    data-animate-out="fadeOut" data-items="1" data-loop="true" data-autoplay="true">
-    <div class="slide" style="background-image:url('homepages/real-estate/images/1.jpg');">
-        <div class="container">
-            <div class="slide-captions">
-                <h3 class="text-uppercase text-medium">Percantik rumahmu <br>dengan upvc <br>
-                    pilihan terbaik.
-                </h3>
-                <p class="lead">EuroUPVC memiliki motif yang beragam
-                    <br> Sehingga kamu bisa memilih motif yang sesuai <br> dengan seleramu.</p>
-            </div>
-        </div>
-    </div>
-    <div class="slide" style="background-image:url('homepages/real-estate/images/2.jpg');">
-        <div class="container">
-            <div class="slide-captions">
+<div class="section header-stick">
+    <div class="container clearfix">
+        <div class="row">
 
-                <h2 class="text-uppercase text-medium no-margin">Dynamic System <br> Designs</h2>
-                <p class="lead">Kami memiliki <b>sistem yang flexible</b> dalam design
-                    <br> Berikan refrensi design mu, dan kami <br>akan mencoba membuat seperti keinginanmu.</p>
+            <div class="col-lg-9">
+                <div class="heading-block bottommargin-sm">
+                    <h3>Kami ahli dalam produk panen</h3>
+                </div>
 
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus asperiores expedita
+                    corporis omnis. Nesciunt, fugiat maxime? Eius adipisci amet nisi autem, voluptatibus soluta quia,
+                    vel sapiente vero repudiandae minus tenetur.</p>
             </div>
+
+            <div class="col-lg-3">
+                <a href="#" class="button button-3d button-dark button-large btn-block center"
+                    style="margin-top: 30px;">Lihat produk kami</a>
+            </div>
+
         </div>
     </div>
 </div>
 
-<section class="variouscolor">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="heading-text heading-section text-left">
-                    <h2>Warna Bervariasi</h2>
-                    <span class="lead">Kami sadar bahwa client kami sangat mencintai banyak motif dengan itu
-                        kami
-                        memproduksi produk kami dengan banyak variasi warna.</span>
+<div class="container clearfix">
+
+    <div class="row justify-content-center col-mb-50">
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box media-box">
+                <div class="fbox-media">
+                    <img src="https://www.pkpberdikari.id/wp-content/uploads/2019/03/1517383091_panen.jpg"
+                        alt="Why choose Us?">
+                </div>
+                <div class="fbox-content px-0">
+                    <h3>Why choose Us.<span class="subtitle">Because we are Reliable.</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem,
+                        facilis
+                        nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis
+                        mollitia.
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 variouspall text-right">
-                <img class="img-fluid" src="images/various.png" alt="Produk Euro UPVC Variasi Warna">
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box media-box">
+                <div class="fbox-media">
+                    <img src="https://posmetropadang.co.id/wp-content/uploads/2020/04/okkk-17.jpg" alt="Why choose Us?">
+                </div>
+                <div class="fbox-content px-0">
+                    <h3>Our Mission.<span class="subtitle">To Redefine your Brand.</span></h3>
+                    <p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae,
+                        atque
+                        tempora ullam. Vitae delectus quia, consequuntur rerum molestias quo.</p>
+                </div>
             </div>
         </div>
-        <div class="row justify-content-center imgvarious m-t-50">
-            <div class="col-lg-2 text-center">
-                <img src="images/material/white.png" alt="Warna variasi produk EURO uPVC - White High Anti UV Various">
-                <h4>White High Anti UV</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/black.png" alt="Warna variasi produk EURO uPVC - Black ASA Various">
-                <h4>Black ASA</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/darkbrown.png" alt="Warna variasi produk EURO uPVC - Dark Brown ASA Various">
-                <h4>Dark Brown ASA</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/goldenoak.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Golden Oak Various">
-                <h4>Laminated Golden Oak</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/wallnut.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Wallnutt Various">
-                <h4>Laminated Wallnut</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/darkoak.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Dark Oak Various">
-                <h4>Laminated Dark Oak</h4>
-            </div>
-        </div>
-        <div class="row justify-content-center m-t-50 imgvarious">
-            <div class="col-lg-2 text-center">
-                <img src="images/material/mahogani.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Mahogani Various">
-                <h4>Laminated Mahogani</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/vintageoak.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Vintage Oak Various">
-                <h4>Laminated Vintage Oak</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/naturaloak.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Natural Oak Various">
-                <h4>Laminated Natural Oak</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/lblack.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Sand Stone Black Various">
-                <h4>Laminated Sand Stone Black</h4>
-            </div>
-            <div class="col-lg-2 text-center">
-                <img src="images/material/grey.png"
-                    alt="Warna variasi produk EURO uPVC - Laminated Anthracite Grey Various">
-                <h4>Laminated Anthracite Grey</h4>
+
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box media-box">
+                <div class="fbox-media">
+                    <img src="https://img.okezone.com/content/2020/05/09/1/2211551/petani-dan-penyuluh-manggarai-timur-rayakan-puncak-panen-raya-di-tengah-pandemi-Ftf2la3Jbk.jpeg"
+                        alt="Why choose Us?">
+                </div>
+                <div class="fbox-content px-0">
+                    <h3>What we Do.<span class="subtitle">Make our Customers Happy.</span></h3>
+                    <p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur,
+                        labore totam. Accusamus perspiciatis asperiores labore esse ab accusantium
+                        ea
+                        modi ut.</p>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<section id="section2" class="p-t-100">
-    <div class="container">
-        <div class="heading-text heading-section text-center">
-            <h2>Fitur Terbaik UPVC Kami.</h2>
-            <span class="lead">Kamu tidak akan kecewa akan kualitas produk kami.</span>
-        </div>
-        <div class="row">
-            <section id="fiturss" class="no-padding equalize" data-equalize-item=".text-box">
-                <div class="row col-no-margin">
-                    <div class="col-lg-4">
-                        <div class="text-box hover-effect" style="height: 330px;">
-                            <a href="#"> <i class="fas fa-dumbbell"></i>
-                                <h3>Kekuatan</h3>
-                                <p>Pengelasan sudut dapat menahan tekanan sebesar 400 Newton. Kokoh dan tahan
-                                    lama.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="text-box hover-effect" style="height: 330px;">
-                            <a href="#"><span><i class="fas fa-volume-mute"></i></span>
-                                <h3>Noise Cancelling</h3>
-                                <p>Rongga rongga profil merupakan desain baik untuk mengatasi penambatan suara
-                                    dari sisi luar ke sisi dalam. Menggunakan bahan yang lembut dan dapat
-                                    menyerap suara.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="text-box hover-effect" style="height: 330px;">
-                            <a href="#"> <i class="fas fa-tools"></i>
-                                <h3>Bebas Perawatan</h3>
-                                <p>Bahan uPVC kami tidak memerlukan perawatan untuk seumur hidup.</p>
-                            </a>
-                        </div>
-                    </div>
-                    {{-- Row 2 --}}
-                    <div class="col-lg-4">
-                        <div class="text-box hover-effect" style="height: 330px;">
-                            <a href="#"> <i class="fas fa-leaf"></i>
-                                <h3>Hemat Energi </h3>
-                                <p>Menjamin bahwa bahan kami merupakan bahan yang membuat insulasi terhadap
-                                    panas & suara sehingga hemat energi.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="text-box hover-effect" style="height: 330px;">
-                            <a href="#"> <i class="fas fa-hand-holding-usd"></i>
-                                <h3>Menghemat Biaya </h3>
-                                <p>Terjamin lebih dari 10 tahun tanpa terjadi korosi & perubahan warna, sehingga
-                                    menghemat biaya renovasi.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="text-box hover-effect" style="height: 330px;">
-                            <a href="#"> <i class="fas fa-drafting-compass"></i>
-                                <h3>Design Elegant & Flexibel</h3>
-                                <p>Penampilan yang anggun, dan dibuat sesuai dengan desain dan arsitektur yang
-                                    diinginkan.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <!-- end: Boxes -->
+</div>
+<div class="container clearfix my-5">
+    <div class="row justify-content-center">
+        <div class="heading-block text-center">
+            <h3>Katalog Besar Produk Kami</h3>
         </div>
     </div>
-</section>
-
-<section class="ourproduct">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="heading-text heading-section">
-                    <h2>Katalog Produk Utama Kami</h2>
+    <div class="row justify-content-center col-mb-50 m-b-0">
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box text-center media-box fbox-bg">
+                <div class="fbox-media">
+                    <a href=""><img
+                            src="https://cdn-radar.jawapos.com/uploads/radarkediri/news/2019/02/28/baru-enam-kecamatan-yang-panen-padi_m_122191.jpg"
+                            alt=""></a>
+                </div>
+                <div class="fbox-content">
+                    <h3>Panen Padi<span class="subtitle">Contoh Katalog Produk Hasil Panen</span></h3>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-3 p-t-20 p-b-20">
-                <a href="/catalog/door-system">
-                    <img src="images/product/door.png" alt="Produk Katalog EURO uPVC - Door System">
-                    <h4>Door System</h4>
-                </a>
-            </div>
-            <div class="col-lg-3 p-t-20 p-b-20">
-                <a href="/catalog/sliding-door-system">
-                    <img src="images/product/sliding-door.png" alt="Produk Katalog EURO uPVC - Sliding Door System">
-                    <h4>Sliding Door System</h4>
-                </a>
-            </div>
-            <div class="col-lg-3 p-t-20 p-b-20">
-                <a href="/catalog/window-system">
-                    <img src="images/product/window.png" alt="Produk Katalog EURO uPVC - Window System">
-                    <h4>Window System</h4>
-                </a>
-            </div>
-            <div class="col-lg-3 p-t-20 p-b-20">
-                <a href="/catalog/sliding-window-system">
-                    <img src="images/product/sliding-window.png" alt="Produk Katalog EURO uPVC - Sliding Window System">
-                    <h4>Sliding Window System</h4>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="p-b-0">
-    <div class="container">
-        <div class="heading-text heading-section">
-            <h2>Galeri Kami</h2>
-            <span class="lead">Kami memastikan bahwa setiap projek yang kami kerjakan dapat dinilai sangat baik
-                oleh client kami. Dan juga dapat dinilai layak untuk masuk ke dalam dokumentasi website
-                kami.</span>
-        </div>
-    </div>
-
-    <div id="portfolio" class="grid-layout portfolio-4-columns" data-margin="0" data-lightbox="gallery">
-        @if(!$galp->isEmpty())
-        @foreach ($galp as $galp)
-        <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media ct-marketing ct-webdesign">
-            <div class="portfolio-item-wrap">
-                <div class="portfolio-image">
-                    <a href="#"><img class="img-fluid" src="{!!asset('media/gallery/'.$galp->img)!!}"
-                            alt="Gallery EURO UPVC{{$galp->judul_foto}}"></a>
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box text-center media-box fbox-bg">
+                <div class="fbox-media">
+                    <a href=""><img
+                            src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/9/8/87863118/87863118_51f833ce-c1e1-4475-9357-6247bde06e80_500_375.jpg"
+                            alt=""></a>
                 </div>
-                <div class="portfolio-description">
-                    <a title="{{$galp->judul_foto}} - {{$galp->img}}" data-lightbox="gallery-image"
-                        href="{!!asset('media/gallery/'.$galp->img)!!}" class="btn btn-light btn-rounded">Zoom</a>
+                <div class="fbox-content">
+                    <h3>Panen Sawit<span class="subtitle">Contoh Katalog Produk Hasil Panen</span></h3>
                 </div>
             </div>
         </div>
-        @endforeach
-        @else
-        <h4>No data founded</h4>
-        @endif
-    </div>
-
-</section>
-<div class="background-grey">
-    <div class="container p-t-60 p-b-60">
-        @if(session('great'))
-        <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-                <div role="alert" class="alert alert-success alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                            aria-hidden="true">&times;</span> </button>
-                    <strong><i class="fa fa-check-circle"></i> Success!</strong> {{session('great')}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box text-center media-box fbox-bg">
+                <div class="fbox-media">
+                    <a href=""><img
+                            src="https://img.alinea.id/img/content/2018/05/06/4867/kementan-bangun-fasilitas-penyimpanan-untuk-hasil-panen-48W1pwApEz.jpg"
+                            alt=""></a>
+                </div>
+                <div class="fbox-content">
+                    <h3>Panen Hasil Padi<span class="subtitle">Contoh Katalog Produk Hasil Panen</span></h3>
                 </div>
             </div>
         </div>
-        @endif
-        <div class="row">
-            <div class="col-lg-7">
-                <h2 class="text-medium">Butuh saran untuk bagian UPVC dalam rumahmu?</h2>
-                <p>Kami akan mengirimkan saran/proposal ke email kamu. <br>Hanya untukmu!</p>
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box text-center media-box fbox-bg">
+                <div class="fbox-media">
+                    <a href=""><img
+                            src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/9/8/87863118/87863118_51f833ce-c1e1-4475-9357-6247bde06e80_500_375.jpg"
+                            alt=""></a>
+                </div>
+                <div class="fbox-content">
+                    <h3>Panen Sawit<span class="subtitle">Contoh Katalog Produk Hasil Panen</span></h3>
+                </div>
             </div>
-            <div class="col-lg-5 real-estate-form-container">
-                <div class="real-estate-form">
-                    <div class="text-dark p-40 background-white">
-                        <h3 class="m-b-20">Isi Form</h3>
-                        <form id="widget-contact-form-agent" class="form-gray-fields" action="/kirim-pesan" role="form"
-                            method="post">
-                            @csrf
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label for="name">Nama Lengkap</label>
-                                        <input type="text" aria-required="true" name="name"
-                                            class="form-control required name" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" aria-required="true" name="email"
-                                            class="form-control required email" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nohp">No HP</label>
-                                        <input type="nohp" aria-required="true" name="nohp"
-                                            class="form-control required email" placeholder="">
-                                        <small class="text-muted">Masukkan dengan format +62812345****</small>
-                                    </div>
-                                    <input type="hidden" name="type" value="Request Penawaran">
-                                    <input type="hidden" name="message"
-                                        value="Hallo admin EURO UPVC, saya ingin meminta penawaran harga dan produk UPVC.">
-                                    <div class="form-group">
-                                        <button class="btn button border black rounded" type="submit"
-                                            id="form-submit">Dapatkan penawaran!</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="feature-box text-center media-box fbox-bg">
+                <div class="fbox-media">
+                    <a href=""><img
+                            src="https://img.alinea.id/img/content/2018/05/06/4867/kementan-bangun-fasilitas-penyimpanan-untuk-hasil-panen-48W1pwApEz.jpg"
+                            alt=""></a>
+                </div>
+                <div class="fbox-content">
+                    <h3>Panen Hasil Padi<span class="subtitle">Contoh Katalog Produk Hasil Panen</span></h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<section class="content">
-    <div class="container">
-        <div class="heading-text heading-section">
-            <h2>Berita Terbaru dari Kami</h2>
+<div class="container clearfix my-5">
+    <div class="row">
+        <div class="heading-block text-left">
+            <h3>Galeri Kami</h3>
         </div>
     </div>
-    <div id="blog">
-        <div class="container">
-            <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
-                @if(!$blog->isEmpty())
-                @foreach ($blog as $blog)
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-image">
-                            <a href="/blog/{{$blog->judul}}">
-                                <img alt="Blog EURO UPVC{{$blog->judul}}"
-                                    src="{!!asset('media/blog/'.$blog->coverimg)!!}">
-                            </a>
-                            <span class="post-meta-category"><a href="">{{$blog->kategori_produk}}</a></span>
-                        </div>
-                        <div class="post-item-description">
-                            <span class="post-meta-date"><i
-                                    class="fa fa-calendar-o"></i>{{date('M d Y',strtotime($blog->created_at))}}</span>
-                            <h2><a href="/blog/{{$blog->judul}}">{{$blog->judul}}
-                                </a></h2>
-                            <p>{!!str_limit($blog->isi, 100)!!}</p>
-                            <a href="/blog/{{$blog->judul}}" class="item-link">Read More <i
-                                    class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-                @else
-                <h5>No data founded</h5>
-                @endif
+    <div class="masonry-thumbs grid-container grid-6" data-big="3" data-lightbox="gallery">
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+        <a href="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+            class="grid-item" data-lightbox="gallery-item">
+            <img src="https://risetcdn.jatimtimes.com/images/2020/05/08/Foto-ilustrasi.-Sumber-httpswww.officialkhabar.com75cb199b38da2c88.md.jpg"
+                alt="">
+        </a>
+    </div>
+</div>
+<div class="container clearfix my-5">
+    <div class="promo promo-border text-center p-4 p-md-5 mb-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <h3>Telepon kami hari ini di <span>+62 812 888 888</span> atau <br> email kami di
+                    <span>info@musimpanen.co.id</span></h3>
+                <span>Kami akan memberikan penawaran terbaik dan kita akan membuat kerja sama yang baik hari ini.</span>
+            </div>
+            <div class="col-12 mt-4">
+                <a href="#" class="button button-large button-rounded m-0">Tunggu apalagi?</a>
             </div>
         </div>
     </div>
-</section>
-
-<section id="section5">
-    <div class="container">
-        <div class="heading-text heading-section text-center">
-            <h2>OUR PARTNERS</h2>
+</div>
+<div class="section footer-stick">
+    <h3 class="center">Our Partners & Clients</h3>
+    <div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel carousel-widget" data-margin="30"
+        data-nav="true" data-pagi="false" data-autoplay="5000" data-items-xs="3" data-items-sm="3" data-items-md="5"
+        data-items-lg="6" data-items-xl="7">
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
         </div>
-        <ul class="grid grid-6-columns">
-            @if(!$partner->isEmpty())
-            @foreach ($partner as $partner)
-            <li>
-                <a href="#"><img src="{!!asset('media/partner/'.$partner->image)!!}"
-                        alt="{{$partner->title}} &copy;euroupvc.co.id">
-                </a>
-            </li>
-            @endforeach
-            @else
-            <div class="text-center">
-                <h4>No data founded</h4>
-            </div>
-            @endif
-        </ul>
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
+        </div>
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
+        </div>
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
+        </div>
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
+        </div>
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
+        </div>
+        <div class="oc-item">
+            <a href="">
+                <img src="https://dp-teknologi.co.id/wp-content/uploads/2019/11/logo_arcserve.png" alt="">
+            </a>
+        </div>
+
     </div>
-</section>
+</div>
 @endsection

@@ -14,7 +14,10 @@
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
-Route::get('/', 'HomepageController@index');
+// Route::get('/', 'HomepageController@index');
+Route::get('/', function () {
+    return view('homepage.index');
+});
 Route::get('/blog/{judul}', 'HomepageController@blogview');
 Route::get('/projects', 'HomepageController@projectsview');
 Route::post('/kirim-pesan', 'DashboardController@kirimpesan');
