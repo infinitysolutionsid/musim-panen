@@ -3,47 +3,50 @@
 <?php $y = Date('Y'); ?>
 @section('deschomepage','')
 @section('sliderhomepage')
-<div class="slider-inner">
+<section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100">
+    <div class="slider-inner">
 
-    <div class="swiper-container swiper-parent">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide dark">
-                <div class="container">
-                    <div class="slider-caption slider-caption-center">
-                        <h2 data-animate="fadeInUp">Welcome to Musim Panen</h2>
-                        <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Quisquam, illo. Similique molestiae eum esse dolorem unde
-                            iusto, eveniet laudantium beatae nesciunt sunt, aspernatur suscipit? Saepe recusandae
-                            expedita nemo reiciendis ea!</p>
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dark">
+                    <div class="container">
+                        <div class="slider-caption slider-caption-center">
+                            <h2 data-animate="fadeInUp">Welcome to Musim Panen</h2>
+                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Lorem ipsum dolor sit
+                                amet
+                                consectetur adipisicing elit. Quisquam, illo. Similique molestiae eum esse dolorem unde
+                                iusto, eveniet laudantium beatae nesciunt sunt, aspernatur suscipit? Saepe recusandae
+                                expedita nemo reiciendis ea!</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide-bg"
+                        style="background-image: url('{!!asset('homepage/images/slider/swiper/1.jpg')!!}');">
                     </div>
                 </div>
-                <div class="swiper-slide-bg"
-                    style="background-image: url('{!!asset('homepage/images/slider/swiper/1.jpg')!!}');">
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="container">
-                    <div class="slider-caption">
-                        <h2 data-animate="fadeInUp">Great Performance</h2>
-                        <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be
-                            surprised to see the Final Results of your Creation &amp; would crave for more.
-                        </p>
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="slider-caption">
+                            <h2 data-animate="fadeInUp">Great Performance</h2>
+                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be
+                                surprised to see the Final Results of your Creation &amp; would crave for more.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide-bg"
+                        style="background-image: url('{!!asset('homepage/images/slider/swiper/2.jpg')!!}'); background-position: center top;">
                     </div>
                 </div>
-                <div class="swiper-slide-bg"
-                    style="background-image: url('{!!asset('homepage/images/slider/swiper/2.jpg')!!}'); background-position: center top;">
-                </div>
+            </div>
+            <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+            <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+            <div class="slide-number">
+                <div class="slide-number-current"></div><span>/</span>
+                <div class="slide-number-total"></div>
             </div>
         </div>
-        <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
-        <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-        <div class="slide-number">
-            <div class="slide-number-current"></div><span>/</span>
-            <div class="slide-number-total"></div>
-        </div>
+
     </div>
-
-</div>
+</section>
 
 @endsection
 @section('content')
@@ -69,7 +72,6 @@
         </div>
     </div>
 </div>
-
 <div class="container clearfix">
 
     <div class="row justify-content-center col-mb-50">

@@ -167,27 +167,27 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="#">
+                                    <a class="menu-link" href="/gallery">
                                         <div>Gallery</div><span>Our documentations</span>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="#">
+                                    <a class="menu-link" href="/demonstration">
                                         <div>Videos</div><span>Our Demonstration</span>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="#">
+                                    <a class="menu-link" href="/blog">
                                         <div>News</div><span>Our updates</span>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="/">
+                                    <a class="menu-link" href="/about-us">
                                         <div>About Us</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="/">
+                                    <a class="menu-link" href="/contact-us">
                                         <div>Contact Us</div>
                                     </a>
                                 </li>
@@ -204,13 +204,8 @@
                 </div>
             </div>
             <div class="header-wrap-clone"></div>
-        </header><!-- #header end -->
-        <section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100">
-            @yield('sliderhomepage')
-        </section>
-
-        <!-- Content
-		============================================= -->
+        </header>
+        @yield('sliderhomepage')
         <section id="content">
             <div class="content-wrap">
                 @yield('content')
