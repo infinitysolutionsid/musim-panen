@@ -206,11 +206,9 @@
             <div class="header-wrap-clone"></div>
         </header>
         @yield('sliderhomepage')
-        <section id="content">
-            <div class="content-wrap">
-                @yield('content')
-            </div>
-        </section><!-- #content end -->
+
+        @yield('content')
+
 
         <!-- Footer
 		============================================= -->
