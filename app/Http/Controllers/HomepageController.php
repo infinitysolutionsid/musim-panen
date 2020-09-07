@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\blogdb;
 use App\gallerydb;
+use App\video;
 use Illuminate\Support\Facades\DB;
 
 class HomepageController extends Controller
@@ -46,5 +47,17 @@ class HomepageController extends Controller
     {
         $blog = blogdb::orderBy('created_at', 'DESC')->paginate(9);
         return view('homepage.projects', ['blog' => $blog]);
+    }
+    public function galleryview()
+    {
+        return view('homepage.gallery.index');
+    }
+    public function videoview()
+    {
+        return view('homepage.videos.index');
+    }
+    public function blog()
+    {
+        return view('homepage.blog');
     }
 }

@@ -40,6 +40,7 @@ return array(
     'App\\kategori' => $baseDir . '/app/kategori.php',
     'App\\partner' => $baseDir . '/app/partner.php',
     'App\\productsdb' => $baseDir . '/app/productsdb.php',
+    'App\\video' => $baseDir . '/app/video.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',

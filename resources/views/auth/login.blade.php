@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Login Administrator - Euro UPVC</title>
+    <title>Login Administrator - Musim Panen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang Tobing" />
-    <link rel="icon" type="image/png" href="auth/images/favicon.ico" />
+    {{-- <link rel="icon" type="image/png" href="auth/images/favicon.ico" /> --}}
     <link rel="stylesheet" type="text/css" href="auth/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="auth/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="auth/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">

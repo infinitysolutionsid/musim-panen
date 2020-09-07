@@ -30,6 +30,9 @@ Route::get('/pesan', function () {
 Route::get('/about-us', function () {
     return view('homepage.aboutus');
 });
+Route::get('/gallery', 'HomepageController@galleryview');
+Route::get('/demonstration', 'HomepageController@videoview');
+Route::get('/blog', 'HomepageController@blog');
 Route::get('/dash', function () {
     return view('dashboard');
 });
@@ -43,53 +46,8 @@ Route::get('logout', function () {
 });
 
 // Katalog katalog or PRODUK
-Route::prefix('catalog')->group(function () {
-    Route::get('/door-system', function () {
-        $door = DB::table('gallerydbs')
-            ->where('gallerydbs.product_id', '=', '1')
-            ->select('gallerydbs.*')
-            ->orderBy('gallerydbs.created_at', 'DESC')
-            ->get();
-        return view('homepage.catalog.doorsystem', ['door' => $door]);
-    });
-    Route::get('/window-system', function () {
-        $window = DB::table('gallerydbs')
-            ->where('gallerydbs.product_id', '=', '3')
-            ->select('gallerydbs.*')
-            ->orderBy('gallerydbs.created_at', 'DESC')
-            ->get();
-        return view('homepage.catalog.windowsystem', ['window' => $window]);
-    });
-    Route::get('/sliding-window-system', function () {
-        $slidingwin = DB::table('gallerydbs')
-            ->where('gallerydbs.product_id', '=', '4')
-            ->select('gallerydbs.*')
-            ->orderBy('gallerydbs.created_at', 'DESC')
-            ->get();
-        return view('homepage.catalog.slidingwindowsystem', ['slidingwin' => $slidingwin]);
-    });
-    Route::get('/sliding-door-system', function () {
-        $slidingdoor = DB::table('gallerydbs')
-            ->where('gallerydbs.product_id', '=', '2')
-            ->select('gallerydbs.*')
-            ->orderBy('gallerydbs.created_at', 'DESC')
-            ->get();
-        return view('homepage.catalog.slidingdoorsystem', ['slidingdoor' => $slidingdoor]);
-    });
-});
 
-Route::get('/door-system', function () {
-    return Redirect::to('/catalog/door-system');
-});
-Route::get('/window-system', function () {
-    return Redirect::to('/catalog/window-system');
-});
-Route::get('/sliding-window-system', function () {
-    return Redirect::to('/catalog/sliding-window-system');
-});
-Route::get('/sliding-door-system', function () {
-    return Redirect::to('/catalog/sliding-door-system');
-});
+
 
 Route::prefix('product/details')->group(function () {
     Route::get('/{product_name}', 'HomepageControler@productdetails');

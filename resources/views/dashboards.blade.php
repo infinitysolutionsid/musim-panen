@@ -11,13 +11,9 @@
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
     <link rel="shortcut icon" href="{!!asset('dashboard/favicon.ico')!!}">
-    <!-- Retina iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="144x144" href="{!!asset('dashboard/favicon.ico')!!}">
-    <!-- Retina iPhone Touch Icon-->
     <link rel="apple-touch-icon" sizes="114x114" href="{!!asset('dashboard/favicon.ico')!!}">
-    <!-- Standard iPad Touch Icon-->
     <link rel="apple-touch-icon" sizes="72x72" href="{!!asset('dashboard/favicon.ico')!!}">
-    <!-- Standard iPhone Touch Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="{!!asset('dashboard/favicon.ico')!!}">
 
     <!-- Styles -->
@@ -50,7 +46,7 @@
         <div class="nano">
             <div class="nano-content">
                 <div class="logo"><a href="/admin/dashboard">
-                        <span>UPVC
+                        <span>MUSIMPANEN
                             SYS</span></a></div>
                 <ul>
                     <li class="label">Main</li>
@@ -149,7 +145,7 @@
                 <div class="col-lg-6 text-left">
                     <div class="footer">
                         <?php $y = Date('Y') ?>
-                        <p>©{{$y}} CV. EURO UPVC - All rights reserved.</p>
+                        <p>©{{$y}} CV. MUSIM PANEN - All rights reserved.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
