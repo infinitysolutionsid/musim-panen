@@ -78,25 +78,16 @@ musimpanen.co.id.')
                                         class="button button-3d m-0">Submit Comment</button>
                                 </div>
                             </div>
-
                             <input type="hidden" name="prefix" value="template-contactform-">
-
                         </form>
                     </div>
-
-                </div><!-- Contact Form End -->
-
-                <!-- Google Map
-						============================================= -->
+                </div>
                 <div class="col-lg-6 min-vh-50">
                     <div class="gmap h-100" data-latitude="3.6294025" data-longitude="98.6866543"
                         data-markers='[{latitude:3.6294025, longitude:98.6866543, html: "<div class=\"p-2\" style=\"width: 300px;\"><h4 class=\"mb-2\">Hi! We are <span>Envato!</span></h4><p class=\"mb-0\" style=\"font-size:1rem;\">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day.</p></div>", icon:{ image: "images/icons/map-icon-red.png", iconsize: [32, 39], iconanchor: [32,39] } }]'>
                     </div>
-                </div><!-- Google Map End -->
+                </div>
             </div>
-
-            <!-- Contact Info
-					============================================= -->
             <div class="row col-mb-50">
                 <div class="col-sm-6 col-lg-3">
                     <div class="feature-box fbox-center fbox-bg fbox-plain">
