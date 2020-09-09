@@ -1,81 +1,148 @@
 @extends('welcome')
-@section('titlepage','Euro UPVC - Contact Us')
+@section('titlepage','Musim Panen - Contact Us')
 <?php $y = Date('Y'); ?>
 @section('deschomepage','Ayo konsultusi untuk upvc di rumah idaman kamu. Jangan ragu. Konsultasi sekarang juga, hubungi
-euroupvc.co.id.')
+musimpanen.co.id.')
 @section('content')
-<section id="page-content">
-    <div class="container">
-        <div class="page-title m-t-30">
-            <h1>Euro UPVC - Contact Us</h1>
-            <div class="breadcrumb float-left">
-                <ul>
-                    <li><a href="#">Home</a>
-                    </li>
-                    <li class="active"><a href="/contact-us">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section id="page-title">
+    <div class="container clearfix">
+        <h1>Contact Us</h1>
+        <span>How you can contact us?</span>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
     </div>
 </section>
-<section class="m-b-20" style="padding:0 0;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="text-uppercase">Address & Map</h3>
-                <div class="row">
-                    <div class="col-lg-4 m-b-30">
-                        <address>
-                            <strong>Showroom:</strong><br>
-                            Jl Gatot Subroto No.106 <br>
-                            at Plaza Bangunan Home Smart <br>
-                            Medan - Sumatera Utara 20114 <br>
-                        </address>
-                        <strong>Phone:</strong> <a href="https://api.whatsapp.com/send?phone=6282267673000">(+62) 822
-                            6767 3000</a>
-                        <br>
-                        <strong>Email:</strong> <a href="mailto:info@euroupvc.co.id">info@euroupvc.co.id</a>
+<section id="content">
+    <div class="content-wrap">
+        <div class="container clearfix">
+
+            <div class="row align-items-stretch col-mb-50 mb-0">
+                <!-- Contact Form
+						============================================= -->
+                <div class="col-lg-6">
+
+                    <div class="fancy-title title-border">
+                        <h3>Send us an Email</h3>
                     </div>
-                    <div class="col-lg-4 m-b-30">
-                        <address>
-                            <strong>Showroom:</strong><br>
-                            Jl Ringroad, Jl. Setia Budi Blk. II No.99s <br>
-                            at Home Centra <br>
-                            Medan - Sumatera Utara 20122 <br>
-                        </address>
-                        <strong>Phone:</strong> <a href="https://api.whatsapp.com/send?phone=6285373673000">(+62) 853
-                            7367 3000</a>
-                        <br>
-                        <strong>Email:</strong> <a href="mailto:info@euroupvc.co.id">info@euroupvc.co.id</a>
+
+                    <div class="form-widget">
+
+                        <div class="form-result"></div>
+
+                        <form class="mb-0" id="template-contactform" name="template-contactform"
+                            action="include/form.php" method="post">
+
+                            <div class="form-process">
+                                <div class="css3-spinner">
+                                    <div class="css3-spinner-scaler"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label for="template-contactform-name">Name <small>*</small></label>
+                                    <input type="text" id="template-contactform-name" name="template-contactform-name"
+                                        value="" class="sm-form-control required" />
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    <label for="template-contactform-email">Email <small>*</small></label>
+                                    <input type="email" id="template-contactform-email"
+                                        name="template-contactform-email" value=""
+                                        class="required email sm-form-control" />
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    <label for="template-contactform-phone">Phone</label>
+                                    <input type="text" id="template-contactform-phone" name="template-contactform-phone"
+                                        value="" class="sm-form-control" />
+                                </div>
+
+                                <div class="w-100"></div>
+
+                                <div class="col-12 form-group">
+                                    <label for="template-contactform-message">Message <small>*</small></label>
+                                    <textarea class="required sm-form-control" id="template-contactform-message"
+                                        name="template-contactform-message" rows="6" cols="30"></textarea>
+                                </div>
+
+                                <div class="col-12 form-group d-none">
+                                    <input type="text" id="template-contactform-botcheck"
+                                        name="template-contactform-botcheck" value="" class="sm-form-control" />
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit"
+                                        class="button button-3d m-0">Submit Comment</button>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="prefix" value="template-contactform-">
+
+                        </form>
                     </div>
-                    <div class="col-lg-4 m-b-30">
-                        <address>
-                            <strong>Pabrik:</strong><br>
-                            Jln. K.L Yos Sudarso, km 7,9 No.24 <br>
-                            Tanjung Mulia Hilir, Medan Deli
-                            Medan - Sumatera Utara 20242 <br>
-                        </address>
-                        <strong>Phone:</strong> (+62) 6180032105
-                        <br>
-                        <strong>Phone:</strong> (+62) 6180032106
-                        <br>
-                        <strong>Email:</strong> <a href="mailto:info@euroupvc.co.id">info@euroupvc.co.id</a>
+
+                </div><!-- Contact Form End -->
+
+                <!-- Google Map
+						============================================= -->
+                <div class="col-lg-6 min-vh-50">
+                    <div class="gmap h-100" data-latitude="3.6294025" data-longitude="98.6866543"
+                        data-markers='[{latitude:3.6294025, longitude:98.6866543, html: "<div class=\"p-2\" style=\"width: 300px;\"><h4 class=\"mb-2\">Hi! We are <span>Envato!</span></h4><p class=\"mb-0\" style=\"font-size:1rem;\">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day.</p></div>", icon:{ image: "images/icons/map-icon-red.png", iconsize: [32, 39], iconanchor: [32,39] } }]'>
                     </div>
-                    {{-- <div class="col-lg-6">
-                        <address>
-                            <strong>Polo Office</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</h4> (123) 456-7890
-                        </address>
-                    </div> --}}
+                </div><!-- Google Map End -->
+            </div>
+
+            <!-- Contact Info
+					============================================= -->
+            <div class="row col-mb-50">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-map-marker2"></i></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Our Office<span class="subtitle">Medan, Indonesia</span></h3>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="map" data-latitude="3.5905828" data-longitude="98.6519925" data-style="light"
-                    data-info="Hello from &lt;br&gt; Euro UPVC"></div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-phone3"></i></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Speak to Us<span class="subtitle">(123) 456 7890</span></h3>
+                        </div>
+                    </div>
+                </div>
 
-            </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-email"></i></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Email us<span class="subtitle">info@musimpanen.co.id</span></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-twitter2"></i></a>
+                        </div>
+                        <div class="fbox-content">
+                            <h3>Follow on Twitter<span class="subtitle">2.3M Followers</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Contact Info End -->
+
         </div>
     </div>
 </section>

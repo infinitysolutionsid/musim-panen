@@ -87,7 +87,7 @@
                                     <td>
                                         {{$gal->link_title}}
                                     </td>
-                                    <td>{!!$gal->link!!}
+                                    <td><a href="{!!$gal->link!!}" target="_blank">{!!$gal->link!!}</a>
                                     </td>
                                     <td>
                                         <a href="/admin/video/trash/{!!$gal->id!!}" class="btn btn-danger btn-rounded">

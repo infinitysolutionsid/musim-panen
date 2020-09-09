@@ -60,7 +60,7 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-image > a {
 
 .product-title h3 a:hover,
 .single-product .product-title h2 a:hover {
-	color: #1ABC9C;
+	color: #469145;
 }
 
 .product-price {
@@ -78,7 +78,7 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-image > a {
 
 .product-price ins {
 	text-decoration: none;
-	color: #1ABC9C;
+	color: #469145;
 }
 
 .product-image > .badge,
@@ -116,7 +116,7 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-image > a {
 
 .single-product .product-price {
 	font-size: 1.5rem;
-	color: #1ABC9C;
+	color: #469145;
 	margin-bottom: 0;
 }
 
@@ -240,7 +240,7 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-image > a {
 }
 
 .cart-product-thumbnail img:hover {
-	border-color: #1ABC9C;
+	border-color: #469145;
 }
 
 .cart-product-name a,

@@ -1,6 +1,6 @@
 <?php
 
-header ("Content-Type:text/css");
+header("Content-Type:text/css");
 
 /** ===============================================================
  *
@@ -9,7 +9,7 @@ header ("Content-Type:text/css");
  *
  ================================================================== */
 
-$color = "#1ABC9C"; // Change your Color Here
+$color = "#469145"; // Change your Color Here
 
 /** ===============================================================
  *
@@ -18,10 +18,10 @@ $color = "#1ABC9C"; // Change your Color Here
  *
  ================================================================== */
 
-function checkhexcolor($color) {
+function checkhexcolor($color)
+{
 
 	return preg_match('/^#[a-f0-9]{6}$/i', $color);
-
 }
 
 /** ===============================================================
@@ -30,21 +30,21 @@ function checkhexcolor($color) {
  *
  ================================================================== */
 
-if( isset( $_GET[ 'color' ] ) AND $_GET[ 'color' ] != '' ) {
-	$color = "#" . $_GET[ 'color' ];
+if (isset($_GET['color']) and $_GET['color'] != '') {
+	$color = "#" . $_GET['color'];
 }
 
-if( !$color OR !checkhexcolor( $color ) ) {
-	$color = "#1ABC9C";
+if (!$color or !checkhexcolor($color)) {
+	$color = "#469145";
 }
 
 ?>
 
 
 /* ----------------------------------------------------------------
-	Colors
+Colors
 
-	Replace the HEX Code with your Desired Color HEX
+Replace the HEX Code with your Desired Color HEX
 -----------------------------------------------------------------*/
 
 
@@ -250,30 +250,30 @@ input.switch-toggle-flat:checked + label::after,
 
 @media (min-width: 992px) {
 
-	.sub-menu-container .menu-item:hover > .menu-link,
-	.mega-menu-style-2 .mega-menu-title > .menu-link:hover,
-	.dark .mega-menu-style-2 .mega-menu-title:hover > .menu-link { color: <?php echo $color; ?>; }
+.sub-menu-container .menu-item:hover > .menu-link,
+.mega-menu-style-2 .mega-menu-title > .menu-link:hover,
+.dark .mega-menu-style-2 .mega-menu-title:hover > .menu-link { color: <?php echo $color; ?>; }
 
-	.style-3 .menu-container > .menu-item.current > .menu-link,
-	.sub-title .menu-container > .menu-item:hover > .menu-link::after,
-	.sub-title .menu-container > .menu-item.current > .menu-link::after,
-	.page-menu-sub-menu,
-	.dots-menu .page-menu-item.current > a,
-	.dots-menu .page-menu-item div,
-	.dark .style-3 .menu-container > .menu-item.current > .menu-link { background-color: <?php echo $color; ?>; }
+.style-3 .menu-container > .menu-item.current > .menu-link,
+.sub-title .menu-container > .menu-item:hover > .menu-link::after,
+.sub-title .menu-container > .menu-item.current > .menu-link::after,
+.page-menu-sub-menu,
+.dots-menu .page-menu-item.current > a,
+.dots-menu .page-menu-item div,
+.dark .style-3 .menu-container > .menu-item.current > .menu-link { background-color: <?php echo $color; ?>; }
 
-	.style-4 .menu-container > .menu-item:hover > .menu-link,
-	.style-4 .menu-container > .menu-item.current > .menu-link,
-	.dots-menu.dots-menu-border .page-menu-item.current > a { border-color: <?php echo $color; ?>; }
+.style-4 .menu-container > .menu-item:hover > .menu-link,
+.style-4 .menu-container > .menu-item.current > .menu-link,
+.dots-menu.dots-menu-border .page-menu-item.current > a { border-color: <?php echo $color; ?>; }
 
-	.sub-menu-container,
-	.mega-menu-content,
-	.style-6 .menu-container > .menu-item > .menu-link::after,
-	.style-6 .menu-container > .menu-item.current > .menu-link::after,
-	.top-cart-content,
-	.dark .sub-menu-container,
-	.dark .mega-menu-content,
-	.dark .top-cart-content { border-top-color: <?php echo $color; ?>; }
+.sub-menu-container,
+.mega-menu-content,
+.style-6 .menu-container > .menu-item > .menu-link::after,
+.style-6 .menu-container > .menu-item.current > .menu-link::after,
+.top-cart-content,
+.dark .sub-menu-container,
+.dark .mega-menu-content,
+.dark .top-cart-content { border-top-color: <?php echo $color; ?>; }
 
-	.dots-menu .page-menu-item div::after { border-left-color: <?php echo $color; ?>; }
+.dots-menu .page-menu-item div::after { border-left-color: <?php echo $color; ?>; }
 }

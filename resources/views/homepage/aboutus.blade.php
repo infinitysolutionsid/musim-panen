@@ -1,56 +1,62 @@
 @extends('welcome')
-@section('titlepage','Euro UPVC - About Us')
+@section('titlepage','Musim Panen - About Us')
 <?php $y = Date('Y'); ?>
-@section('deschomepage','Bagaimana kami memulai usaha dan bisnis upvc di Indonesia terkhusus di Medan dan di Jakarta.
-Kami Euro UPVC.')
+@section('deschomepage','Bagaimana kami memulai usaha dan bisnis panen di Indonesia terkhusus di Medan dan di Jakarta.
+Kami Musim Panen.')
 @section('content')
-<div id="slider" class="inspiro-slider dots-creative" data-height-xs="360">
-
-    <div class="slide kenburns" style="background-image:url('homepages/real-estate/images/parallax-1.jpg');">
-        <div class="bg-overlay"></div>
-        <div class="container">
-            <div class="slide-captions text-center text-light">
-
-                <span class="strong">Who we are</span>
-                <h1>About EURO UPVC</h1>
-
+<section id="page-title">
+    <div class="container clearfix">
+        <h1>About Us</h1>
+        <span>This is our story, this is our company profile.</span>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+    </div>
+</section>
+<section id="content">
+    <div class="content-wrap">
+        <div class="container clearfix">
+            <div class="row col-mb-50 mb-0">
+                <div class="col-lg-4">
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>Why choose <span>Us</span>.</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam
+                        expedita, ea fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim
+                        repellat earum perspiciatis.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>Our <span>Mission</span>.</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam
+                        expedita, ea fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim
+                        repellat earum perspiciatis.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>What we <span>Do</span>.</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam
+                        expedita, ea fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim
+                        repellat earum perspiciatis.</p>
+                </div>
+            </div>
+            <div class="row col-mb-50 mb-0">
+                <div class="col-lg-12">
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>Our <span>History</span>.</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem quisquam earum
+                        voluptatibus est placeat eaque dolorum laboriosam laudantium dolor omnis, facere repellendus.
+                        Iste magni nobis suscipit, deleniti nesciunt aliquam ducimus. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+                        voluptas iusto, hic autem deleniti dolores explicabo labore enim repellat earum perspiciatis.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-
-</div>
-
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="heading-text heading-section">
-                    <h2>THE COMPANY</h2>
-                </div>
-            </div>
-            <div class="col-lg-9">
-                <div class="row">
-                    <div class="col-lg-6">
-                        CV EURO UPVC was founded in 2008 by Mr. Khaidir Lucefer, who started out as he was interested in
-                        the doors and windows of UPVC material.
-                        <br><br>
-                        UPVC is believed to be a substitute for increasingly limited aluminum and wood materials for the
-                        manufacture of doors and windows. Where UPVC has many advantages not possessed by wood and
-                        aluminum materials, such as: termite resistant, low maintenance costs, soundproof, water
-                        resistance and weather changes, non-flammable and energy efficient.
-                    </div>
-                    {{-- <div class="col-lg-6">Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. The
-                        most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida
-                        tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum
-                        volutpat quis. A true story, that never been told!. Fusce id mi diam, non ornare orci.
-                        Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Pellentesque ipsum erat,
-                        facilisis ut venenatis eu, sodales vel dolor. <br> <br>The most happiest time of the day!. Morbi
-                        sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.
-                        Nulla varius consequat magna, id molestie ipsum volut.</div>
-                </div> --}}
-                </div>
-            </div>
-        </div>
 </section>
-
 @endsection

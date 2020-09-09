@@ -10,7 +10,7 @@
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
-    <link rel="shortcut icon" href="{!!asset('dashboard/favicon.ico')!!}">
+    <link rel="shortcut icon" href="{!!asset('auth/images/avatar-01.ico')!!}">
     <link rel="apple-touch-icon" sizes="144x144" href="{!!asset('dashboard/favicon.ico')!!}">
     <link rel="apple-touch-icon" sizes="114x114" href="{!!asset('dashboard/favicon.ico')!!}">
     <link rel="apple-touch-icon" sizes="72x72" href="{!!asset('dashboard/favicon.ico')!!}">
@@ -58,7 +58,7 @@
                     <li class="@yield('activeannounce')"><a href="/admin/announcement"><i class="ti-bell"></i>
                             Announcement</a></li>
                     @endif
-                    @if($getRole=='Admin')
+                    @if($getRole=='Admin' || $getRole=='Developer')
                     <li class="@yield('activeuser')"><a class="sidebar-sub-toggle"><i class="ti-lock"></i> Credentials
                             <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>

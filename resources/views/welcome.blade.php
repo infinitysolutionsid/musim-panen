@@ -7,7 +7,7 @@
     <meta name="author" content="Bintang Tobing" />
     <meta name="description" content="@yield('deschomepage')">
     <meta name="keywords" content="musim panen, musimpanen, musimpanen.co.id, cv musim panen">
-    <link rel="shortcut icon" href="{!!asset('homepage/images/favicon.ico')!!}" type="image/x-icon">
+    <link rel="shortcut icon" href="{!!asset('auth/images/avatar-01.ico')!!}" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>@yield('titlepage')</title>
@@ -268,7 +268,7 @@
                             <div class="row col-mb-50">
                                 <div class="col-md-4">
                                     <div class="widget clearfix">
-                                        <img src="{!!asset('homepage/images/logo.png')!!}" alt="Image"
+                                        <img src="{!!asset('homepage/images/logo-white.png')!!}" alt="Image"
                                             class="footer-logo">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam architecto
                                             repellat deserunt eum nostrum sed eos id.</p>
@@ -458,7 +458,7 @@
         }); /*ready*/
 
     </script>
-
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyBPHBkHbxlsp255-WwFSBcj4Eq3WUovF00"></script>
 </body>
 
 </html>

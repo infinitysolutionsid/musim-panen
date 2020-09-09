@@ -635,7 +635,7 @@ Header
 	.dots-menu .page-menu-item div::after {
 		right: auto;
 		left: -5px;
-		border-right: 6px solid #1ABC9C;
+		border-right: 6px solid #469145;
 		border-left: 0;
 	}
 	.dots-menu .page-menu-item > a:hover div {
@@ -2252,14 +2252,14 @@ blockquote.float-right {
 -----------------------------------------------------------------*/
 .title-block {
 	padding: 2px 20px 3px 0px;
-	border-right: 7px solid #1ABC9C;
+	border-right: 7px solid #469145;
 	border-left: 0;
 }
 
 .title-block-right {
 	padding: 2px 0px 3px 20px;
 	border-right: 0;
-	border-left: 7px solid #1ABC9C;
+	border-left: 7px solid #469145;
 	text-align: left;
 }
 
