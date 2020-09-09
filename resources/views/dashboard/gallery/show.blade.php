@@ -34,7 +34,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <select name="product_id" id="" class="form-control custom-select" required>
-                                        <option>Pilih kategori blog</option>
+                                        <option>Pilih kategori galeri</option>
                                         @foreach ($product as $product)
                                         <option value="{{$product->id}}">{{$product->product_name}}</option>
                                         @endforeach

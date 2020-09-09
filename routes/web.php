@@ -62,6 +62,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isLogin'], function () {
     Route::get('/emails', 'DashboardController@showemails');
     Route::get('/announcement', 'DashboardController@showannounce');
     Route::get('/partner', 'DashboardController@showpartner');
+    Route::get('/video', 'DashboardController@showvideo');
 });
 
 Route::group(['prefix' => 'admin/user', 'middleware' => 'isLogin'], function () {
@@ -84,6 +85,10 @@ Route::group(['prefix' => 'admin/blog', 'middleware' => 'isLogin'], function () 
 Route::group(['prefix' => 'admin/gallery', 'middleware' => 'isLogin'], function () {
     Route::post('/addnewgallery', 'DashboardController@prosesaddgallery');
     Route::get('/trash/{id}', 'DashboardController@trashgallery');
+});
+Route::group(['prefix' => 'admin/video', 'middleware' => 'isLogin'], function () {
+    Route::post('/addnewvideo', 'DashboardController@prosesaddvideo');
+    Route::get('/trash/{id}', 'DashboardController@trashvideo');
 });
 Route::group(['prefix' => 'admin/partner', 'middleware' => 'isLogin'], function () {
     Route::post('/addnewpartner', 'DashboardController@prosesaddpartner');

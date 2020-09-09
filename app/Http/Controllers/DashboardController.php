@@ -15,6 +15,7 @@ use App\itemproduk;
 use App\kategori;
 use App\partner;
 use App\productsdb;
+use App\video;
 
 class DashboardController extends Controller
 {
@@ -151,6 +152,36 @@ class DashboardController extends Controller
     }
     // END BLOG SECTION
 
+    // VIDEOS SECTION
+    public function showvideo()
+    {
+        $gal = DB::table('videos')
+            ->orderBy('videos.created_at', 'DESC')
+            ->select('videos.*')
+            ->get();
+        return view('dashboard.video.show', ['gal' => $gal]);
+    }
+    public function prosesaddvideo(Request $request)
+    {
+        $vid = new video();
+        $vid->link_title = $request->link_title;
+        $vid->link = 'https://youtube.com/embed/' . $request->link;
+        $vid->save();
+
+        return back()->with('selamat', 'Berhasil tambah video baru.');
+    }
+    public function trashvideo($id)
+    {
+        $gal = video::find($id);
+        // dd($user);
+        if ($gal) {
+            if ($gal->delete()) {
+                DB::statement('ALTER TABLE videos AUTO_INCREMENT = ' . (count(video::all()) + 1) . ';');
+
+                return back()->with('selamat', 'Data video ini berhasil dihapus.');
+            }
+        }
+    }
     // GALLERY SECTION
     public function showgallery()
     {

@@ -73,7 +73,7 @@
                     </li>
                     <li class="@yield('activegallery')"><a href="/admin/gallery"><i class="ti-gallery"></i> Gallery </a>
                     </li>
-                    <li class="@yield('activegallery')"><a href="/admin/video"><i class="ti-gallery"></i> Videos </a>
+                    <li class="@yield('activevideos')"><a href="/admin/video"><i class="ti-gallery"></i> Videos </a>
                     </li>
                     <li class="@yield('activepartner')"><a href="/admin/partner"><i class="ti-link"></i> Partner </a>
                     </li>
