@@ -24,7 +24,7 @@
                 <form class="login100-form validate-form" action="{{route('login.proses')}}" method="POST">
                     {{ csrf_field() }}
                     <div class="login100-form-avatar">
-                        <img src="auth/images/avatar-01.png" alt="Euro UPVC Logo">
+                        <img src="auth/images/avatar-01.png" alt="Musim Logo">
                     </div>
                     <span class="login100-form-title p-t-20 p-b-20">
                         Welcome to system!

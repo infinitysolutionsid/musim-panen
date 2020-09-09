@@ -3,51 +3,136 @@
 <?php $y = Date('Y'); ?>
 @section('deschomepage','')
 @section('sliderhomepage')
-<section id="slider" class="slider-element swiper_wrapper min-vh-60 min-vh-md-100">
+<section id="slider" class="slider-element revslider-wrap include-header h-auto">
     <div class="slider-inner">
+        <div id="rev_slider_679_1_wrapper" class="rev_slider_wrapper fullwidth-container" style="padding:0px;">
+            <!-- START REVOLUTION SLIDER 5.1.4 fullwidth mode -->
+            <div id="rev_slider_679_1" class="rev_slider fullwidthbanner" style="display:none;" data-version="5.1.4">
+                <ul>
+                    <!-- SLIDE  -->
+                    <li class="dark" data-transition="fade" data-slotamount="1" data-masterspeed="1500"
+                        data-thumb="{!!asset('homepage/images/slider/swiper/3.jpg')!!}" data-delay="10000"
+                        data-saveperformance="off" data-title="Responsive Design">
+                        <!-- MAIN IMAGE -->
+                        <img src="{!!asset('homepage/images/slider/swiper/3.jpg')!!}" alt="kenburns1"
+                            data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120"
+                            data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0"
+                            data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
 
-        <div class="swiper-container swiper-parent">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide dark">
-                    <div class="container">
-                        <div class="slider-caption slider-caption-center">
-                            <h2 data-animate="fadeInUp">Welcome to Musim Panen</h2>
-                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Lorem ipsum dolor sit
-                                amet
-                                consectetur adipisicing elit. Quisquam, illo. Similique molestiae eum esse dolorem unde
-                                iusto, eveniet laudantium beatae nesciunt sunt, aspernatur suscipit? Saepe recusandae
-                                expedita nemo reiciendis ea!</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide-bg"
-                        style="background-image: url('{!!asset('homepage/images/slider/swiper/1.jpg')!!}');">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="slider-caption">
-                            <h2 data-animate="fadeInUp">Great Performance</h2>
-                            <p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be
-                                surprised to see the Final Results of your Creation &amp; would crave for more.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide-bg"
-                        style="background-image: url('{!!asset('homepage/images/slider/swiper/2.jpg')!!}'); background-position: center top;">
-                    </div>
-                </div>
-            </div>
-            <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
-            <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-            <div class="slide-number">
-                <div class="slide-number-current"></div><span>/</span>
-                <div class="slide-number-total"></div>
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text text-uppercase"
+                            data-x="middle" data-hoffset="0" data-y="top" data-voffset="215"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1000" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3; white-space: nowrap;">Welcome to</div>
+
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text p-0 border-0"
+                            data-x="middle" data-hoffset="0" data-y="top" data-voffset="230"
+                            data-fontsize="['60','50','40','34']"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1200" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3; white-space: nowrap;">CV MUSIM PANEN</div>
+
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text" data-x="middle"
+                            data-hoffset="0" data-y="top" data-voffset="340"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1400" data-easing="easeOutQuad"
+                            data-width="['650','650','480','360']" data-splitin="none" data-splitout="none"
+                            data-elementdelay="0.01" data-endelementdelay="0.1" data-endspeed="1000"
+                            data-textAlign="center" data-endeasing="Power4.easeIn"
+                            style="z-index: 3; max-width: 650px; white-space: normal;">CV Musim Panen adalah perusahaan
+                            yang bergerak di bidang panen sawit dan panen lain lain.</div>
+                    </li>
+                    <li class="dark" data-transition="fade" data-slotamount="1" data-masterspeed="1500"
+                        data-thumb="{!!asset('homepage/images/slider/swiper/1.jpg')!!}" data-delay="10000"
+                        data-saveperformance="off" data-title="Responsive Design">
+                        <!-- MAIN IMAGE -->
+                        <img src="{!!asset('homepage/images/slider/swiper/1.jpg')!!}" alt="kenburns1"
+                            data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120"
+                            data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0"
+                            data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text text-uppercase"
+                            data-x="middle" data-hoffset="0" data-y="top" data-voffset="215"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1000" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3; white-space: nowrap;">Welcome to cv musim panen</div>
+
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text p-0 border-0"
+                            data-x="middle" data-hoffset="0" data-y="top" data-voffset="230"
+                            data-fontsize="['60','50','40','34']"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1200" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3; white-space: nowrap;">We always serve you the best</div>
+
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text" data-x="middle"
+                            data-hoffset="0" data-y="top" data-voffset="340"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1400" data-easing="easeOutQuad"
+                            data-width="['650','650','480','360']" data-splitin="none" data-splitout="none"
+                            data-elementdelay="0.01" data-endelementdelay="0.1" data-endspeed="1000"
+                            data-textAlign="center" data-endeasing="Power4.easeIn"
+                            style="z-index: 3; max-width: 650px; white-space: normal;">Serving you with our best
+                            services is a number one for us.</div>
+                    </li>
+                    <li class="dark" data-transition="slideup" data-slotamount="1" data-masterspeed="1500"
+                        data-thumb="{!!asset('homepage/images/slider/swiper/2.jpg')!!}" data-delay="10000"
+                        data-saveperformance="off" data-title="Unlimited Possibilities">
+                        <!-- MAIN IMAGE -->
+                        <img src="{!!asset('homepage/images/slider/swiper/2.jpg')!!}" alt="kenburns6"
+                            data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120"
+                            data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0"
+                            data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text text-uppercase"
+                            data-x="middle" data-hoffset="0" data-y="top" data-voffset="215"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1000" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3;  white-space: nowrap;">Mengapa memilih bekerja sama dengan kami?</div>
+
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text p-0 border-0"
+                            data-x="middle" data-hoffset="0" data-y="top" data-voffset="230"
+                            data-fontsize="['60','50','40','34']"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1200" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3;  white-space: nowrap;">Tanggung Jawab yang Luar Biasa</div>
+
+                        <div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text" data-x="middle"
+                            data-hoffset="0" data-y="top" data-voffset="340" data-width="['650','650','480','360']"
+                            data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                            data-speed="800" data-start="1400" data-easing="easeOutQuad" data-splitin="none"
+                            data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
+                            data-textAlign="center" data-endspeed="1000" data-endeasing="Power4.easeIn"
+                            style="z-index: 3;  max-width: 650px; white-space: normal;">Apapun yang kita telah janjikan.
+                            Kami akan selalu berusaha untuk selalu bertangguh jawab akan pekerjaan kami.</div>
+
+                    </li>
+                </ul>
             </div>
         </div>
 
     </div>
 </section>
-
 @endsection
 @section('content')
 <div class="section header-stick">

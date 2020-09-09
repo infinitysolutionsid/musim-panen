@@ -36,7 +36,7 @@ $(function () {
         xkey: 'y',
         ykeys: ['a', 'b'],
         labels: ['A', 'B'],
-        barColors: ['#b8161b', '#cb1a21'],
+        barColors: ['#143e13', '#143e13'],
         hideHover: 'auto',
         gridLineColor: '#eef0f2',
         resize: true
