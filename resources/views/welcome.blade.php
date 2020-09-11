@@ -6,8 +6,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang Tobing" />
     <meta name="description" content="@yield('deschomepage')">
-    <meta name="keywords" content="musim panen, musimpanen, musimpanen.co.id, cv musim panen">
-    <link rel="shortcut icon" href="{!!asset('auth/images/avatar-01.ico')!!}" type="image/x-icon">
+    <meta name="keywords" content="musim panen, musimpanen, putrakaryalogamsukses.com, cv musim panen">
+    <link rel="shortcut icon" href="{!!asset('auth/images/favicon.ico')!!}" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>@yield('titlepage')</title>
@@ -16,24 +16,22 @@
     <!-- Stylesheets
 	============================================= -->
     <link
-        href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700&display=swap"
         rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{!!asset('homepage/construction/construction.css')!!}" type="text/css" />
+    <link rel="stylesheet" href="{!!asset('homepage/construction/css/fonts.css')!!}" type="text/css" />
+
     <link rel="stylesheet" href="{!!asset('homepage/css/bootstrap.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('homepage/style.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('homepage/css/swiper.css')!!}" type="text/css" />
+
     <link rel="stylesheet" href="{!!asset('homepage/css/dark.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('homepage/css/font-icons.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('homepage/css/animate.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('homepage/css/magnific-popup.css')!!}" type="text/css" />
 
     <link rel="stylesheet" href="{!!asset('homepage/css/custom.css')!!}" type="text/css" />
-
-
-    <!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
-    <link rel="stylesheet" type="text/css" href="{!!asset('homepage/include/rs-plugin/css/settings.css')!!}"
-        media="screen" />
-    <link rel="stylesheet" type="text/css" href="{!!asset('homepage/include/rs-plugin/css/layers.css')!!}">
-    <link rel="stylesheet" type="text/css" href="{!!asset('homepage/include/rs-plugin/css/navigation.css')!!}">
+    <link rel="stylesheet" href="{!!asset('homepage/css/colors.php?color=269097')!!}" type="text/css" />
 
 
     <script type="application/ld+json">
@@ -41,10 +39,10 @@
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "Musim Panen",
-            "url": "https://musimpanen.co.id/about-us",
+            "url": "https://putrakaryalogamsukses.com/about-us",
             "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://musimpanen.co.id/{search_term_string}",
+                "target": "https://putrakaryalogamsukses.com/{search_term_string}",
                 "query-input": "required name=search_term_string"
             }
         }
@@ -75,43 +73,6 @@
         gtag('config', 'UA-68593210-14');
 
     </script> --}}
-
-
-    <style>
-        .revo-slider-emphasis-text {
-            font-size: 64px;
-            font-weight: 700;
-            letter-spacing: -1px;
-            font-family: 'Poppins', sans-serif;
-            padding: 15px 20px;
-            border-top: 2px solid #FFF;
-            border-bottom: 2px solid #FFF;
-        }
-
-        .revo-slider-desc-text {
-            font-size: 20px;
-            font-family: 'Lato', sans-serif;
-            width: 650px;
-            text-align: center;
-            line-height: 1.5;
-        }
-
-        .revo-slider-caps-text {
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 3px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .tp-video-play-button {
-            display: none !important;
-        }
-
-        .tp-caption {
-            white-space: nowrap;
-        }
-
-    </style>
 </head>
 
 <body class="stretched">
@@ -120,12 +81,13 @@
 	============================================= -->
     <div id="wrapper" class="clearfix">
         <div id="top-bar">
-            <div class="container-fluid">
+            <div class="container clearfix">
 
                 <div class="row justify-content-between align-items-center">
                     <div class="col-12 col-md-auto">
                         <p class="mb-0 py-2 text-center text-md-left"><strong>Hotline:</strong> 0123-0000-0000 |
-                            <strong>Email:</strong> <a href="mailto:info@musimpanen.co.id">info@musimpanen.co.id</a> |
+                            <strong>Email:</strong> <a
+                                href="mailto:info@putrakaryalogamsukses.com">info@putrakaryalogamsukses.com</a> |
                             <strong><a href="#">Live Chat</a></strong>
                         </p>
                     </div>
@@ -134,14 +96,17 @@
 
                         <!-- Top Links
 						============================================= -->
-                        <div class="top-links on-click">
+                        <div class="top-links">
                             <ul class="top-links-container">
-                                <li class="top-links-item"><a href="#"><span><i
-                                                class="fab fa-facebook fa-2x"></i></span></a>
+                                <li class="top-links-item"><a href="#">Locations</a>
+                                    <ul class="top-links-sub-menu">
+                                        <li class="top-links-item"><a href="#">San Francisco</a></li>
+                                        <li class="top-links-item"><a href="#">London</a></li>
+                                        <li class="top-links-item"><a href="#">Amsterdam</a></li>
+                                    </ul>
                                 </li>
-                                <li class="top-links-item"><a href="#"><span><i
-                                                class="fab fa-instagram fa-2x"></i></span></a>
-                                </li>
+                                <li class="top-links-item"><a href="faqs.html">FAQs</a></li>
+                                <li class="top-links-item"><a href="contact.html">Contact</a></li>
                             </ul>
                         </div><!-- .top-links end -->
 
@@ -150,27 +115,103 @@
 
             </div>
         </div>
-        <!-- Header
-		============================================= -->
-        <header id="header" class="full-header" data-sticky-logo-height="74" data-menu-padding="32">
+        <header id="header" class="header-size-sm" data-sticky-shrink="false">
+            <div class="container">
+                <div class="header-row">
+
+                    <!-- Logo
+					============================================= -->
+                    <div id="logo" class="ml-auto ml-lg-0 mr-lg-auto my-3">
+                        <a href="/" class="standard-logo"><img src="{!!asset('homepage/images/logo-web.png')!!}"
+                                alt="Logam Sukses Logo"></a>
+                        <a href="/" class="retina-logo"><img src="{!!asset('homepage/images/logo-web.png')!!}"
+                                alt="Logam Sukses Logo"></a>
+                    </div><!-- #logo end -->
+
+                    <div class="header-misc d-none d-lg-flex">
+
+                        <ul class="header-extras">
+                            <li>
+                                <i class="i-plain icon-call m-0"></i>
+                                <div class="he-text">
+                                    Call Us
+                                    <span>(1) 22 54215821</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="i-plain icon-line2-envelope m-0"></i>
+                                <div class="he-text">
+                                    Email Us
+                                    <span>info@putrakaryalogamsukses.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="i-plain icon-line-clock m-0"></i>
+                                <div class="he-text">
+                                    We'are Open
+                                    <span>Mon - Sat, 10AM to 6PM</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
             <div id="header-wrap">
                 <div class="container">
-                    <div class="header-row">
-                        <!-- Logo
-						============================================= -->
-                        <div id="logo">
-                            <a href="/" class="standard-logo"
-                                data-dark-logo="{!!asset('homepage/images/logo.png')!!}"><img
-                                    src="{!!asset('homepage/images/logo.png')!!}" alt="Musim Panen Logo"></a>
-                            <a href="/" class="retina-logo"
-                                data-dark-logo="{!!asset('homepage/images/logo@2x.png')!!}"><img
-                                    src="{!!asset('homepage/images/logo@2x.png')!!}" alt="Musim Panen Logo"></a>
-                        </div><!-- #logo end -->
+                    <div
+                        class="header-row justify-content-between flex-row-reverse flex-lg-row justify-content-lg-left">
 
                         <div class="header-misc">
+
+                            <!-- Top Search
+							============================================= -->
                             <div id="top-search" class="header-misc-icon">
                                 <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i
                                         class="icon-line-cross"></i></a>
+                            </div><!-- #top-search end -->
+                            <div id="top-cart" class="header-misc-icon d-none d-sm-block">
+                                <a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span
+                                        class="top-cart-number">5</span></a>
+                                <div class="top-cart-content">
+                                    <div class="top-cart-title">
+                                        <h4>Shopping Cart</h4>
+                                    </div>
+                                    <div class="top-cart-items">
+                                        <div class="top-cart-item">
+                                            <div class="top-cart-item-image">
+                                                <a href="#"><img src="images/shop/small/1.jpg"
+                                                        alt="Blue Round-Neck Tshirt" /></a>
+                                            </div>
+                                            <div class="top-cart-item-desc">
+                                                <div class="top-cart-item-desc-title">
+                                                    <a href="#">Blue Round-Neck Tshirt with a Button</a>
+                                                    <span class="top-cart-item-price d-block">$19.99</span>
+                                                </div>
+                                                <div class="top-cart-item-quantity">x 2</div>
+                                            </div>
+                                        </div>
+                                        <div class="top-cart-item">
+                                            <div class="top-cart-item-image">
+                                                <a href="#"><img src="images/shop/small/6.jpg"
+                                                        alt="Light Blue Denim Dress" /></a>
+                                            </div>
+                                            <div class="top-cart-item-desc">
+                                                <div class="top-cart-item-desc-title">
+                                                    <a href="#">Light Blue Denim Dress</a>
+                                                    <span class="top-cart-item-price d-block">$24.99</span>
+                                                </div>
+                                                <div class="top-cart-item-quantity">x 3</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-cart-action">
+                                        <span class="top-checkout-price">$114.95</span>
+                                        <a href="#" class="button button-3d button-small m-0">View Cart</a>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -189,51 +230,36 @@
 
                         <!-- Primary Navigation
 						============================================= -->
-                        <nav class="primary-menu sub-title">
+                        <nav class="primary-menu with-arrows">
 
                             <ul class="menu-container">
-                                <li class="menu-item">
-                                    <a class="menu-link" href="/">
+                                <li class="menu-item current"><a class="menu-link" href="demo-construction.html">
                                         <div>Home</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="#">
-                                        <div>Product</div><span>Our products</span>
+                                    </a></li>
+                                <li class="menu-item"><a class="menu-link" href="demo-construction-about-us.html">
+                                        <div>About Us</div>
+                                    </a></li>
+                                <li class="menu-item"><a class="menu-link" href="demo-construction-projects.html">
+                                        <div>Products</div>
                                     </a>
                                     <ul class="sub-menu-container">
-                                        <li class="menu-item">
-                                            <a class="menu-link" href="#">
-                                                <div>Panen</div>
-                                            </a>
-                                        </li>
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="demo-construction-projects-2.html">
+                                                <div>Besi</div>
+                                            </a></li>
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="demo-construction-projects-3.html">
+                                                <div>Ship</div>
+                                            </a></li>
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="demo-construction-projects.html">
+                                                <div>Marine Proper</div>
+                                            </a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="/gallery">
-                                        <div>Gallery</div><span>Our documentations</span>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="/demonstration">
-                                        <div>Videos</div><span>Our Demonstration</span>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="/blog">
-                                        <div>News</div><span>Our updates</span>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="/about-us">
-                                        <div>About Us</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link" href="/contact-us">
+                                <li class="menu-item"><a class="menu-link" href="demo-construction-investors.html">
                                         <div>Contact Us</div>
-                                    </a>
-                                </li>
+                                    </a></li>
                             </ul>
 
                         </nav><!-- #primary-menu end -->
@@ -242,7 +268,6 @@
                             <input type="text" name="q" class="form-control" value=""
                                 placeholder="Type &amp; Hit Enter.." autocomplete="off">
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -268,8 +293,8 @@
                             <div class="row col-mb-50">
                                 <div class="col-md-4">
                                     <div class="widget clearfix">
-                                        <img src="{!!asset('homepage/images/logo-white.png')!!}" alt="Image"
-                                            class="footer-logo">
+                                        <img src="{!!asset('homepage/images/logo-white.png')!!}"
+                                            alt="Logam Sukses Image Logo" class="footer-logo">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam architecto
                                             repellat deserunt eum nostrum sed eos id.</p>
                                         <div
@@ -281,7 +306,7 @@
                                             </address>
                                             <abbr title="Phone Number"><strong>Phone:</strong></abbr> (061) 000 000<br>
                                             <abbr title="Email Address"><strong>Email:</strong></abbr>
-                                            info@musimpanen.co.id
+                                            info@putrakaryalogamsukses.com
                                         </div>
                                     </div>
                                 </div>
@@ -324,8 +349,9 @@
 
                             <div class="clear"></div>
 
-                            <i class="icon-envelope2"></i> info@musimpanen.co.id <span class="middot">&middot;</span> <i
-                                class="icon-headphones"></i> +62 61 000 000 <span class="middot"></span>
+                            <i class="icon-envelope2"></i> info@putrakaryalogamsukses.com <span
+                                class="middot">&middot;</span> <i class="icon-headphones"></i> +62 61 000 000 <span
+                                class="middot"></span>
                         </div>
 
                     </div>
@@ -349,115 +375,6 @@
     <script src="{!!asset('homepage/js/functions.js')!!}">
     </script>
 
-
-    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
-    <script src="{!!asset('homepage/include/rs-plugin/js/jquery.themepunch.tools.min.js')!!}"></script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/jquery.themepunch.revolution.min.js')!!}"></script>
-
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.video.min.js')!!}"></script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js')!!}">
-    </script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.actions.min.js')!!}"></script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js')!!}">
-    </script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js')!!}"></script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.navigation.min.js')!!}">
-    </script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.migration.min.js')!!}">
-    </script>
-    <script src="{!!asset('homepage/include/rs-plugin/js/extensions/revolution.extension.parallax.min.js')!!}"></script>
-    <script>
-        var tpj = jQuery;
-        var revapi31;
-        var $ = jQuery.noConflict();
-
-        tpj(document).ready(function () {
-            if (tpj("#rev_slider_679_1").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_679_1");
-            } else {
-                revapi31 = tpj("#rev_slider_679_1").show().revolution({
-                    sliderType: "standard",
-                    jsFileLocation: "include/rs-plugin/js/",
-                    sliderLayout: "fullwidth",
-                    dottedOverlay: "none",
-                    delay: 16000,
-                    hideThumbs: 200,
-                    thumbWidth: 100,
-                    thumbHeight: 50,
-                    thumbAmount: 5,
-                    navigation: {
-                        keyboardNavigation: "on",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        onHoverStop: "off",
-                        touch: {
-                            touchenabled: "on",
-                            swipe_threshold: 75,
-                            swipe_min_touches: 1,
-                            swipe_direction: "horizontal",
-                            drag_block_vertical: false
-                        },
-                        arrows: {
-                            style: "hades",
-                            enable: true,
-                            hide_onmobile: false,
-                            hide_onleave: false,
-                            tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div></div>',
-                            left: {
-                                h_align: "left",
-                                v_align: "center",
-                                h_offset: 10,
-                                v_offset: 0
-                            },
-                            right: {
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 10,
-                                v_offset: 0
-                            }
-                        },
-                    },
-                    responsiveLevels: [1140, 1024, 778, 480],
-                    visibilityLevels: [1140, 1024, 778, 480],
-                    gridwidth: [1140, 1024, 778, 480],
-                    gridheight: [700, 768, 960, 720],
-                    lazyType: "none",
-                    shadow: 0,
-                    spinner: "off",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    fullScreenAutoWidth: "off",
-                    fullScreenAlignForce: "off",
-                    fullScreenOffsetContainer: "",
-                    fullScreenOffset: "0px",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: false,
-                    }
-                });
-            }
-
-            revapi31.on("revolution.slide.onloaded", function (e) {
-                setTimeout(function () {
-                    SEMICOLON.slider.sliderDimensions();
-                }, 200);
-            });
-
-            revapi31.on("revolution.slide.onchange", function (e, data) {
-                SEMICOLON.slider.revolutionSliderMenu();
-            });
-        }); /*ready*/
-
-    </script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyBPHBkHbxlsp255-WwFSBcj4Eq3WUovF00"></script>
 </body>
 

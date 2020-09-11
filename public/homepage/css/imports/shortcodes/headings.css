@@ -35,13 +35,13 @@ h3.titular-title {
 -----------------------------------------------------------------*/
 .title-block {
   padding: 2px 0 3px 20px;
-  border-left: 7px solid #469145;
+  border-left: 7px solid #1ABC9C;
   margin-bottom: 30px;
 }
 .title-block-right {
   padding: 2px 20px 3px 0;
   border-left: 0;
-  border-right: 7px solid #469145;
+  border-right: 7px solid #1ABC9C;
   text-align: right;
 }
 .title-block h1,
@@ -133,7 +133,7 @@ h3.titular-title {
   display: none;
 }
 .heading-block.border-color::after {
-  border-color: #469145;
+  border-color: #1ABC9C;
 }
 
 /* Emphasis Title
@@ -203,7 +203,7 @@ h3.titular-title {
 
 .title-border-color::before,
 .title-border-color::after {
-  border-top: 1px solid #469145;
+  border-top: 1px solid #1ABC9C;
 }
 
 /* Fancy Title - Center Align
@@ -234,7 +234,7 @@ h3.titular-title {
 .title-bottom-border h6 {
   width: 100%;
   padding: 0 0 0.75rem;
-  border-bottom: 2px solid #469145;
+  border-bottom: 2px solid #1ABC9C;
 }
 
 /* Sub Heading

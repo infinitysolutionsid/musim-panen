@@ -254,7 +254,7 @@
 }
 .widget-filter-links li.active-filter span {
   color: #FFF !important;
-  background-color: #469145 !important;
+  background-color: #1ABC9C !important;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -280,6 +280,6 @@ body:not(.device-touch) .tagcloud a {
   transition: all .3s ease-in-out;
 }
 .tagcloud a:hover {
-  border-color: #469145 !important;
-  color: #469145 !important;
+  border-color: #1ABC9C !important;
+  color: #1ABC9C !important;
 }
