@@ -6,7 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang Tobing" />
     <meta name="description" content="@yield('deschomepage')">
-    <meta name="keywords" content="musim panen, musimpanen, putrakaryalogamsukses.com, cv musim panen">
+    <meta name="keywords" content="putrakaryalogamsukses.com, putrakaryalogam, logam sukses, logamsukses, ship proper">
     <link rel="shortcut icon" href="{!!asset('auth/images/favicon.ico')!!}" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -100,13 +100,13 @@
                             <ul class="top-links-container">
                                 <li class="top-links-item"><a href="#">Locations</a>
                                     <ul class="top-links-sub-menu">
-                                        <li class="top-links-item"><a href="#">San Francisco</a></li>
-                                        <li class="top-links-item"><a href="#">London</a></li>
-                                        <li class="top-links-item"><a href="#">Amsterdam</a></li>
+                                        <li class="top-links-item"><a href="#">Medan</a></li>
+                                        <li class="top-links-item"><a href="#">Jakarta</a></li>
+                                        <li class="top-links-item"><a href="#">Bali</a></li>
                                     </ul>
                                 </li>
-                                <li class="top-links-item"><a href="faqs.html">FAQs</a></li>
-                                <li class="top-links-item"><a href="contact.html">Contact</a></li>
+                                <li class="top-links-item"><a href="/faq">FAQs</a></li>
+                                <li class="top-links-item"><a href="/contact-us">Contact</a></li>
                             </ul>
                         </div><!-- .top-links end -->
 
@@ -174,12 +174,12 @@
                             </div><!-- #top-search end -->
                             <div id="top-cart" class="header-misc-icon d-none d-sm-block">
                                 <a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span
-                                        class="top-cart-number">5</span></a>
+                                        class="top-cart-number">0</span></a>
                                 <div class="top-cart-content">
                                     <div class="top-cart-title">
                                         <h4>Shopping Cart</h4>
                                     </div>
-                                    <div class="top-cart-items">
+                                    {{-- <div class="top-cart-items">
                                         <div class="top-cart-item">
                                             <div class="top-cart-item-image">
                                                 <a href="#"><img src="images/shop/small/1.jpg"
@@ -210,7 +210,7 @@
                                     <div class="top-cart-action">
                                         <span class="top-checkout-price">$114.95</span>
                                         <a href="#" class="button button-3d button-small m-0">View Cart</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
 
@@ -233,31 +233,28 @@
                         <nav class="primary-menu with-arrows">
 
                             <ul class="menu-container">
-                                <li class="menu-item current"><a class="menu-link" href="demo-construction.html">
+                                <li class="menu-item current"><a class="menu-link" href="/">
                                         <div>Home</div>
                                     </a></li>
-                                <li class="menu-item"><a class="menu-link" href="demo-construction-about-us.html">
+                                <li class="menu-item"><a class="menu-link" href="/about-us">
                                         <div>About Us</div>
                                     </a></li>
-                                <li class="menu-item"><a class="menu-link" href="demo-construction-projects.html">
+                                <li class="menu-item"><a class="menu-link" href="#">
                                         <div>Products</div>
                                     </a>
                                     <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link"
-                                                href="demo-construction-projects-2.html">
+                                        <li class="menu-item"><a class="menu-link" href="/product/besi">
                                                 <div>Besi</div>
                                             </a></li>
-                                        <li class="menu-item"><a class="menu-link"
-                                                href="demo-construction-projects-3.html">
+                                        <li class="menu-item"><a class="menu-link" href="/product/ship">
                                                 <div>Ship</div>
                                             </a></li>
-                                        <li class="menu-item"><a class="menu-link"
-                                                href="demo-construction-projects.html">
+                                        <li class="menu-item"><a class="menu-link" href="/product/marine-proper">
                                                 <div>Marine Proper</div>
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="demo-construction-investors.html">
+                                <li class="menu-item"><a class="menu-link" href="/contact-us">
                                         <div>Contact Us</div>
                                     </a></li>
                             </ul>
@@ -278,8 +275,7 @@
         @yield('content')
 
 
-        <!-- Footer
-		============================================= -->
+
         <footer id="footer" class="dark">
             <div class="container">
 
@@ -287,36 +283,95 @@
 				============================================= -->
                 <div class="footer-widgets-wrap">
 
-                    <div class="row col-mb-50">
-                        <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="widget clearfix">
 
-                            <div class="row col-mb-50">
-                                <div class="col-md-4">
-                                    <div class="widget clearfix">
-                                        <img src="{!!asset('homepage/images/logo-white.png')!!}"
-                                            alt="Logam Sukses Image Logo" class="footer-logo">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam architecto
-                                            repellat deserunt eum nostrum sed eos id.</p>
-                                        <div
-                                            style="background: url('{!!asset('homepage/images/world-map.png')!!}') no-repeat center center; background-size: 100%;">
-                                            <address>
-                                                <strong>Kantor Kami:</strong><br>
-                                                Jalan Cemara No. 167<br>
-                                                Medan, Indonesia<br>
-                                            </address>
-                                            <abbr title="Phone Number"><strong>Phone:</strong></abbr> (061) 000 000<br>
-                                            <abbr title="Email Address"><strong>Email:</strong></abbr>
-                                            info@putrakaryalogamsukses.com
+                                <img src="{!!asset('homepage/images/logo-white.png')!!}"
+                                    alt="Web Logo Putra Karya Logam Sukses" class="alignleft"
+                                    style="width:200px; height: auto; margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
+
+                                <p>Kolom sesi tentang hal yang menjual dan bernilai di mata user. Lorem ipsum dolor sit
+                                    amet consectetur adipisicing elit. Minus nam suscipit enim harum ipsa consequatur.
+                                </p>
+
+                                <div class="line" style="margin: 30px 0;"></div>
+
+                                <div class="row col-mb-30">
+                                    <div class="col-lg-3 col-6 widget_links">
+                                        <ul>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-6 widget_links">
+                                        <ul>
+                                            <li><a href="#">Locations</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="#">Sitemap</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-6 widget_links">
+                                        <ul>
+                                            <li><a href="#">Besi</a></li>
+                                            <li><a href="#">Proper</a></li>
+                                            <li><a href="#">Ship Proper</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 mt-5 mt-lg-0">
+                            <div class="widget clearfix">
+
+                                <div class="row col-mb-30">
+                                    <div class="col-12">
+                                        <div class="footer-big-contacts">
+                                            <span>Call Us:</span>
+                                            <h4>(+62) 812 345 678</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="footer-big-contacts">
+                                            <span>Send an Email:</span>
+                                            <h4>info@putrakaryalogamsukses.com</h4>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
+                            <div class="widget subscribe-widget clearfix">
+
+                                <div class="row col-mb-30">
+                                    <div class="col-12 col-sm-3 clearfix">
+                                        <a href="https://facebook.com"
+                                            class="social-icon si-dark si-colored si-facebook mb-0"
+                                            style="margin-right: 10px;">
+                                            <i class="icon-facebook"></i>
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 col-sm-3 clearfix">
+                                        <a href="https://instagram.com"
+                                            class="social-icon si-dark si-colored si-instagram mb-0"
+                                            style="margin-right: 10px;">
+                                            <i class="icon-instagram"></i>
+                                            <i class="icon-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
                 </div><!-- .footer-widgets-wrap end -->
-
             </div>
 
             <!-- Copyrights
@@ -324,36 +379,20 @@
             <div id="copyrights">
                 <div class="container">
 
-                    <div class="row col-mb-30">
-                        <?php $y = Date('Y') ?>
-                        <div class="col-md-6 text-center text-md-left">
-                            Copyrights &copy; {{$y}} - Musim Panen.co.id | All Rights Reserved by <a
-                                href="https://infinitysolutions.co.id">Infinity Solutions</a>.<br>
-                            <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy
-                                    Policy</a>
+                    <div class="row justify-content-between col-mb-30">
+                        <div class="col-12 col-md-auto text-center text-md-left">
+                            &copy; 2020 CV. PUTRA KARYA LOGAM SUKSES - All Rights Reserved by <a
+                                href="https://bintangtobing.com">bintangtobing.com</a><br>
+                            <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a>
                             </div>
                         </div>
 
-                        <div class="col-md-6 text-center text-md-right">
-                            <div class="d-flex justify-content-center justify-content-md-end">
-                                <a href="#" class="social-icon si-small si-borderless si-facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-
-                                <a href="#" class="social-icon si-small si-borderless si-instagram">
-                                    <i class="icon-instagram"></i>
-                                    <i class="icon-instagram"></i>
-                                </a>
+                        <div class="col-12 col-md-auto text-center text-md-right">
+                            <div class="copyrights-menu copyright-links clearfix">
+                                <a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Products</a>/<a
+                                    href="#">Contact Us</a>/<a href="#">FAQs</a>
                             </div>
-
-                            <div class="clear"></div>
-
-                            <i class="icon-envelope2"></i> info@putrakaryalogamsukses.com <span
-                                class="middot">&middot;</span> <i class="icon-headphones"></i> +62 61 000 000 <span
-                                class="middot"></span>
                         </div>
-
                     </div>
 
                 </div>
