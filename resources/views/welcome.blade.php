@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{!!asset('homepage/css/magnific-popup.css')!!}" type="text/css" />
 
     <link rel="stylesheet" href="{!!asset('homepage/css/custom.css')!!}" type="text/css" />
-    <link rel="stylesheet" href="{!!asset('homepage/css/colors.php?color=269097')!!}" type="text/css" />
+    <link rel="stylesheet" href="{!!asset('homepage/css/colors.php?color=42210b')!!}" type="text/css" />
 
 
     <script type="application/ld+json">
@@ -134,8 +134,9 @@
                             <li>
                                 <i class="i-plain icon-call m-0"></i>
                                 <div class="he-text">
-                                    Call Us
-                                    <span>(1) 22 54215821</span>
+                                    Whatsapp us
+                                    <span><a href="https://wa.me/6282363183901">(+62)82363183901</a><br><a
+                                            href="https://wa.me/62811628376">(+62)811628376</a></span>
                                 </div>
                             </li>
                             <li>
@@ -243,15 +244,11 @@
                                         <div>Products</div>
                                     </a>
                                     <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link" href="/product/besi">
-                                                <div>Besi</div>
+                                        @foreach (App\productsdb::orderBy('created_at', 'ASC')->get() as $product)
+                                        <li class="menu-item"><a class="menu-link" href="/product/{{$product->id}}">
+                                                <div>{{$product->product_name}}</div>
                                             </a></li>
-                                        <li class="menu-item"><a class="menu-link" href="/product/ship">
-                                                <div>Ship</div>
-                                            </a></li>
-                                        <li class="menu-item"><a class="menu-link" href="/product/marine-proper">
-                                                <div>Marine Proper</div>
-                                            </a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a class="menu-link" href="/contact-us">
@@ -291,8 +288,9 @@
                                     alt="Web Logo Putra Karya Logam Sukses" class="alignleft"
                                     style="width:200px; height: auto; margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
 
-                                <p>Kolom sesi tentang hal yang menjual dan bernilai di mata user. Lorem ipsum dolor sit
-                                    amet consectetur adipisicing elit. Minus nam suscipit enim harum ipsa consequatur.
+                                <p>Manufacturing company based in Tanjung Balai, North Sumatera, specializes at fishing
+                                    boats gears. To become number 1 producer and distributor in Indonesia’s Marine
+                                    industry is our vision.
                                 </p>
 
                                 <div class="line" style="margin: 30px 0;"></div>
@@ -331,8 +329,9 @@
                                 <div class="row col-mb-30">
                                     <div class="col-12">
                                         <div class="footer-big-contacts">
-                                            <span>Call Us:</span>
-                                            <h4>(+62) 812 345 678</h4>
+                                            <span>Whatsapp us:</span>
+                                            <h4><a href="https://wa.me/6282363183901">(+62)82363183901</a><br><a
+                                                    href="https://wa.me/62811628376">(+62)811628376</a></h4>
                                         </div>
                                     </div>
 
@@ -389,8 +388,8 @@
 
                         <div class="col-12 col-md-auto text-center text-md-right">
                             <div class="copyrights-menu copyright-links clearfix">
-                                <a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Products</a>/<a
-                                    href="#">Contact Us</a>/<a href="#">FAQs</a>
+                                <a href="#">Home</a>/<a href="/about-us">About Us</a>/<a href="#">Products</a>/<a
+                                    href="/contact-us">Contact Us</a>/<a href="#">FAQs</a>
                             </div>
                         </div>
                     </div>

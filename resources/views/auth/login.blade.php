@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Login Administrator - Musim Panen</title>
+    <title>Login Administrator - Putra Karya Logam Sukses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang Tobing" />
-    {{-- <link rel="icon" type="image/png" href="auth/images/favicon.ico" /> --}}
+    <link rel="icon" type="image/png" href="auth/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="auth/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="auth/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="auth/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
@@ -24,7 +24,7 @@
                 <form class="login100-form validate-form" action="{{route('login.proses')}}" method="POST">
                     {{ csrf_field() }}
                     <div class="login100-form-avatar">
-                        <img src="auth/images/avatar-01.png" alt="Musim Logo">
+                        <img src="auth/images/avatar-01.png" alt="PKLS Logo">
                     </div>
                     <span class="login100-form-title p-t-20 p-b-20">
                         Welcome to system!

@@ -115,7 +115,8 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="/admin/products/update/{{$products->id}}" method="POST">
+                                            <form id="kategorinew" action="/admin/products/update/{{$products->id}}"
+                                                method="POST">
                                                 @csrf
                                                 <div class="modal-body">
                                                     <div class="form-row">
@@ -138,7 +139,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                                    <button form="kategorinew" type="submit"
+                                                        class="btn btn-primary">Save changes</button>
                                                 </div>
                                             </form>
                                         </div>

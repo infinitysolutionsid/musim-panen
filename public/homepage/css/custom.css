@@ -1,3 +1,11 @@
 #logo img {
     height: 70px !important;
 }
+
+.portfolio-item .portfolio-image,
+.portfolio-item .portfolio-image>a,
+.portfolio-item .portfolio-image img {
+    width: 340px;
+    height: 250px;
+    object-fit: cover;
+}

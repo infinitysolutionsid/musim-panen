@@ -1,5 +1,5 @@
 @extends('welcome')
-@section('titlepage','Musim Panen - Contact Us')
+@section('titlepage','Contact Us - Putra Karya Logam Sukses')
 <?php $y = Date('Y'); ?>
 @section('deschomepage','Ayo konsultusi untuk upvc di rumah idaman kamu. Jangan ragu. Konsultasi sekarang juga, hubungi
 musimpanen.co.id.')
@@ -89,7 +89,7 @@ musimpanen.co.id.')
                 </div>
             </div>
             <div class="row col-mb-50">
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-4">
                     <div class="feature-box fbox-center fbox-bg fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><i class="icon-map-marker2"></i></a>
@@ -100,7 +100,7 @@ musimpanen.co.id.')
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-4">
                     <div class="feature-box fbox-center fbox-bg fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><i class="icon-phone3"></i></a>
@@ -111,24 +111,13 @@ musimpanen.co.id.')
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-4">
                     <div class="feature-box fbox-center fbox-bg fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><i class="icon-email"></i></a>
                         </div>
                         <div class="fbox-content">
                             <h3>Email us<span class="subtitle">info@musimpanen.co.id</span></h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div class="feature-box fbox-center fbox-bg fbox-plain">
-                        <div class="fbox-icon">
-                            <a href="#"><i class="icon-twitter2"></i></a>
-                        </div>
-                        <div class="fbox-content">
-                            <h3>Follow on Twitter<span class="subtitle">2.3M Followers</span></h3>
                         </div>
                     </div>
                 </div>

@@ -12,37 +12,14 @@
                     <div class="slider-caption">
                         <div>
                             <h2>Welcome to <span>Putra Karya Logam Sukses</span></h2>
-                            <p class="d-none d-sm-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
-                                officia nisi voluptatum accusantium, voluptatibus debitis hic quam exercitationem.</p>
+                            <p class="d-none d-sm-block">We offers a broad range of propellers for fishing and
+                                recreational boat. We dimensionally inspect every propeller we build to ensure the
+                                products are qualified.</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide-bg" style="background-image: url('{!!asset('homepage/images/slider/swiper/1.jpg')!!}');
                     background-position: center top;">
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="container">
-                    <div class="slider-caption slider-caption-right">
-                        <div>
-                            <h2>Best Propeller Stock in Indonesia</h2>
-                            <p class="d-none d-sm-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Magni.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-wrap">
-                    <video id="slide-video" poster="demos/construction/images/videos/1.jpg" preload="auto" loop autoplay
-                        muted>
-                        <source
-                            src='https://ak.picdn.net/shutterstock/videos/1024789244/preview/stock-footage-slowmotion-close-up-shot-of-boat-propeller-starts-with-nice-air-bubbles-from-the-engine.webm'
-                            type='video/webm' />
-                        <source
-                            src='https://ak.picdn.net/shutterstock/videos/1024789244/preview/stock-footage-slowmotion-close-up-shot-of-boat-propeller-starts-with-nice-air-bubbles-from-the-engine.webm'
-                            type='video/mp4' />
-                    </video>
-                    <div class="video-overlay" style="background-color: rgba(0,0,0,0.1);"></div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -85,8 +62,8 @@
         </div>
 
         <div class="container clearfix">
-            <div class="row justify-content-left">
-                <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12 text-center">
                     <h1>What we do?</h1>
                 </div>
             </div>
@@ -97,9 +74,9 @@
                             <img class="rounded" src="{!!asset('homepage/images/home/1.jpg')!!}" alt="Quality Things">
                         </div>
                         <div class="fbox-content px-0">
-                            <h3>We Provide You<span class="subtitle">Our A Qualified Products</span></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis
-                                voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+                            <h3>We Provide You<span class="subtitle">Our Qualified Products</span></h3>
+                            <p>Quality over quantity. We provide value for money, order once confirmed there will be
+                                next order.</p>
                         </div>
                     </div>
                 </div>
@@ -111,14 +88,14 @@
                                 alt="Effective Planning">
                         </div>
                         <div class="fbox-content px-0">
-                            <h3>We give you not a<span class="subtitle">just a product also a Solutions</span></h3>
-                            <p>Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore
-                                totam. Accusamus perspiciatis asperiores labore esse.</p>
+                            <h3>We give you not <span class="subtitle">just a product also a Solutions</span></h3>
+                            <p>Don’t know what size to purchase? contact us we will give you solutions based on your
+                                needs.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
+                {{-- <div class="col-sm-6 col-lg-4">
                     <div class="feature-box media-box">
                         <div class="fbox-media">
                             <img class="rounded" src="{!!asset('homepage/images/home/3.jpg')!!}" alt="Why choose Us?">
@@ -129,7 +106,7 @@
                                 ullam. Vitae delectus quia, consequuntur rerum quo.</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </div>
@@ -138,46 +115,43 @@
                 <div class="col-lg-12 col-md-6 text-center">
                     <h1>Our Advantage</h1>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><img src="{!!asset('homepage/images/icons/building.png')!!}"
-                                    alt="Concrete Developments"></a>
+                                    alt="High and consistent quality"></a>
                         </div>
                         <div class="fbox-content">
-                            <h3>Concrete Developments</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere distinctio
-                                placeat.</p>
+                            <h3>High and consistent quality</h3>
+                            <p>Our products quality is Better than other manufacturers in North Sumatera.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><img src="{!!asset('homepage/images/icons/bank.png')!!}"
-                                    alt="Quality Guarantee"></a>
+                                    alt="Efficient and on time shipping"></a>
                         </div>
                         <div class="fbox-content">
-                            <h3>Quality Guarantee</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere distinctio
-                                placeat.</p>
+                            <h3>Efficient and on time shipping</h3>
+                            <p>We ensure you that we follow deadlines, and make sure your goods will arrive on time</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><img src="{!!asset('homepage/images/icons/traffic-cone.png')!!}"
-                                    alt="Smart Servicer"></a>
+                                    alt="Available for customization"></a>
                         </div>
                         <div class="fbox-content">
-                            <h3>Smart Servicer</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima, facere distinctio
-                                placeat.</p>
+                            <h3>Available for customization</h3>
+                            <p>Need a custom size? We can provide according to your need and satisfaction.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                {{-- <div class="col-lg-6 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
                             <a href="#"><img src="{!!asset('homepage/images/icons/paper-money.png')!!}"
@@ -189,7 +163,7 @@
                                 placeat.</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </div>
@@ -214,7 +188,7 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3><a href="#">Compressor & Spares</a></h3>
+                        <h3><a href="#">Propeller</a></h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -234,13 +208,13 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Mur Propeller / Propeller Nut</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
             </article>
 
-            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-graphics pf-uielements">
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-uielements pf-icons">
                 <div class="grid-inner">
                     <div class="portfolio-image">
                         <img src="{!!asset('homepage/images/product/3.jpg')!!}" alt="Compressor & Spares">
@@ -254,7 +228,7 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Pulley</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -274,7 +248,7 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Kok Air / Kranlaut</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -294,7 +268,7 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Anchor</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -314,13 +288,13 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Steer</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
             </article>
 
-            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-uielements pf-icons">
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-graphics">
                 <div class="grid-inner">
                     <div class="portfolio-image">
                         <img src="{!!asset('homepage/images/product/7.jpg')!!}" alt="Compressor & Spares">
@@ -334,7 +308,7 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Compressor carrier (5H-40,5H60, 5H 80, 5H 120)</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -354,7 +328,7 @@
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor & Spares</h3>
+                        <h3>Condenser</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -530,55 +504,6 @@
 
                     </div>
 
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="row col-mb-50">
-                <div class="col-md-6">
-                    <h4>Clients Overview</h4>
-
-                    <p>We prize our Clients more than everything else. We strive to provide Quality Services to all our
-                        Clients on a Priority Basis. You are invited to join our Clients List and enjoy our Services. <a
-                            href="#">See more...</a></p>
-
-                    <ul class="clients-grid grid-2 grid-sm-3 mb-0">
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/1.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/2.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/3.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/4.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/5.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/6.png')!!}" alt="Clients"></a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-6">
-                    <h4>Certifications & Awards</h4>
-
-                    <p>Tempat logo logo awards / sertifikat suatu instansi. Ketika di klik akan melihat sertifikat
-                        secara detail. <a href="#">See more...</a></p>
-
-                    <ul class="clients-grid grid-2 grid-sm-3 mb-0">
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/7.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/8.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/9.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/10.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/11.png')!!}" alt="Clients"></a></li>
-                        <li class="grid-item" style="padding: 20px;"><a href="#"><img
-                                    src="{!!asset('homepage/images/clients/12.png')!!}" alt="Clients"></a></li>
-                    </ul>
                 </div>
             </div>
 

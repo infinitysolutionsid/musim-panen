@@ -60,10 +60,7 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <input type="password" name="password" id="password"
-                                                            class="form-control" placeholder="Password" required
-                                                            pattern=".{8,}"
-                                                            oninvalid="setCustomValidity('Minimal character password adalah 8 abjad/angka. ')"
-                                                            onchange="try{setCustomValidity('')}catch(e){}">
+                                                            class="form-control" placeholder="Password" required>
                                                     </div>
                                                 </div>
                                                 <div class="col">

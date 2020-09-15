@@ -11,10 +11,10 @@
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
     <link rel="shortcut icon" href="{!!asset('auth/images/avatar-01.ico')!!}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{!!asset('dashboard/favicon.ico')!!}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{!!asset('dashboard/favicon.ico')!!}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{!!asset('dashboard/favicon.ico')!!}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{!!asset('dashboard/favicon.ico')!!}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{!!asset('auth/images/favicon.ico')!!}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{!!asset('auth/images/favicon.ico')!!}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{!!asset('auth/images/favicon.ico')!!}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{!!asset('auth/images/favicon.ico')!!}">
 
     <!-- Styles -->
     <link href="{!!asset('dashboard/assets/css/lib/weather-icons.css')!!}" rel="stylesheet" />
@@ -46,7 +46,7 @@
         <div class="nano">
             <div class="nano-content">
                 <div class="logo"><a href="/admin/dashboard">
-                        <span>MUSIMPANEN
+                        <span>PKLS
                             SYS</span></a></div>
                 <ul>
                     <li class="label">Main</li>
@@ -67,16 +67,16 @@
                     </li>
                     @endif
                     <li class="label">Store Needs</li>
-                    <li class="@yield('activeblog')"><a href="/admin/blog"><i class="ti-folder"></i> Project Blog </a>
-                    </li>
+                    {{-- <li class="@yield('activeblog')"><a href="/admin/blog"><i class="ti-folder"></i> Project Blog </a>
+                    </li> --}}
                     <li class="@yield('activeproducts')"><a href="/admin/products"><i class="ti-bag"></i> Products </a>
                     </li>
                     <li class="@yield('activegallery')"><a href="/admin/gallery"><i class="ti-gallery"></i> Gallery </a>
                     </li>
-                    <li class="@yield('activevideos')"><a href="/admin/video"><i class="ti-gallery"></i> Videos </a>
-                    </li>
-                    <li class="@yield('activepartner')"><a href="/admin/partner"><i class="ti-link"></i> Partner </a>
-                    </li>
+                    {{-- <li class="@yield('activevideos')"><a href="/admin/video"><i class="ti-gallery"></i> Videos </a>
+                    </li> --}}
+                    {{-- <li class="@yield('activepartner')"><a href="/admin/partner"><i class="ti-link"></i> Partner </a>
+                    </li> --}}
                 </ul>
             </div>
         </div>
@@ -147,7 +147,7 @@
                 <div class="col-lg-6 text-left">
                     <div class="footer">
                         <?php $y = Date('Y') ?>
-                        <p>©{{$y}} CV. MUSIM PANEN - All rights reserved.</p>
+                        <p>©{{$y}} CV. Putra Karya Logam Sukses - All rights reserved.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
