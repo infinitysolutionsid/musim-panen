@@ -245,7 +245,8 @@
                                     </a>
                                     <ul class="sub-menu-container">
                                         @foreach (App\productsdb::orderBy('created_at', 'ASC')->get() as $product)
-                                        <li class="menu-item"><a class="menu-link" href="/product/{{$product->id}}">
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="/product/details/{{$product->id}}">
                                                 <div>{{$product->product_name}}</div>
                                             </a></li>
                                         @endforeach
@@ -298,10 +299,10 @@
                                 <div class="row col-mb-30">
                                     <div class="col-lg-3 col-6 widget_links">
                                         <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="/about-us">About Us</a></li>
                                             <li><a href="#">Product</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="/contact-us">Contact Us</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-3 col-6 widget_links">
@@ -311,11 +312,13 @@
                                             <li><a href="#">Sitemap</a></li>
                                         </ul>
                                     </div>
-                                    <div class="col-lg-3 col-6 widget_links">
+                                    <div class="col-lg-4 col-6 widget_links">
                                         <ul>
-                                            <li><a href="#">Besi</a></li>
-                                            <li><a href="#">Proper</a></li>
-                                            <li><a href="#">Ship Proper</a></li>
+                                            @foreach (App\productsdb::orderBy('created_at', 'ASC')->get() as $itempr)
+                                            <li><a
+                                                    href="/product/details/{{$product->id}}">{{$itempr->product_name}}</a>
+                                            </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -381,7 +384,7 @@
                     <div class="row justify-content-between col-mb-30">
                         <div class="col-12 col-md-auto text-center text-md-left">
                             &copy; 2020 CV. PUTRA KARYA LOGAM SUKSES - All Rights Reserved by <a
-                                href="https://bintangtobing.com">bintangtobing.com</a><br>
+                                href="https://bintangtobing.com" style="color: #fff;">bintangtobing.com</a><br>
                             <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a>
                             </div>
                         </div>

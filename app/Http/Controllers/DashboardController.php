@@ -54,6 +54,7 @@ class DashboardController extends Controller
     public function showuser()
     {
         $getuser = DB::table('admindbs')
+            ->where('admindbs.role', '!=', 'Developer')
             ->orderBy('admindbs.name', 'ASC')
             ->select('admindbs.*')
             ->get();
@@ -249,7 +250,14 @@ class DashboardController extends Controller
             ->orderBy('itemproduks.nama_item', 'ASC')
             ->select('itemproduks.*')
             ->get();
-        return view('dashboard.products.show', ['products' => $products, 'kategori' => $kategori, 'produk' => $produk, 'productget' => $productget]);
+        $itemproduk = DB::table('itemproduks')
+            ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
+            ->orderBy('itemproduks.nama_item', 'ASC')
+            ->select('kategoris.*', 'itemproduks.*', 'kategoris.description as descriptionItem')
+            ->get();
+        $kategoriItem = kategori::all();
+        $katalogItem = productsdb::all();
+        return view('dashboard.products.show', ['products' => $products, 'kategori' => $kategori, 'produk' => $produk, 'productget' => $productget, 'itemproduk' => $itemproduk, 'kategoriItem' => $kategoriItem, 'katalogItem' => $katalogItem]);
     }
     // // // Kategori Section
     public function prosesaddkategori(Request $request)
@@ -260,7 +268,7 @@ class DashboardController extends Controller
         $kategori->description = $request->description;
         // dd($request->all());
         $kategori->save();
-        return back()->with('selamat', 'Data kategori produk berhasil diupdate');
+        return redirect('/admin/products')->with('selamat', 'Data kategori produk berhasil diupdate');
     }
     // End Section
     // // // // // // // // // // // // // //
@@ -270,11 +278,21 @@ class DashboardController extends Controller
     {
         $item = new itemproduk();
         $item->kategori_id = $request->kategori_id;
-        $item->nama_item = $request->nama_item;
+        $item->katalog_id = $request->katalog_id;
+        $item->nama_item = $request->nama_produk;
         $item->description = $request->description;
+
+        if (!$request->hasFile('fileimg')) {
+            $item->save();
+        } else {
+            $lamp = $request->file('fileimg');
+            $filename = time() . '.' . $lamp->getClientOriginalExtension();
+            $request->file('fileimg')->move('media/product/item/', $filename);
+            $item->fileimg = $filename;
+            $item->save();
+        }
         // dd($request->all());
-        $item->save();
-        return back()->with('selamat', 'Data item produk berhasil diupdate');
+        return redirect('/admin/products')->with('selamat', 'Data item produk berhasil ditambahkan');
     }
     // End Item Section
     public function prosesaddproduct(Request $request)

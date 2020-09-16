@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\blogdb;
 use App\gallerydb;
+use App\productsdb;
 use App\video;
 use Illuminate\Support\Facades\DB;
 
@@ -59,5 +60,17 @@ class HomepageController extends Controller
     public function blog()
     {
         return view('homepage.blog');
+    }
+
+    public function productdetails($id)
+    {
+        $item = DB::table('itemproduks')
+            ->where('itemproduks.katalog_id', '=', $id)
+            ->orderBy('itemproduks.created_at', 'DESC')
+            ->select('itemproduks.*')
+            ->get();
+        $catalog = productsdb::find($id);
+        return view('homepage.catalog.details', ['catalog' => $catalog, 'item' => $item]);
+        // dd($item);
     }
 }
