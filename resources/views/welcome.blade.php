@@ -384,7 +384,7 @@
                     <div class="row justify-content-between col-mb-30">
                         <div class="col-12 col-md-auto text-center text-md-left">
                             &copy; 2020 CV. PUTRA KARYA LOGAM SUKSES - All Rights Reserved by <a
-                                href="https://bintangtobing.com" style="color: #fff;">bintangtobing.com</a><br>
+                                href="https://workwith.bintangtobing.com" style="color: #fff;">bintangtobing.com</a><br>
                             <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a>
                             </div>
                         </div>

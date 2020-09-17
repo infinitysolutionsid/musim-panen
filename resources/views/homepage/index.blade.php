@@ -180,15 +180,15 @@
                         <img src="{!!asset('homepage/images/product/1.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11315" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3><a href="#">Propeller</a></h3>
+                        <h3><a href="/product/details/11315">Propeller</a></h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -200,9 +200,9 @@
                         <img src="{!!asset('homepage/images/product/2.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11316" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
@@ -220,9 +220,9 @@
                         <img src="{!!asset('homepage/images/product/3.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11317" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
@@ -240,9 +240,9 @@
                         <img src="{!!asset('homepage/images/product/4.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11318" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
@@ -260,9 +260,9 @@
                         <img src="{!!asset('homepage/images/product/5.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11319" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
@@ -280,9 +280,9 @@
                         <img src="{!!asset('homepage/images/product/6.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11320" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
@@ -300,15 +300,15 @@
                         <img src="{!!asset('homepage/images/product/7.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11321" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
                     </div>
                     <div class="portfolio-desc">
-                        <h3>Compressor carrier (5H-40,5H60, 5H 80, 5H 120)</h3>
+                        <h3>Compressor carrier</h3>
                         <span>Ship - Marine Propeller</span>
                     </div>
                 </div>
@@ -320,9 +320,9 @@
                         <img src="{!!asset('homepage/images/product/8.jpg')!!}" alt="Compressor & Spares">
                         <div class="bg-overlay">
                             <div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-                                <a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn"
-                                    data-hover-animate-out="zoomOut" data-hover-speed="350"><i
-                                        class="icon-line-ellipsis"></i></a>
+                                <a href="/product/details/11322" class="overlay-trigger-icon bg-light text-dark"
+                                    data-hover-animate="zoomIn" data-hover-animate-out="zoomOut"
+                                    data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
                             </div>
                             <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
                         </div>
