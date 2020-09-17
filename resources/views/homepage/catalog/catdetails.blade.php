@@ -1,17 +1,17 @@
 @extends('welcome')
-@section('titlepage',$catalog->product_name.' | Putra Karya Logam Sukses Product Details')
+@section('titlepage',$catalog->nama_kategori.' | Putra Karya Logam Sukses Product Details')
 <?php $y = Date('Y'); ?>
 @section('deschomepage','')
 @section('content')
 <section id="page-title">
     <div class="container clearfix">
-        <h1>{{$catalog->product_name}}</h1>
-        <span>{{$catalog->product_name}} is one of our many products that selled on our company.</span>
+        <h1>{{$catalog->nama_kategori}}</h1>
+        <span>{{$catalog->nama_kategori}} is one of our many products that selled on our company.</span>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">Product</li>
+            <li class="breadcrumb-item" aria-current="page">Product Kategori</li>
             <li class="breadcrumb-item" aria-current="page">Details</li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">{{$catalog->product_name}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">{{$catalog->nama_kategori}}</a></li>
         </ol>
     </div>
 </section>
@@ -82,28 +82,6 @@
                         @endif
                     </div>
                 </div>
-                <div class="sidebar col-lg-3">
-                    <div class="sidebar-widgets-wrap">
-
-                        <div class="widget widget_links clearfix">
-
-                            <h4>Catalog Categories</h4>
-                            <ul>
-                                @if(!$kategori->isEmpty())
-                                @foreach ($kategori as $kategoris)
-                                <li><a
-                                        href="/product/categories/details/{{$kategoris->id}}">{{$kategoris->nama_kategori}}</a>
-                                </li>
-                                @endforeach
-                                @else
-                                <li> No categories founded on this catalog</li>
-                                @endif
-                            </ul>
-
-                        </div>
-
-                    </div>
-                </div><!-- .sidebar end -->
             </div>
 
         </div>

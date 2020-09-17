@@ -52,6 +52,10 @@ Route::get('logout', function () {
 Route::prefix('product/details')->group(function () {
     Route::get('/{id}', 'HomepageController@productdetails');
 });
+Route::prefix('product/categories/details')->group(function () {
+    Route::get('/{id}', 'HomepageController@productcatdetails');
+});
+
 
 Route::group(['prefix' => 'admin', 'middleware' => 'isLogin'], function () {
     Route::get('/dashboard', 'DashboardController@index');
