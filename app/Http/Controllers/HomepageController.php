@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\blogdb;
 use App\gallerydb;
+use App\itemproduk;
 use App\kategori;
 use App\productsdb;
 use App\video;
@@ -70,13 +71,18 @@ class HomepageController extends Controller
             ->orderBy('itemproduks.created_at', 'DESC')
             ->select('itemproduks.*')
             ->get();
+        $items = DB::table('itemproduks')
+            ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
+            ->join('productsdbs', 'itemproduks.katalog_id', '=', 'productsdbs.id')
+            ->select('itemproduks.*', 'kategoris.nama_kategori', 'productsdbs.product_name')
+            ->get();
         $kategori = DB::table('kategoris')
             ->where('kategoris.product_id', '=', $id)
             ->orderBy('kategoris.created_at', 'DESC')
             ->select('kategoris.*')
             ->get();
         $catalog = productsdb::find($id);
-        return view('homepage.catalog.details', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori]);
+        return view('homepage.catalog.details', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori, 'items' => $items]);
         // dd($item);
     }
     public function productcatdetails($id)

@@ -32,6 +32,48 @@
 <section id="content">
     <div class="content-wrap" style="padding-top: 0px !important;">
         <div class="container clearfix">
+            @foreach ($items as $items)
+            <div id="showitem{{$items->id}}" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-body">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">{{$items->nama_item}}</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="imgview"
+                                                src="{!!asset('media/product/item/'.$items->fileimg)!!}"
+                                                alt="{{$items->nama_item}}">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p>{!!$items->description!!} <br>
+                                                <form class="cart mb-0" method="post" enctype='multipart/form-data'>
+                                                    <div class="quantity">
+                                                        <input type="button" value="-" class="minus">
+                                                        <input type="text" step="1" min="1" name="quantity" value="1"
+                                                            title="Qty" class="qty" size="4" />
+                                                        <input type="button" value="+" class="plus">
+                                                    </div>
+                                                    <button type="submit" class="add-to-cart button m-0">Add to
+                                                        cart</button>
+                                                </form> <br> Category: <strong>{{$items->nama_kategori}}</strong><br>
+                                                Catalog: <strong>{{$items->product_name}}</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
 
             <div class="row gutter-40 col-mb-80">
                 <!-- Post Content
@@ -47,22 +89,21 @@
                         <div class="product col-md-4 col-sm-6 col-12">
                             <div class="grid-inner">
                                 <div class="product-image">
-                                    <a href="#"><img src="{!!asset('media/product/item/'.$item->fileimg)!!}"
+                                    <a href="#" data-toggle="modal" data-target="#showitem{{$item->id}}"><img
+                                            src="{!!asset('media/product/item/'.$item->fileimg)!!}"
                                             alt="{{$item->nama_item}}"></a>
                                     <div class="sale-flash badge badge-success p-2">Available</div>
                                     <div class="bg-overlay">
                                         <div class="bg-overlay-content align-items-end justify-content-between"
                                             data-hover-animate="fadeIn" data-hover-speed="400">
-                                            <a href="#" class="btn btn-dark mr-2"><i class="icon-shopping-cart"></i></a>
-                                            <a href="include/ajax/shop-item.html" class="btn btn-dark"
-                                                data-lightbox="ajax"><i class="icon-line-expand"></i></a>
                                         </div>
                                         <div class="bg-overlay-bg bg-transparent"></div>
                                     </div>
                                 </div>
                                 <div class="product-desc">
                                     <div class="product-title">
-                                        <h3><a href="#">{{$item->nama_item}}</a></h3>
+                                        <h3><a href="#" data-toggle="modal"
+                                                data-target="#showitem{{$item->id}}">{{$item->nama_item}}</a></h3>
                                     </div>
                                     <div class="product-rating">
                                         <i class="icon-star3"></i>
@@ -74,6 +115,7 @@
                                 </div>
                             </div>
                         </div>
+
                         @endforeach
                         @else
                         <div class="col-md-6 text-center">

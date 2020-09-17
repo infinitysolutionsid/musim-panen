@@ -9,3 +9,9 @@
     height: 250px;
     object-fit: cover;
 }
+
+.imgview {
+    width: auto;
+    height: 220px;
+    object-fit: cover;
+}

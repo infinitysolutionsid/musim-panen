@@ -51,6 +51,7 @@ Route::get('logout', function () {
 
 Route::prefix('product/details')->group(function () {
     Route::get('/{id}', 'HomepageController@productdetails');
+    Route::get('ajax-item/{id}', 'HomepageController@ajaxdetails');
 });
 Route::prefix('product/categories/details')->group(function () {
     Route::get('/{id}', 'HomepageController@productcatdetails');
