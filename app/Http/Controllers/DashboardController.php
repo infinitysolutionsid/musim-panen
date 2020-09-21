@@ -423,5 +423,9 @@ class DashboardController extends Controller
     }
     // End Section
 
-
+    // COntct Section
+    public function showcontact()
+    {
+        return view('dashboard.contact.show');
+    }
 }

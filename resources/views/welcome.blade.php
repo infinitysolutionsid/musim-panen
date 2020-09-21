@@ -315,8 +315,7 @@
                                     <div class="col-lg-4 col-6 widget_links">
                                         <ul>
                                             @foreach (App\productsdb::orderBy('created_at', 'ASC')->get() as $itempr)
-                                            <li><a
-                                                    href="/product/details/{{$product->id}}">{{$itempr->product_name}}</a>
+                                            <li><a href="/product/details/{{$itempr->id}}">{{$itempr->product_name}}</a>
                                             </li>
                                             @endforeach
                                         </ul>

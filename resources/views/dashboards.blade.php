@@ -65,6 +65,10 @@
                             <li><a href="/admin/user">User Managements</a></li>
                         </ul>
                     </li>
+                    <li class="@yield('activecontact')"><a href="/admin/contact"><i class="ti-mobile"></i> Basic
+                            Information
+                        </a>
+                    </li>
                     @endif
                     <li class="label">Store Needs</li>
                     {{-- <li class="@yield('activeblog')"><a href="/admin/blog"><i class="ti-folder"></i> Project Blog </a>

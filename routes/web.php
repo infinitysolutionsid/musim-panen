@@ -68,6 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isLogin'], function () {
     Route::get('/announcement', 'DashboardController@showannounce');
     Route::get('/partner', 'DashboardController@showpartner');
     Route::get('/video', 'DashboardController@showvideo');
+    Route::get('/contact', 'DashboardController@showcontact');
 });
 
 Route::group(['prefix' => 'admin/user', 'middleware' => 'isLogin'], function () {
