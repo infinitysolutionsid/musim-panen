@@ -3,7 +3,80 @@
 @section('contents')
 @section('activecontact','active')
 <section id="main-content">
+    @if(session('selamat'))
     <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <strong>Congratulations {{session()->get('name')}}!</strong> - {{session('selamat')}}
+            </div>
+        </div>
+    </div>
+    @endif
+    <div class="row">
+        <div class="modal fade" id="editinformation" tabindex="-1" role="dialog" aria-labelledby="editinformation"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form action="/admin/contact/update" method="post">
+                        {{ csrf_field() }}
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Informations</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">First phone / WA number</label>
+                                        <input type="text" name="whatsapp1" class="form-control input-default"
+                                            value="{{$info->whatsapp1}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Second phone / WA number</label>
+                                        <input type="text" name="whatsapp2" class="form-control input-default"
+                                            value="{{$info->whatsapp2}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Facebook</label>
+                                        <input type="text" name="facebook" class="form-control input-default"
+                                            value="{{$info->facebook}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Instagram</label>
+                                        <input type="text" name="instagram" class="form-control input-default"
+                                            value="{{$info->instagram}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="">Alamat Usaha</label>
+                                        <textarea name="address" class="form-control" id="" cols="30"
+                                            rows="10">{{$info->address}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Update changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
@@ -24,16 +97,17 @@
                                                 <h4>Contact information</h4>
                                                 <div class="phone-content">
                                                     <span class="contact-title">Phone:</span>
-                                                    <span class="phone-number">+6282363183901</span>
+                                                    <span class="phone-number">{{$info->whatsapp1}}</span>
                                                 </div>
                                                 <div class="phone-content">
                                                     <span class="contact-title">Phone II:</span>
-                                                    <span class="phone-number">+62811628376</span>
+
+                                                    <span class="phone-number">{{$info->whatsapp2}}</span>
+
                                                 </div>
                                                 <div class="address-content">
                                                     <span class="contact-title">Address:</span>
-                                                    <span class="mail-address">Jalan Perintis Km 10 Jampalan, Asahan -
-                                                        Sumatera Utara, Indonesia</span>
+                                                    <span class="mail-address">{!!strip_tags($info->address)!!}</span>
                                                 </div>
                                                 <div class="email-content">
                                                     <span class="contact-title">Email:</span>
@@ -48,17 +122,20 @@
                                                 <h4>Social Media information</h4>
                                                 <div class="">
                                                     <span class="contact-title">Facebook:</span>
-                                                    <span class="phone-number"></span>
+                                                    <span class="phone-number">{{$info->facebook}}</span>
+
                                                 </div>
                                                 <div class="">
                                                     <span class="contact-title">Instagram:</span>
-                                                    <span class="phone-number"></span>
+                                                    <span class="phone-number">{{$info->instagram}}</span>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <a class="btn btn-primary btn-block btn-flat btn-addon m-b-10 m-l-5"
+                                        <a data-toggle="modal" data-target="#editinformation"
+                                            class="btn btn-primary btn-block btn-flat btn-addon m-b-10 m-l-5"
                                             style="color: #fff;"><i class="ti-pencil"></i>Edit Information</a>
                                     </div>
                                 </div>

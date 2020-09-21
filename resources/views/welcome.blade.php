@@ -74,18 +74,17 @@
 
     </script> --}}
 </head>
+<?php $contact = App\Contact::find('609012'); ?>
 
 <body class="stretched">
-
-    <!-- Document Wrapper
-	============================================= -->
     <div id="wrapper" class="clearfix">
         <div id="top-bar">
             <div class="container clearfix">
 
                 <div class="row justify-content-between align-items-center">
                     <div class="col-12 col-md-auto">
-                        <p class="mb-0 py-2 text-center text-md-left"><strong>Hotline:</strong> 0123-0000-0000 |
+                        <p class="mb-0 py-2 text-center text-md-left"><strong>Hotline:</strong> {{$contact->whatsapp1}}
+                            |
                             <strong>Email:</strong> <a
                                 href="mailto:info@putrakaryalogamsukses.com">info@putrakaryalogamsukses.com</a> |
                             <strong><a href="#">Live Chat</a></strong>
@@ -135,8 +134,9 @@
                                 <i class="i-plain icon-call m-0"></i>
                                 <div class="he-text">
                                     Whatsapp us
-                                    <span><a href="https://wa.me/6282363183901">(+62)82363183901</a><br><a
-                                            href="https://wa.me/62811628376">(+62)811628376</a></span>
+                                    <span><a
+                                            href="https://wa.me/{{$contact->whatsapp1}}">{{$contact->whatsapp1}}</a><br><a
+                                            href="https://wa.me/{{$contact->whatsapp2}}">{{$contact->whatsapp2}}</a></span>
                                 </div>
                             </li>
                             <li>
@@ -332,11 +332,13 @@
                                     <div class="col-12">
                                         <div class="footer-big-contacts">
                                             <span>Whatsapp us:</span>
-                                            <h4><a href="https://wa.me/6282363183901">(+62)82363183901</a><br><a
-                                                    href="https://wa.me/62811628376">(+62)811628376</a></h4>
+                                            <h4><a
+                                                    href="https://wa.me/{{$contact->whatsapp1}}">{{$contact->whatsapp1}}</a><br><a
+                                                    href="
+                                                    https://wa.me/{{$contact->whatsapp2}}">{{$contact->whatsapp2}} </a>
+                                            </h4>
                                         </div>
                                     </div>
-
                                     <div class="col-12">
                                         <div class="footer-big-contacts">
                                             <span>Send an Email:</span>
@@ -351,7 +353,7 @@
 
                                 <div class="row col-mb-30">
                                     <div class="col-12 col-sm-3 clearfix">
-                                        <a href="https://facebook.com"
+                                        <a href="{{$contact->facebook}}"
                                             class="social-icon si-dark si-colored si-facebook mb-0"
                                             style="margin-right: 10px;">
                                             <i class="icon-facebook"></i>
@@ -359,7 +361,7 @@
                                         </a>
                                     </div>
                                     <div class="col-12 col-sm-3 clearfix">
-                                        <a href="https://instagram.com"
+                                        <a href="{{$contact->instagram}}"
                                             class="social-icon si-dark si-colored si-instagram mb-0"
                                             style="margin-right: 10px;">
                                             <i class="icon-instagram"></i>
@@ -384,7 +386,8 @@
                         <div class="col-12 col-md-auto text-center text-md-left">
                             &copy; 2020 CV. PUTRA KARYA LOGAM SUKSES - All Rights Reserved by <a
                                 href="https://workwith.bintangtobing.com" style="color: #fff;">bintangtobing.com</a><br>
-                            <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a>
+                            <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy
+                                    Policy</a>
                             </div>
                         </div>
 

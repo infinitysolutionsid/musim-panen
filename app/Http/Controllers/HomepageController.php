@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\blogdb;
+use App\Contact;
 use App\gallerydb;
 use App\itemproduk;
 use App\kategori;
@@ -30,7 +31,8 @@ class HomepageController extends Controller
             ->orderBy('partners.id', 'ASC')
             ->select('partners.*')
             ->get();
-        return view('homepage.index', ['blog' => $blog, 'galp' => $galp, 'product' => $product, 'partner' => $partner]);
+        $contact = Contact::find('609012');
+        return view('homepage.index', ['blog' => $blog, 'galp' => $galp, 'product' => $product, 'partner' => $partner, 'contact' => $contact]);
     }
     public function blogview($judul)
     {

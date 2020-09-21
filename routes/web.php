@@ -107,3 +107,6 @@ Route::group(['prefix' => 'admin/announcement', 'middleware' => 'isLogin'], func
     Route::post('/addnewannouncement', 'DashboardController@addnewannouncement');
     Route::post('/editannouncement/{id}', 'DashboardController@editannounce');
 });
+Route::group(['prefix' => 'admin/contact', 'middleware' => 'isLogin'], function () {
+    Route::post('/update', 'DashboardController@updateprofile');
+});

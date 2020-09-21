@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\admindb;
 use App\announce;
 use App\blogdb;
+use App\Contact;
 use App\email;
 use App\gallerydb;
 use App\itemproduk;
@@ -426,6 +427,24 @@ class DashboardController extends Controller
     // COntct Section
     public function showcontact()
     {
-        return view('dashboard.contact.show');
+        $info = DB::table('contacts')
+            ->where('contacts.id', '=', '609012')
+            ->select('contacts.*')
+            ->first();
+        return view('dashboard.contact.show', ['info' => $info]);
+        // dd($info);
+    }
+    public function updateprofile(Request $request)
+    {
+        $prof = Contact::find('609012');
+        $prof->whatsapp1 = $request->whatsapp1;
+        $prof->whatsapp2 = $request->whatsapp2;
+        $prof->facebook = $request->facebook;
+        $prof->instagram = $request->instagram;
+        $prof->address = $request->address;
+        $prof->save();
+        // dd($prof);
+        // dd($request->all());
+        return redirect('/admin/contact')->with('selamat', 'Profil anda berhasil di update');
     }
 }
