@@ -31,8 +31,7 @@ class HomepageController extends Controller
             ->orderBy('partners.id', 'ASC')
             ->select('partners.*')
             ->get();
-        $contact = Contact::find('609012');
-        return view('homepage.index', ['blog' => $blog, 'galp' => $galp, 'product' => $product, 'partner' => $partner, 'contact' => $contact]);
+        return view('homepage.index', ['blog' => $blog, 'galp' => $galp, 'product' => $product, 'partner' => $partner]);
     }
     public function blogview($judul)
     {
@@ -102,5 +101,44 @@ class HomepageController extends Controller
         $catalog = kategori::find($id);
         return view('homepage.catalog.catdetails', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori]);
         // dd($item);
+    }
+    public function addcart(Request $req, $id)
+    {
+        $item = itemproduk::find($id);
+        dd($id);
+
+        if (!$item) {
+            abort(404);
+        }
+        $cart = session()->get('cart');
+
+        // ngecek cart kosong dan ini merupakan produk yang pertama
+        if (!$cart) {
+            $cart = [
+                $id => [
+                    "nama_item" => $item->nama_item,
+                    "quantity" => 1,
+                    "fileimg" => $item->fileimg
+                ]
+            ];
+            session()->put('cart', $cart);
+            return redirect()->back()->with('selamat', 'Product added to cart successfully!');
+        }
+
+        // jika cart tidak kosong, dan cek, jikaa produk ini ada, maka quantity di increment
+        if (isset($cart[$id])) {
+            $cart[$id]['quantity']++;
+            session()->put('cart', $cart);
+            return redirect()->back()->with('selamat', 'Product added to cart successfully!');
+        }
+
+        // jikaa iitem tidak ada di cart, maka tambahkan item ke cart dengan quantity 1
+        $cart[$id] = [
+            "nama_item" => $item->nama_item,
+            "quantity" => 1,
+            "fileimg" => $item->fileimg
+        ];
+        session()->put('cart', $cart);
+        return redirect()->back()->with('selamat', 'Product added to cart successfully!');
     }
 }

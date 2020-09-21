@@ -36,6 +36,9 @@ Route::get('/blog', 'HomepageController@blog');
 Route::get('/dash', function () {
     return view('dashboard');
 });
+Route::get('/cart', function () {
+    return view('cart');
+});
 Route::prefix('admin')->group(function () {
     Route::get('/', 'DashboardController@loginshow')->name('login.show');
     Route::post('/', 'DashboardController@loginproses')->name('login.proses');
@@ -57,6 +60,7 @@ Route::prefix('product/categories/details')->group(function () {
     Route::get('/{id}', 'HomepageController@productcatdetails');
 });
 
+Route::get('/add-to-cart/{id}', 'HomepageController@addcart');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'isLogin'], function () {
     Route::get('/dashboard', 'DashboardController@index');

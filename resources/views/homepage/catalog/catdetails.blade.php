@@ -28,6 +28,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <section id="content">
     <div class="content-wrap" style="padding-top: 0px !important;">

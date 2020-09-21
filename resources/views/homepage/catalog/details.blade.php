@@ -16,18 +16,32 @@
     </div>
 </section>
 <section id="content">
-    <div class="content-wrap" style="padding-top: 20px !important; padding-bottom:0px;">
-        <div class="container clearfix">
-            <div class="row col-mb-50 mb-0">
-                <div class="col-lg-12">
-                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                        <h4>Product Descriptions.</h4>
+    <div class="container">
+        <div class="content-wrap" style="padding-top: 20px !important; padding-bottom:0px;">
+            <div class="container clearfix">
+                <div class="row mb-0">
+                    <div class="col-lg-12">
+                        <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                            <h4>Product Descriptions.</h4>
+                        </div>
+                        <p>{!!$catalog->description!!}
+                        </p>
                     </div>
-                    <p>{!!$catalog->description!!}
-                    </p>
                 </div>
             </div>
         </div>
+        @if(session('selamat'))
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="style-msg successmsg">
+                    <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>Well done!</strong> {{session('selamat')}}
+                    </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                </div>
+            </div>
+        </div>
+        @endif
+    </div>
 </section>
 <section id="content">
     <div class="content-wrap" style="padding-top: 0px !important;">
@@ -45,28 +59,31 @@
                             </div>
                             <div class="modal-body">
                                 <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <img class="imgview"
-                                                src="{!!asset('media/product/item/'.$items->fileimg)!!}"
-                                                alt="{{$items->nama_item}}">
+                                    <form action="/add-to-cart/{{$items->id}}" method="GET">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="imgview"
+                                                    src="{!!asset('media/product/item/'.$items->fileimg)!!}"
+                                                    alt="{{$items->nama_item}}">
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p>{!!$items->description!!} <br>
+                                                    <form class="cart mb-0" method="post" enctype='multipart/form-data'>
+                                                        <div class="quantity">
+                                                            <input type="button" value="-" class="minus">
+                                                            <input type="text" step="1" min="1" name="quantity"
+                                                                value="1" title="Qty" class="qty" size="4" />
+                                                            <input type="button" value="+" class="plus">
+                                                        </div>
+                                                        <button type="submit" class="add-to-cart button m-0">Add to
+                                                            cart</button>
+                                                    </form> <br> Category:
+                                                    <strong>{{$items->nama_kategori}}</strong><br>
+                                                    Catalog: <strong>{{$items->product_name}}</strong>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-8">
-                                            <p>{!!$items->description!!} <br>
-                                                <form class="cart mb-0" method="post" enctype='multipart/form-data'>
-                                                    <div class="quantity">
-                                                        <input type="button" value="-" class="minus">
-                                                        <input type="text" step="1" min="1" name="quantity" value="1"
-                                                            title="Qty" class="qty" size="4" />
-                                                        <input type="button" value="+" class="plus">
-                                                    </div>
-                                                    <button type="submit" class="add-to-cart button m-0">Add to
-                                                        cart</button>
-                                                </form> <br> Category: <strong>{{$items->nama_kategori}}</strong><br>
-                                                Catalog: <strong>{{$items->product_name}}</strong>
-                                            </p>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
