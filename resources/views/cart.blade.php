@@ -103,6 +103,10 @@
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
+                        @else
+                        <tr>No item founded!</tr>
+                        @endif
                         <tr class="cart_item">
                             <td colspan="6">
                                 <div class="row">
@@ -114,10 +118,6 @@
                                 </div>
                             </td>
                         </tr>
-                        @endforeach
-                        @else
-                        <tr>No item founded!</tr>
-                        @endif
                     </tbody>
                 </table>
             </div>

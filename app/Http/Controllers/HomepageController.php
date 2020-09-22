@@ -12,6 +12,7 @@ use App\productsdb;
 use App\quotation;
 use App\video;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class HomepageController extends Controller
 {
@@ -122,6 +123,7 @@ class HomepageController extends Controller
         if (!$cart) {
             $cart = [
                 $id => [
+                    "id" => $item->id,
                     "nama_item" => $item->nama_item,
                     "quantity" => 1,
                     "fileimg" => $item->fileimg
@@ -140,6 +142,7 @@ class HomepageController extends Controller
 
         // jikaa iitem tidak ada di cart, maka tambahkan item ke cart dengan quantity 1
         $cart[$id] = [
+            "id" => $item->id,
             "nama_item" => $item->nama_item,
             "quantity" => 1,
             "fileimg" => $item->fileimg
@@ -166,17 +169,29 @@ class HomepageController extends Controller
 
     public function requestQuot(Request $req)
     {
-        // $quot = new quotation();
-        // $quot->request_name = $req->request_name;
-        // $quot->request_company = $req->request_company;
-        // $quot->email = $req->email;
-        // $quot->phone = $req->phone;
-        // $quot->save();
-        // $lastId = $quot->id;
+        $quot = new quotation();
+        $quot->request_name = $req->request_name;
+        $quot->request_company = $req->request_company;
+        $quot->email = $req->email;
+        $quot->phone = $req->phone;
+        $quot->messages = $req->messages;
+        $quot->save();
+        $lastId = $quot->id;
 
-        @foreach (session('cart') as $id => $details){
-            // dd($details);
-            
+        $data = Session::get('cart');
+        $idData = array_keys($data);
+        // dd($data["id"]);
+        // dd($idData);
+        foreach ($idData as $dataId) {
+            $item_details = DB::table('quotation_details')
+                ->insert([
+                    'quotation_id' => $lastId,
+                    'item_id' => $dataId,
+                ]);
         }
+
+        session()->flush();
+
+        return redirect('/')->with('selamat', 'Successfully request quotation');
     }
 }

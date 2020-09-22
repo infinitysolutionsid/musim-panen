@@ -13,10 +13,15 @@
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 // Route::get('/', 'HomepageController@index');
 Route::get('/', function () {
     return view('homepage.index');
+});
+Route::get('/flush', function () {
+    session()->flush();
+    return redirect('/');
 });
 Route::get('/blog/{judul}', 'HomepageController@blogview');
 Route::get('/projects', 'HomepageController@projectsview');
