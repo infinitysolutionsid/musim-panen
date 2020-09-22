@@ -18,37 +18,81 @@
 <!-- Content
 		============================================= -->
 <section id="content">
+    <div class="modal fade" id="requestquote" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/request-quotation" method="POST">
+                    {{ csrf_field() }}
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="staticBackdropLabel">Send Enquiry</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" name="request_name" placeholder="Your Name" id=""
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="request_company" placeholder="Your Company Name" id=""
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your Valid Email Address" id=""
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="phone" placeholder="Phone Number" id=""
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="messages" id="" cols="30" rows="10" class="form-control"
+                                        placeholder="Your Messages here..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="content-wrap">
         <div class="container">
-
             <div class="table-responsive mb-5">
                 <table class="table cart">
                     <thead>
                         <tr>
-                            <th class="cart-product-remove">&nbsp;</th>
-                            <th class="cart-product-thumbnail">&nbsp;</th>
-                            <th class="cart-product-name">Product</th>
-                            <th class="cart-product-quantity">Quantity</th>
-                            <th class="cart-product-subtotal">Total</th>
+                            <th style="width: 30px;" class="cart-product-remove">&nbsp;</th>
+                            <th style="width: 50px;" class="cart-product-thumbnail">&nbsp;</th>
+                            <th style="width: 250px;" class="cart-product-name">Product</th>
+                            <th style="width: 100px;" class="cart-product-quantity">Quantity</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $total = 0; ?>
 
                         @if(session('cart'))
-                        @foreach (session('cart') as $id as $details)
+                        @foreach (session('cart') as $id => $details)
                         <tr class="cart_item">
                             <td class="cart-product-remove">
-                                <a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>
+                                <button class="remove-from-cart remove btn-light btn-sm btn" data-id="{{$id}}"
+                                    title="Remove this item"><i class="icon-trash2"></i></button>
                             </td>
 
                             <td class="cart-product-thumbnail">
-                                <a href="#"><img width="64" height="64"
+                                <a><img width="120px" height="120px"
                                         src="{!!asset('media/product/item/'.$details['fileimg'])!!}"></a>
                             </td>
 
                             <td class="cart-product-name">
-                                <a href="#">{{$details['nama_item']}}</a>
+                                <a>{{$details['nama_item']}}</a>
                             </td>
 
                             <td class="cart-product-quantity">
@@ -58,28 +102,52 @@
                                     <input type="button" value="+" class="plus">
                                 </div>
                             </td>
-
-                            <td class="cart-product-subtotal">
-                                <span class="amount">$39.98</span>
-                            </td>
                         </tr>
-                        @endforeach
                         <tr class="cart_item">
                             <td colspan="6">
                                 <div class="row">
                                     <div class="col-lg-8 col-8 p-0 offset-4">
                                         {{-- <a href="#" class="button button-3d m-0 float-right">Update Cart</a> --}}
-                                        <a href="#" class="button button-3d mt-0 float-right">Proceed to
-                                            Checkout</a>
+                                        <a href="#" data-toggle="modal" data-target="#requestquote"
+                                            class="button button-3d mt-0">Request Quotations</a>
                                     </div>
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
+                        @else
+                        <tr>No item founded!</tr>
+                        @endif
                     </tbody>
-
                 </table>
             </div>
         </div>
     </div>
 </section>
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $(".remove-from-cart").click(function (e) {
+        e.preventDefault();
+
+        var ele = $(this);
+
+        if (confirm("Are you sure")) {
+            $.ajax({
+                url: '{{url('
+                remove - from - cart ')}}',
+                method: "DELETE",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: ele.attr("data-id")
+                },
+                success: function (response) {
+                    window.location.reload();
+                }
+            });
+        }
+    });
+
+</script>
 @endsection

@@ -27,13 +27,63 @@
                     </p>
                 </div>
             </div>
+            @if(session('selamat'))
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="style-msg successmsg">
+                        <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>Well done!</strong>
+                            {{session('selamat')}}
+                        </div>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    </div>
+                </div>
+            </div>
+            @endif
         </div>
     </div>
 </section>
 <section id="content">
     <div class="content-wrap" style="padding-top: 0px !important;">
         <div class="container clearfix">
-
+            @foreach ($items as $items)
+            <div id="showitemcat{{$items->id}}" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-body">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">{{$items->nama_item}}</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <form action="/add-to-cart/{{$items->id}}" method="GET">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="imgview"
+                                                    src="{!!asset('media/product/item/'.$items->fileimg)!!}"
+                                                    alt="{{$items->nama_item}}">
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p>{!!$items->description!!} <br>
+                                                    <form class="cart mb-0" method="post" enctype='multipart/form-data'>
+                                                        <button type="submit" class="add-to-cart button m-0">Add to
+                                                            cart</button><br><br>
+                                                    </form> <br> Category:
+                                                    <strong>{{$items->nama_kategori}}</strong><br>
+                                                    Catalog: <strong>{{$items->product_name}}</strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
             <div class="row gutter-40 col-mb-80">
                 <!-- Post Content
 						============================================= -->
@@ -60,7 +110,8 @@
                                 </div>
                                 <div class="product-desc">
                                     <div class="product-title">
-                                        <h3><a href="#">{{$item->nama_item}}</a></h3>
+                                        <h3><a href="#" data-toggle="modal"
+                                                data-target="#showitemcat{{$item->id}}">{{$item->nama_item}}</a></h3>
                                     </div>
                                     <div class="product-rating">
                                         <i class="icon-star3"></i>

@@ -69,14 +69,8 @@
                                             <div class="col-lg-8">
                                                 <p>{!!$items->description!!} <br>
                                                     <form class="cart mb-0" method="post" enctype='multipart/form-data'>
-                                                        <div class="quantity">
-                                                            <input type="button" value="-" class="minus">
-                                                            <input type="text" step="1" min="1" name="quantity"
-                                                                value="1" title="Qty" class="qty" size="4" />
-                                                            <input type="button" value="+" class="plus">
-                                                        </div>
                                                         <button type="submit" class="add-to-cart button m-0">Add to
-                                                            cart</button>
+                                                            cart</button><br><br>
                                                     </form> <br> Category:
                                                     <strong>{{$items->nama_kategori}}</strong><br>
                                                     Catalog: <strong>{{$items->product_name}}</strong>

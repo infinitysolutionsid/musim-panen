@@ -174,13 +174,13 @@
                                         class="icon-line-cross"></i></a>
                             </div><!-- #top-search end -->
                             <div id="top-cart" class="header-misc-icon d-none d-sm-block">
-                                <a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span
-                                        class="top-cart-number">0</span></a>
-                                <div class="top-cart-content">
+                                <a href="/cart"><i class="icon-line-bag"></i><span
+                                        class="top-cart-number">{{count((array)session('cart'))}}</span></a>
+                                {{-- <div class="top-cart-content">
                                     <div class="top-cart-title">
                                         <h4>Shopping Cart</h4>
                                     </div>
-                                    {{-- <div class="top-cart-items">
+                                    <div class="top-cart-items">
                                         <div class="top-cart-item">
                                             <div class="top-cart-item-image">
                                                 <a href="#"><img src="images/shop/small/1.jpg"
@@ -211,8 +211,8 @@
                                     <div class="top-cart-action">
                                         <span class="top-checkout-price">$114.95</span>
                                         <a href="#" class="button button-3d button-small m-0">View Cart</a>
-                                    </div> --}}
-                                </div>
+                                    </div>
+                                </div> --}}
                             </div>
 
                         </div>
@@ -412,6 +412,7 @@
     <!-- JavaScripts
 	============================================= -->
     <script src="{!!asset('homepage/js/jquery.js')!!}"></script>
+    @yield('scripts')
     <script src="{!!asset('homepage/js/plugins.min.js')!!}"> </script>
     <!-- Footer
         Scripts=============================================-->
@@ -419,6 +420,7 @@
     </script>
 
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyBPHBkHbxlsp255-WwFSBcj4Eq3WUovF00"></script>
+
 </body>
 
 </html>

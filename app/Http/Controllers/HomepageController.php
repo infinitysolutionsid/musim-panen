@@ -9,6 +9,7 @@ use App\gallerydb;
 use App\itemproduk;
 use App\kategori;
 use App\productsdb;
+use App\quotation;
 use App\video;
 use Illuminate\Support\Facades\DB;
 
@@ -93,19 +94,24 @@ class HomepageController extends Controller
             ->orderBy('itemproduks.created_at', 'DESC')
             ->select('itemproduks.*')
             ->get();
+        $items = DB::table('itemproduks')
+            ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
+            ->join('productsdbs', 'itemproduks.katalog_id', '=', 'productsdbs.id')
+            ->select('itemproduks.*', 'kategoris.nama_kategori', 'productsdbs.product_name')
+            ->get();
         $kategori = DB::table('kategoris')
             ->where('kategoris.product_id', '=', $id)
             ->orderBy('kategoris.created_at', 'DESC')
             ->select('kategoris.*')
             ->get();
         $catalog = kategori::find($id);
-        return view('homepage.catalog.catdetails', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori]);
+        return view('homepage.catalog.catdetails', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori, 'items' => $items]);
         // dd($item);
     }
     public function addcart(Request $req, $id)
     {
         $item = itemproduk::find($id);
-        dd($id);
+        // dd($id);
 
         if (!$item) {
             abort(404);
@@ -140,5 +146,37 @@ class HomepageController extends Controller
         ];
         session()->put('cart', $cart);
         return redirect()->back()->with('selamat', 'Product added to cart successfully!');
+    }
+    public function removeitem(Request $request)
+    {
+        if ($request->id) {
+
+            $cart = session()->get('cart');
+
+            if (isset($cart[$request->id])) {
+
+                unset($cart[$request->id]);
+
+                session()->put('cart', $cart);
+            }
+
+            session()->flash('success', 'Product removed successfully');
+        }
+    }
+
+    public function requestQuot(Request $req)
+    {
+        // $quot = new quotation();
+        // $quot->request_name = $req->request_name;
+        // $quot->request_company = $req->request_company;
+        // $quot->email = $req->email;
+        // $quot->phone = $req->phone;
+        // $quot->save();
+        // $lastId = $quot->id;
+
+        @foreach (session('cart') as $id => $details){
+            // dd($details);
+            
+        }
     }
 }

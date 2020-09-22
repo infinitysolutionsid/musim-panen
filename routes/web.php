@@ -39,6 +39,9 @@ Route::get('/dash', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+Route::delete('remove-from-cart', 'HomepageController@removeitem');
+Route::post('/request-quotation', 'HomepageController@requestQuot');
+
 Route::prefix('admin')->group(function () {
     Route::get('/', 'DashboardController@loginshow')->name('login.show');
     Route::post('/', 'DashboardController@loginproses')->name('login.proses');
