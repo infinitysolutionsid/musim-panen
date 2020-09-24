@@ -87,7 +87,7 @@
             <div class="row gutter-40 col-mb-80">
                 <!-- Post Content
 						============================================= -->
-                <div class="postcontent col-lg-9 order-lg-last">
+                <div class="postcontent col-lg-12 order-lg-last">
 
                     <!-- Shop
 							============================================= -->
@@ -95,7 +95,7 @@
 
                         @if(!$item->isEmpty())
                         @foreach ($item as $item)
-                        <div class="product col-md-4 col-sm-6 col-12">
+                        <div class="product col-md-3 col-sm-6 col-12">
                             <div class="grid-inner">
                                 <div class="product-image">
                                     <a href="#"><img src="{!!asset('media/product/item/'.$item->fileimg)!!}"

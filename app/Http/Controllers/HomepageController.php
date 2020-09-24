@@ -8,6 +8,8 @@ use App\Contact;
 use App\gallerydb;
 use App\itemproduk;
 use App\kategori;
+use App\Mail\ConfirmUserOrder;
+use App\Mail\PenawaranBaru;
 use App\productsdb;
 use App\quotation;
 use App\video;
@@ -180,8 +182,7 @@ class HomepageController extends Controller
 
         $data = Session::get('cart');
         $idData = array_keys($data);
-        // dd($data["id"]);
-        // dd($idData);
+
         foreach ($idData as $dataId) {
             $item_details = DB::table('quotation_details')
                 ->insert([
@@ -190,8 +191,13 @@ class HomepageController extends Controller
                 ]);
         }
 
+        $itemId = itemproduk::find($idData);
+        // foreach ($itemId as $dataa) {
+        //     dd($dataa);
+        // }
+        \Mail::to($quot->email)->send(new ConfirmUserOrder($quot, $itemId));
+        \Mail::to('info@putrakaryalogamsukses.com')->send(new PenawaranBaru($quot, $itemId));
         session()->flush();
-
-        return redirect('/')->with('selamat', 'Successfully request quotation');
+        return redirect('/cart')->with('selamat', 'Your request quotation order has been succesfully received. And within 2x24 hours, please wait for our responds. And if we have no responds, you can remind us from info@putrakaryalogamsukses.com. Thank you :)');
     }
 }

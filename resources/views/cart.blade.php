@@ -16,7 +16,23 @@
 </section><!-- #page-title end -->
 
 <!-- Content
-		============================================= -->
+        ============================================= -->
+@if(session('selamat'))
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="style-msg2 successmsg">
+                    <div class="msgtitle">Well done sir/mam! :)</div>
+                    <div class="sb-msg">
+                        {{session('selamat')}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
 <section id="content">
     <div class="modal fade" id="requestquote" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -104,9 +120,6 @@
                             </td>
                         </tr>
                         @endforeach
-                        @else
-                        <tr>No item founded!</tr>
-                        @endif
                         <tr class="cart_item">
                             <td colspan="6">
                                 <div class="row">
@@ -118,6 +131,9 @@
                                 </div>
                             </td>
                         </tr>
+                        @else
+                        <tr>No item founded!</tr>
+                        @endif
                     </tbody>
                 </table>
             </div>

@@ -56,9 +56,13 @@ Route::get('logout', function () {
     return redirect('/admin/dashboard');
 });
 
-// Katalog katalog or PRODUK
-
-
+// Testing email mailtrap.io
+// Route::get('/test-email', function () {
+//     \Mail::raw('Halo ini pesan testing untuk putra karya logam sukses', function ($message) {
+//         $message->to('john@johndoe.com', 'John Doe');
+//         $message->subject('Subject Testing');
+//     });
+// });
 
 Route::prefix('product/details')->group(function () {
     Route::get('/{id}', 'HomepageController@productdetails');

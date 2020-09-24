@@ -95,7 +95,8 @@ musimpanen.co.id.')
                             <a href="#"><i class="icon-map-marker2"></i></a>
                         </div>
                         <div class="fbox-content">
-                            <h3>Our Office<span class="subtitle">Medan, Indonesia</span></h3>
+                            <h3>Our Office<span class="subtitle"> Jalan Perintis KM 10 Jampalan, Asahan - Sumatera
+                                    Utara, Indonesia</span></h3>
                         </div>
                     </div>
                 </div>
