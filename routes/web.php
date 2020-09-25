@@ -25,9 +25,10 @@ Route::get('/flush', function () {
 });
 Route::get('/blog/{judul}', 'HomepageController@blogview');
 Route::get('/projects', 'HomepageController@projectsview');
-Route::post('/kirim-pesan', 'DashboardController@kirimpesan');
+Route::post('/send-message', 'DashboardController@kirimpesan');
 Route::get('/contact-us', function () {
-    return view('homepage.contact');
+    $contacts = App\Contact::find('609012');
+    return view('homepage.contact', ['contacts'=>$contacts]);
 });
 Route::get('/pesan', function () {
     return view('receivedemails');

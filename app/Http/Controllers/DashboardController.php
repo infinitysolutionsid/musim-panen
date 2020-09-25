@@ -14,6 +14,7 @@ use App\email;
 use App\gallerydb;
 use App\itemproduk;
 use App\kategori;
+use App\Mail\SendMessage;
 use App\partner;
 use App\productsdb;
 use App\video;
@@ -49,7 +50,11 @@ class DashboardController extends Controller
         $ann = DB::table('announces')
             ->where('status', '=', 'Active')
             ->first();
-        return view('dashboard.index', ['ann' => $ann]);
+        $quotation = DB::table('quotations')->count();
+        $catalog = DB::table('productsdbs')->count();
+        $kategori = DB::table('kategoris')->count();
+        $item = DB::table('itemproduks')->count();
+        return view('dashboard.index', ['ann' => $ann, 'quotation'=>$quotation, 'catalog'=>$catalog, 'kategori'=>$kategori, 'item'=>$item]);
     }
     // User Section
     public function showuser()
@@ -348,9 +353,11 @@ class DashboardController extends Controller
         $email->email = $request->email;
         $email->nohp = $request->nohp;
         $email->message = $request->message;
-        $email->type = $request->type;
+        $email->type = 'Pesan';
+        $email->status = '0';
         // dd($email);
         $email->save();
+        \Mail::to('info@putrakaryalogamsukses.com')->send(new SendMessage($email));
         // return back()->with('great', 'Halo ' . $name . ', kami telah menerima pesan kamu. Biasanya kami membalas dalam waktu 3x24 jam, dan kami akan segera membalas ke email anda maupun melalui nomor telepon yang sudah kamu input. Terima kasih ya.');
         return view('receivedemails', ['name' => $name]);
     }

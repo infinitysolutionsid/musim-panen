@@ -420,6 +420,12 @@
     </script>
 
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyBPHBkHbxlsp255-WwFSBcj4Eq3WUovF00"></script>
+    <script>
+        document.onclick = function (e) {
+            if (e.target instanceof HTMLAnchorElement) e.preventDefault();
+        }
+
+    </script>
 
 </body>
 

@@ -16,13 +16,10 @@
                 <div class="card">
                     <div class="stat-widget-two">
                         <div class="stat-content">
-                            <div class="stat-text">Today Expenses </div>
-                            <div class="stat-digit"> <i class="fa fa-usd"></i>8500</div>
+                            <div class="stat-text">Total Quotations </div>
+                            <div class="stat-digit">{{$quotation}}</div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success w-85" role="progressbar" aria-valuenow="85"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                    
                     </div>
                 </div>
             </div>
@@ -30,13 +27,10 @@
                 <div class="card">
                     <div class="stat-widget-two">
                         <div class="stat-content">
-                            <div class="stat-text">Income Detail</div>
-                            <div class="stat-digit"> <i class="fa fa-usd"></i>7800</div>
+                            <div class="stat-text">Total Catalog Item</div>
+                            <div class="stat-digit">{{$catalog}}</div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-primary w-75" role="progressbar" aria-valuenow="78"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                    
                     </div>
                 </div>
             </div>
@@ -44,13 +38,10 @@
                 <div class="card">
                     <div class="stat-widget-two">
                         <div class="stat-content">
-                            <div class="stat-text">Task Completed</div>
-                            <div class="stat-digit"> <i class="fa fa-usd"></i> 500</div>
+                            <div class="stat-text">Total Categories Item</div>
+                            <div class="stat-digit">{{$kategori}}</div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning w-50" role="progressbar" aria-valuenow="50"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -58,13 +49,10 @@
                 <div class="card">
                     <div class="stat-widget-two">
                         <div class="stat-content">
-                            <div class="stat-text">Task Completed</div>
-                            <div class="stat-digit"> <i class="fa fa-usd"></i>650</div>
+                            <div class="stat-text">Total Item Produk</div>
+                        <div class="stat-digit">{{$item}}</div>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-danger w-65" role="progressbar" aria-valuenow="65"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                    
                     </div>
                 </div>
             </div>

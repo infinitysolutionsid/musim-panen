@@ -31,54 +31,34 @@ musimpanen.co.id.')
 
                         <div class="form-result"></div>
 
-                        <form class="mb-0" id="template-contactform" name="template-contactform"
-                            action="include/form.php" method="post">
-
-                            <div class="form-process">
-                                <div class="css3-spinner">
-                                    <div class="css3-spinner-scaler"></div>
-                                </div>
-                            </div>
-
+                        <form id="sendmessaage" action="/send-message" method="post">
+                            {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-4 form-group">
-                                    <label for="template-contactform-name">Name <small>*</small></label>
-                                    <input type="text" id="template-contactform-name" name="template-contactform-name"
-                                        value="" class="sm-form-control required" />
+                                    <label for="">Name <small>*</small></label>
+                                    <input type="text" name="name" value="" class="sm-form-control" required />
                                 </div>
 
                                 <div class="col-md-4 form-group">
-                                    <label for="template-contactform-email">Email <small>*</small></label>
-                                    <input type="email" id="template-contactform-email"
-                                        name="template-contactform-email" value=""
-                                        class="required email sm-form-control" />
+                                    <label for="">Email <small>*</small></label>
+                                    <input type="email" id="" name="email" value="" class="email sm-form-control"
+                                        required />
                                 </div>
 
                                 <div class="col-md-4 form-group">
-                                    <label for="template-contactform-phone">Phone</label>
-                                    <input type="text" id="template-contactform-phone" name="template-contactform-phone"
-                                        value="" class="sm-form-control" />
+                                    <label for="">Phone</label>
+                                    <input type="text" id="" name="nohp" value="" class="sm-form-control" required />
                                 </div>
-
-                                <div class="w-100"></div>
-
                                 <div class="col-12 form-group">
-                                    <label for="template-contactform-message">Message <small>*</small></label>
-                                    <textarea class="required sm-form-control" id="template-contactform-message"
-                                        name="template-contactform-message" rows="6" cols="30"></textarea>
+                                    <label for="">Message <small>*</small></label>
+                                    <textarea class="sm-form-control" id="" name="message" rows="6"
+                                        cols="30"></textarea>
                                 </div>
-
-                                <div class="col-12 form-group d-none">
-                                    <input type="text" id="template-contactform-botcheck"
-                                        name="template-contactform-botcheck" value="" class="sm-form-control" />
-                                </div>
-
                                 <div class="col-12 form-group">
-                                    <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit"
-                                        class="button button-3d m-0">Submit Comment</button>
+                                    <button form="sendmessaage" type="submit" class="button button-3d m-0">Submit
+                                        Message</button>
                                 </div>
                             </div>
-                            <input type="hidden" name="prefix" value="template-contactform-">
                         </form>
                     </div>
                 </div>
@@ -107,7 +87,11 @@ musimpanen.co.id.')
                             <a href="#"><i class="icon-phone3"></i></a>
                         </div>
                         <div class="fbox-content">
-                            <h3>Speak to Us<span class="subtitle">(123) 456 7890</span></h3>
+                            <h3>Speak to Us
+
+                                <span class="subtitle">{{$contacts->whatsapp1}}</span>
+                                <span class="subtitle">{{$contacts->whatsapp2}}</span>
+                            </h3>
                         </div>
                     </div>
                 </div>

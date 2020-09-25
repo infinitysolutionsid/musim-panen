@@ -45,7 +45,7 @@
 @endsection
 @section('content')
 <section id="content">
-    <div class="content-wrap">
+    <div class="content-wrap" style="padding-bottom: 0;">
 
         <div class="promo promo-light promo-full promo-uppercase p-5 bottommargin-lg header-stick">
             <div class="container clearfix">
@@ -55,7 +55,8 @@
                         <span>We strive to provide Our Customers with Top Quality products.</span>
                     </div>
                     <div class="col-12 col-lg-auto mt-4 mt-lg-0">
-                        <a href="#" class="button button-large button-circle button-black m-0">Lets Work Together</a>
+                        <a href="/contact-us" class="button button-large button-circle button-black m-0">Lets Work
+                            Together</a>
                     </div>
                 </div>
             </div>
@@ -118,7 +119,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
-                            <a href="#"><img src="{!!asset('homepage/images/icons/building.png')!!}"
+                            <a><img src="{!!asset('homepage/images/icons/building.png')!!}"
                                     alt="High and consistent quality"></a>
                         </div>
                         <div class="fbox-content">
@@ -130,7 +131,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
-                            <a href="#"><img src="{!!asset('homepage/images/icons/bank.png')!!}"
+                            <a><img src="{!!asset('homepage/images/icons/bank.png')!!}"
                                     alt="Efficient and on time shipping"></a>
                         </div>
                         <div class="fbox-content">
@@ -142,7 +143,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
-                            <a href="#"><img src="{!!asset('homepage/images/icons/traffic-cone.png')!!}"
+                            <a><img src="{!!asset('homepage/images/icons/traffic-cone.png')!!}"
                                     alt="Available for customization"></a>
                         </div>
                         <div class="fbox-content">
@@ -154,7 +155,7 @@
                 {{-- <div class="col-lg-6 col-md-6">
                     <div class="feature-box fbox-plain">
                         <div class="fbox-icon">
-                            <a href="#"><img src="{!!asset('homepage/images/icons/paper-money.png')!!}"
+                            <a ><img src="{!!asset('homepage/images/icons/paper-money.png')!!}"
                                     alt="Cost Effective Solutions"></a>
                         </div>
                         <div class="fbox-content">
@@ -336,16 +337,16 @@
 
         </div>
 
-        <a href="/enquire-quotation"
+        <a href="/contact-us"
             class="button button-3d border-bottom-0 button-full center text-right bottommargin-lg font-weight-light font-primary"
-            style="font-size: 26px;">
-            <div class="container clearfix">
+            style="font-size: 26px; margin-bottom: 0px !important;">
+            <div class=" container clearfix">
                 Would you like to repair your ship with Us? <strong>Enquire Here</strong> <i class="icon-angle-right"
                     style="top:3px;"></i>
             </div>
         </a>
 
-        <div class="container topmargin-lg cleafix">
+        {{-- <div class="container topmargin-lg cleafix">
 
             <div class="row col-mb-50">
                 <div class="col-md-8">
@@ -507,7 +508,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
 
     </div>
 </section>
