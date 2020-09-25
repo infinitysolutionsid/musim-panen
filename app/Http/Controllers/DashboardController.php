@@ -201,8 +201,7 @@ class DashboardController extends Controller
             ->select('gallerydbs.*')
             ->get();
         $galp = DB::table('gallerydbs')
-            ->join('productsdbs', 'gallerydbs.product_id', '=', 'productsdbs.id')
-            ->select('gallerydbs.*', 'productsdbs.product_name', 'productsdbs.description')
+            ->select('gallerydbs.*')
             ->orderBy('gallerydbs.created_at', 'DESC')
             ->get();
         return view('dashboard.gallery.show', ['product' => $product, 'gal' => $gal, 'galp' => $galp]);
@@ -212,7 +211,7 @@ class DashboardController extends Controller
     {
         $gal = new gallerydb();
         $gal->judul_foto = $request->judul_foto;
-        $gal->product_id = $request->product_id;
+        $gal->product_id = '-';
         if (!$request->hasFile('img')) {
             $gal->save();
         } else {

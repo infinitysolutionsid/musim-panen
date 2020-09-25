@@ -31,17 +31,6 @@
                                         class="form-control" required>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <select name="product_id" id="" class="form-control custom-select" required>
-                                        <option>Pilih kategori galeri</option>
-                                        @foreach ($product as $product)
-                                        <option value="{{$product->id}}">{{$product->product_name}}</option>
-                                        @endforeach
-
-                                    </select>
-                                </div>
-                            </div>
                         </div>
                         <div class="form-row">
                             <div class="col">
@@ -93,7 +82,7 @@
                                     <th>#</th>
                                     <th style="width: 200px;">Preview</th>
                                     <th>Judul Foto</th>
-                                    <th>Kategori</th>
+
                                     <th>Act.</th>
                                 </tr>
                             </thead>
@@ -108,8 +97,7 @@
                                     <td>
                                         {{$gal->judul_foto}}
                                     </td>
-                                    <td>{!!$gal->product_name!!}
-                                    </td>
+
                                     <td>
                                         <a href="" data-toggle="modal" data-target="#viewphotos{{$gal->id}}"
                                             class="btn btn-secondary btn-rounded">
