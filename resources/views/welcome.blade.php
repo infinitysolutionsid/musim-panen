@@ -99,13 +99,12 @@
                             <ul class="top-links-container">
                                 <li class="top-links-item"><a href="#">Locations</a>
                                     <ul class="top-links-sub-menu">
-                                        <li class="top-links-item"><a href="#">Medan</a></li>
-                                        <li class="top-links-item"><a href="#">Jakarta</a></li>
-                                        <li class="top-links-item"><a href="#">Bali</a></li>
+                                        <li class="top-links-item"><a href="#">Tanjung Balai</a></li>
                                     </ul>
                                 </li>
-                                <li class="top-links-item"><a href="/faq">FAQs</a></li>
-                                <li class="top-links-item"><a href="/contact-us">Contact</a></li>
+                                <li class="top-links-item"><a href="/cart">Cart <button
+                                            class="btn btn-secondary btn-sm">{{count((array)session('cart'))}}</button></a>
+                                </li>
                             </ul>
                         </div><!-- .top-links end -->
 
@@ -169,10 +168,7 @@
 
                             <!-- Top Search
 							============================================= -->
-                            <div id="top-search" class="header-misc-icon">
-                                <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i
-                                        class="icon-line-cross"></i></a>
-                            </div><!-- #top-search end -->
+
                             <div id="top-cart" class="header-misc-icon d-none d-sm-block">
                                 <a href="/cart"><i class="icon-line-bag"></i><span
                                         class="top-cart-number">{{count((array)session('cart'))}}</span></a>
@@ -214,6 +210,10 @@
                                     </div>
                                 </div> --}}
                             </div>
+                            {{-- <div id="top-search" class="header-misc-icon">
+                                <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i
+                                        class="icon-line-cross"></i></a>
+                            </div><!-- #top-search end --> --}}
 
                         </div>
 
@@ -239,6 +239,9 @@
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="/about-us">
                                         <div>About Us</div>
+                                    </a></li>
+                                <li class="menu-item"><a class="menu-link" href="/gallery">
+                                        <div>Gallery</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="#">
                                         <div>Products</div>
@@ -303,13 +306,7 @@
                                             <li><a href="/about-us">About Us</a></li>
                                             <li><a href="#">Product</a></li>
                                             <li><a href="/contact-us">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-3 col-6 widget_links">
-                                        <ul>
-                                            <li><a href="#">Locations</a></li>
-                                            <li><a href="#">FAQ</a></li>
-                                            <li><a href="#">Sitemap</a></li>
+                                            <li><a href="/contact-us">Locations</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4 col-6 widget_links">
@@ -412,7 +409,6 @@
     <!-- JavaScripts
 	============================================= -->
     <script src="{!!asset('homepage/js/jquery.js')!!}"></script>
-    @yield('scripts')
     <script src="{!!asset('homepage/js/plugins.min.js')!!}"> </script>
     <!-- Footer
         Scripts=============================================-->
@@ -420,13 +416,9 @@
     </script>
 
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyBPHBkHbxlsp255-WwFSBcj4Eq3WUovF00"></script>
-    <script>
-        document.onclick = function (e) {
-            if (e.target instanceof HTMLAnchorElement) e.preventDefault();
-        }
 
-    </script>
 
+    @yield('scripts')
 </body>
 
 </html>

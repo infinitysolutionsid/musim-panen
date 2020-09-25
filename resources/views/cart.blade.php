@@ -98,7 +98,7 @@
                         @foreach (session('cart') as $id => $details)
                         <tr class="cart_item">
                             <td class="cart-product-remove">
-                                <button class="remove-from-cart remove btn-light btn-sm btn" data-id="{{$id}}"
+                                <button class="btn-light btn-sm btn remove-from-cart" data-id="{{$id}}"
                                     title="Remove this item"><i class="icon-trash2"></i></button>
                             </td>
 
@@ -144,15 +144,14 @@
 
 @section('scripts')
 <script type="text/javascript">
-    $(".remove-from-cart").click(function (e) {
+    $tes = $(".remove-from-cart").click(function (e) {
         e.preventDefault();
-
+        // console.log($tes)
         var ele = $(this);
 
         if (confirm("Are you sure")) {
             $.ajax({
-                url: '{{url('
-                remove - from - cart ')}}',
+                url: 'remove-from-cart',
                 method: "DELETE",
                 data: {
                     _token: '{{ csrf_token() }}',

@@ -58,7 +58,10 @@ class HomepageController extends Controller
     }
     public function galleryview()
     {
-        return view('homepage.gallery.index');
+        $gallery = DB::table('gallerydbs')
+            ->orderBy('gallerydbs.created_at', 'DESC')
+            ->get();
+        return view('homepage.gallery.index', ['gallery' => $gallery]);
     }
     public function videoview()
     {

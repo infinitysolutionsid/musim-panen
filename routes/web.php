@@ -28,7 +28,7 @@ Route::get('/projects', 'HomepageController@projectsview');
 Route::post('/send-message', 'DashboardController@kirimpesan');
 Route::get('/contact-us', function () {
     $contacts = App\Contact::find('609012');
-    return view('homepage.contact', ['contacts'=>$contacts]);
+    return view('homepage.contact', ['contacts' => $contacts]);
 });
 Route::get('/pesan', function () {
     return view('receivedemails');
@@ -45,8 +45,8 @@ Route::get('/dash', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
-Route::delete('remove-from-cart', 'HomepageController@removeitem');
 Route::post('/request-quotation', 'HomepageController@requestQuot');
+Route::delete('remove-from-cart', 'HomepageController@removeitem');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', 'DashboardController@loginshow')->name('login.show');
