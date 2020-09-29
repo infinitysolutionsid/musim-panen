@@ -23,9 +23,9 @@ Kami Musim Panen.')
                         <h4>Our <span>History</span>.</h4>
                     </div>
                     <p>CV. Putra Karya Logam Sukses is a manufacturing company based in Tanjung Balai, North Sumatera,
-                        specializes at fishing boats gears. We have been operating in marine industry since 2014
+                        specializes at fishing ship spareparts. We have been operating in marine industry since 2014
                         continously offering and manufacturing many tools such as anchor, steer, pulleys, nuts,
-                        coupling, shaft, stern tube and propeller to repairing propellers for boats.
+                        coupling, shaft, stern tube and propeller repair as well.
                     </p>
                 </div>
                 <div class="col-lg-4">

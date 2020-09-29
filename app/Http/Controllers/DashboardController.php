@@ -54,7 +54,7 @@ class DashboardController extends Controller
         $catalog = DB::table('productsdbs')->count();
         $kategori = DB::table('kategoris')->count();
         $item = DB::table('itemproduks')->count();
-        return view('dashboard.index', ['ann' => $ann, 'quotation'=>$quotation, 'catalog'=>$catalog, 'kategori'=>$kategori, 'item'=>$item]);
+        return view('dashboard.index', ['ann' => $ann, 'quotation' => $quotation, 'catalog' => $catalog, 'kategori' => $kategori, 'item' => $item]);
     }
     // User Section
     public function showuser()
@@ -318,6 +318,18 @@ class DashboardController extends Controller
                 DB::statement('ALTER TABLE productsdbs AUTO_INCREMENT = ' . (count(productsdb::all()) + 1) . ';');
 
                 return back()->with('selamat', 'Data Produk berhasil dihapus.');
+            }
+        }
+    }
+    public function itemtrashproduct($id)
+    {
+        $product = itemproduk::find($id);
+        // dd($user);
+        if ($product) {
+            if ($product->delete()) {
+                DB::statement('ALTER TABLE itemproduks AUTO_INCREMENT = ' . (count(itemproduk::all()) + 1) . ';');
+
+                return back()->with('selamat', 'Data Item Produk berhasil dihapus.');
             }
         }
     }

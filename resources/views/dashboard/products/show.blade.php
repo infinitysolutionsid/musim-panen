@@ -489,7 +489,7 @@
                                             class="btn btn-warning btn-rounded">
                                             <span><i class="fas fa-pen-nib"></i></span>
                                         </a>
-                                        <a href="/admin/products/trash/{{$itemproduk->id}}"
+                                        <a href="/admin/products/itemtrash/{{$itemproduk->id}}"
                                             class="btn btn-danger btn-rounded">
                                             <span><i class="fas fa-trash"></i></span>
                                         </a>

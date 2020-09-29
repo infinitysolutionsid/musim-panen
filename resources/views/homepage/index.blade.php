@@ -12,8 +12,8 @@
                     <div class="slider-caption">
                         <div>
                             <h2>Welcome to <span>Putra Karya Logam Sukses</span></h2>
-                            <p class="d-none d-sm-block">We offers a broad range of propellers for fishing and
-                                recreational boat. We dimensionally inspect every propeller we build to ensure the
+                            <p class="d-none d-sm-block">We offer a broad range of propellers for fishing and
+                                recreational boat/ship. We dimensionally inspect every propeller we built to ensure the
                                 products are qualified.</p>
                         </div>
                     </div>
