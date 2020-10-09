@@ -100,6 +100,7 @@ Route::group(['prefix' => 'admin/products', 'middleware' => 'isLogin'], function
     Route::get('/trash/{id}', 'DashboardController@trashproduct');
     Route::get('/itemtrash/{id}', 'DashboardController@itemtrashproduct');
     Route::post('/update/{id}', 'DashboardController@updateproduct');
+    Route::get('/kategoritrash/{id}', 'DashboardController@kategoritrash');
 });
 Route::group(['prefix' => 'admin/blog', 'middleware' => 'isLogin'], function () {
     Route::post('/addnewblog', 'DashboardController@prosesaddblog');

@@ -54,8 +54,8 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <textarea name="description" id="" cols="30" rows="10"
-                                                            class="form-control" placeholder="Deskripsi Produk"
-                                                            required></textarea>
+                                                            class="form-control"
+                                                            placeholder="Deskripsi Produk"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -132,8 +132,8 @@
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <textarea name="description" id="" cols="30" rows="10"
-                                                                    class="form-control" placeholder="Deskripsi Produk"
-                                                                    required>{{$products->description}}</textarea>
+                                                                    class="form-control"
+                                                                    placeholder="Deskripsi Produk">{{$products->description}}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -235,8 +235,8 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <textarea name="description" id="" cols="30" rows="10"
-                                                            class="form-control" placeholder="Deskripsi Kategori Produk"
-                                                            required></textarea>
+                                                            class="form-control"
+                                                            placeholder="Deskripsi Kategori Produk"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -279,7 +279,7 @@
                                             class="btn btn-warning btn-rounded">
                                             <span><i class="fas fa-pen-nib"></i></span>
                                         </a>
-                                        <a href="/admin/kategori/trash/{{$kategori->id}}"
+                                        <a href="/admin/products/kategoritrash/{{$kategori->id}}"
                                             class="btn btn-danger btn-rounded">
                                             <span><i class="fas fa-trash"></i></span>
                                         </a>
@@ -340,8 +340,8 @@
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <textarea name="description" id="" cols="30" rows="10"
-                                                                    class="form-control" placeholder="Deskripsi Produk"
-                                                                    required>{{$kategori->description}}</textarea>
+                                                                    class="form-control"
+                                                                    placeholder="Deskripsi Produk">{{$kategori->description}}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -442,8 +442,8 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <textarea name="description" id="" cols="30" rows="10"
-                                                            class="form-control" placeholder="Deskripsi Produk"
-                                                            required></textarea>
+                                                            class="form-control"
+                                                            placeholder="Deskripsi Produk"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -525,8 +525,8 @@
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <textarea name="description" id="" cols="30" rows="10"
-                                                                    class="form-control" placeholder="Deskripsi Produk"
-                                                                    required>{{$itemproduk->description}}</textarea>
+                                                                    class="form-control"
+                                                                    placeholder="Deskripsi Produk">{{$itemproduk->description}}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>

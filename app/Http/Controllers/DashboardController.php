@@ -333,6 +333,18 @@ class DashboardController extends Controller
             }
         }
     }
+    public function kategoritrash($id)
+    {
+        $product = kategori::find($id);
+        // dd($user);
+        if ($product) {
+            if ($product->delete()) {
+                DB::statement('ALTER TABLE kategoris AUTO_INCREMENT = ' . (count(kategori::all()) + 1) . ';');
+
+                return back()->with('selamat', 'Data Kategori Produk berhasil dihapus.');
+            }
+        }
+    }
     public function updateproduct($id, Request $request)
     {
         $product = productsdb::find($id);
