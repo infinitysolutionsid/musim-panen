@@ -414,7 +414,6 @@
         Scripts=============================================-->
     <script src="{!!asset('homepage/js/functions.js')!!}">
     </script>
-
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyBPHBkHbxlsp255-WwFSBcj4Eq3WUovF00"></script>
 
 
