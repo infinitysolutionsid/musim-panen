@@ -45,34 +45,47 @@
 <section id="content">
     <div class="content-wrap" style="padding-top: 0px !important;">
         <div class="container clearfix">
-            @foreach ($items as $items)
-            <div id="showitemcat{{$items->id}}" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+            @foreach ($items as $itemss)
+            <div id="showitemcat{{$itemss->id}}" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
                 aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-body">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel">{{$items->nama_item}}</h4>
+                                <h4 class="modal-title" id="myModalLabel">{{$itemss->nama_item}}</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="container-fluid">
-                                    <form action="/add-to-cart/{{$items->id}}" method="GET">
+                                    <form action="/add-to-cart/{{$itemss->id}}" method="GET">
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <img class="imgview"
-                                                    src="{!!asset('media/product/item/'.$items->fileimg)!!}"
-                                                    alt="{{$items->nama_item}}">
+                                                {{-- <img class="imgview"
+                                                    src="{!!asset('media/product/item/'.$itemss->thumbnails->fileimg)!!}"
+                                                    alt="{{$itemss->nama_item}}"> --}}
+                                                <div class="fslider" data-pagi="false">
+                                                    <div class="flexslider">
+                                                        <div class="slider-wrap">
+                                                            @foreach($itemss->thumbnails as $tmb)
+                                                            <div class="slide"><a
+                                                                    href="{!!asset('media/product/item/'.$tmb->fileimg)!!}"
+                                                                    title=""><img
+                                                                        src="{!!asset('media/product/item/'.$tmb->fileimg)!!}"
+                                                                        alt=""></a></div>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col-lg-8">
-                                                <p>{!!$items->description!!} <br>
+                                                <p>{!!$itemss->description!!} <br>
                                                     <form class="cart mb-0" method="post" enctype='multipart/form-data'>
                                                         <button type="submit" class="add-to-cart button m-0">Add to
                                                             cart</button><br><br>
                                                     </form> <br> Category:
-                                                    <strong>{{$items->nama_kategori}}</strong><br>
-                                                    Catalog: <strong>{{$items->product_name}}</strong>
+                                                    <strong>{{$itemss->nama_kategori}}</strong><br>
+                                                    Catalog: <strong>{{$itemss->product_name}}</strong>
                                                 </p>
                                             </div>
                                         </div>
@@ -93,12 +106,12 @@
 							============================================= -->
                     <div id="shop" class="shop row grid-container gutter-20" data-layout="fitRows">
 
-                        @if(!$item->isEmpty())
-                        @foreach ($item as $item)
+                        @if(!$itemgal->isEmpty())
+                        @foreach ($itemgal as $item)
                         <div class="product col-md-3 col-sm-6 col-12">
                             <div class="grid-inner">
                                 <div class="product-image">
-                                    <a href="#"><img src="{!!asset('media/product/item/'.$item->fileimg)!!}"
+                                    <a href="#"><img src="{!!asset('media/product/item/'.$item->thumbnail->fileimg)!!}"
                                             alt="{{$item->nama_item}}"></a>
                                     <div class="sale-flash badge badge-success p-2">Available</div>
                                     <div class="bg-overlay">

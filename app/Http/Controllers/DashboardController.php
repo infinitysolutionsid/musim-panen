@@ -18,6 +18,7 @@ use App\Mail\SendMessage;
 use App\partner;
 use App\productsdb;
 use App\video;
+use App\itemgalleri;
 
 class DashboardController extends Controller
 {
@@ -249,7 +250,7 @@ class DashboardController extends Controller
         $kategori = DB::table('kategoris')
             ->join('productsdbs', 'kategoris.product_id', '=', 'productsdbs.id')
             ->orderBy('kategoris.nama_kategori', 'ASC')
-            ->select('kategoris.*', 'productsdbs.*', 'kategoris.description as descriptionKat')
+            ->select('kategoris.*', 'productsdbs.*', 'kategoris.description as descriptionKat', 'kategoris.id as kategoriId')
             ->get();
         $produk = DB::table('itemproduks')
             ->orderBy('itemproduks.nama_item', 'ASC')
@@ -257,11 +258,22 @@ class DashboardController extends Controller
             ->get();
         $itemproduk = DB::table('itemproduks')
             ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
+            // ->join('itemgalleris', 'itemproduks.id', '=', 'itemgalleris.itemid')
             ->orderBy('itemproduks.nama_item', 'ASC')
             ->select('kategoris.*', 'itemproduks.*', 'kategoris.description as descriptionItem')
             ->get();
+        $itemproduks = [];
+        foreach ($itemproduk as $item) {
+            $img = DB::table('itemgalleris')
+                ->where('itemgalleris.itemid', '=', $item->id)
+                ->inRandomOrder()
+                ->first();
+            if ($img) $item->fileimg = $img->fileimg;
+            $itemproduks[] = $item;
+        }
         $kategoriItem = kategori::all();
         $katalogItem = productsdb::all();
+
         return view('dashboard.products.show', ['products' => $products, 'kategori' => $kategori, 'produk' => $produk, 'productget' => $productget, 'itemproduk' => $itemproduk, 'kategoriItem' => $kategoriItem, 'katalogItem' => $katalogItem]);
     }
     // // // Kategori Section
@@ -297,6 +309,39 @@ class DashboardController extends Controller
             $item->save();
         }
         // dd($request->all());
+        return redirect('/admin/products')->with('selamat', 'Data item produk berhasil ditambahkan');
+    }
+
+    // ADD ITEM V2
+    public function additem()
+    {
+        $kategoriItem = kategori::all();
+        $katalogItem = productsdb::all();
+        return view('dashboard.products.index', ['kategoriItem' => $kategoriItem, 'katalogItem' => $katalogItem]);
+    }
+    public function prosesitem(Request $request)
+    {
+        $item = new itemproduk();
+        $item->kategori_id = $request->kategori_id;
+        $item->katalog_id = $request->katalog_id;
+        $item->nama_item = $request->nama_produk;
+        $item->description = $request->description;
+        $item->save();
+
+        $itemId = $item->id;
+        if ($request->hasFile('fileimg')) {
+            foreach ($request->file('fileimg') as $image) {
+                $name = $image->getClientOriginalName();
+                $image->move('media/product/item/', $name);
+                // $data[] = $name;
+
+                $itemgal = new itemgalleri();
+                $itemgal->itemid = $itemId;
+                $itemgal->fileimg = $name;
+                $itemgal->save();
+            }
+        }
+
         return redirect('/admin/products')->with('selamat', 'Data item produk berhasil ditambahkan');
     }
     // End Item Section

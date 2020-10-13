@@ -101,6 +101,10 @@ Route::group(['prefix' => 'admin/products', 'middleware' => 'isLogin'], function
     Route::get('/itemtrash/{id}', 'DashboardController@itemtrashproduct');
     Route::post('/update/{id}', 'DashboardController@updateproduct');
     Route::get('/kategoritrash/{id}', 'DashboardController@kategoritrash');
+
+    // Tambah item produk
+    Route::get('/item/add-product', 'DashboardController@additem')->name('view.item');
+    Route::post('/item/add-product', 'DashboardController@prosesitem')->name('proses.item');
 });
 Route::group(['prefix' => 'admin/blog', 'middleware' => 'isLogin'], function () {
     Route::post('/addnewblog', 'DashboardController@prosesaddblog');

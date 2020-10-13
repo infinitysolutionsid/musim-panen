@@ -271,27 +271,31 @@
                                     <td>{{$kategori->nama_kategori}}</td>
                                     <td>{{$kategori->product_name}}</td>
                                     <td>
-                                        <a href="" data-toggle="modal" data-target="#viewkategori{{$kategori->id}}"
+                                        <a href="" data-toggle="modal"
+                                            data-target="#viewkategori{{$kategori->kategoriId}}"
                                             class="btn btn-secondary btn-rounded">
                                             <span style="color:;"><i class="fas fa-question"></i></span>
                                         </a>
-                                        <a href="" data-toggle="modal" data-target="#editkategori{{$kategori->id}}"
+                                        <a href="" data-toggle="modal"
+                                            data-target="#editkategori{{$kategori->kategoriId}}"
                                             class="btn btn-warning btn-rounded">
                                             <span><i class="fas fa-pen-nib"></i></span>
                                         </a>
-                                        <a href="/admin/products/kategoritrash/{{$kategori->id}}"
+                                        <a href="/admin/products/kategoritrash/{{$kategori->kategoriId}}"
                                             class="btn btn-danger btn-rounded">
                                             <span><i class="fas fa-trash"></i></span>
                                         </a>
                                     </td>
                                 </tr>
                                 <!-- Modal view products -->
-                                <div class="modal fade" id="viewkategori{{$kategori->id}}" tabindex="-1" role="dialog"
-                                    aria-labelledby="viewkategori{{$kategori->id}}" aria-hidden="true">
+                                <div class="modal fade" id="viewkategori{{$kategori->kategoriId}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="viewkategori{{$kategori->kategoriId}}"
+                                    aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="view{{$kategori->id}}">View data kategori
+                                                <h5 class="modal-title" id="view{{$kategori->kategoriId}}">View data
+                                                    kategori
                                                     {{$kategori->nama_kategori}}</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
@@ -312,19 +316,22 @@
                                     </div>
                                 </div>
                                 <!-- Modal update products -->
-                                <div class="modal fade" id="editkategori{{$kategori->id}}" tabindex="-1" role="dialog"
-                                    aria-labelledby="editproducts{{$kategori->id}}" aria-hidden="true">
+                                <div class="modal fade" id="editkategori{{$kategori->kategoriId}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="editproducts{{$kategori->kategoriId}}"
+                                    aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="editproducts{{$kategori->id}}">Update produk
+                                                <h5 class="modal-title" id="editproducts{{$kategori->kategoriId}}">
+                                                    Update produk
                                                     {{$kategori->nama_kategori}}?</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="/admin/products/update/{{$kategori->id}}" method="POST">
+                                            <form action="/admin/products/update/{{$kategori->kategoriId}}"
+                                                method="POST">
                                                 @csrf
                                                 <div class="modal-body">
                                                     <div class="form-row">
@@ -380,8 +387,7 @@
                             Item Produk Managements
                         </div>
                         <div class="col-lg-6 text-right">
-                            <button class="btn btn-primary" type="button" data-toggle="modal"
-                                data-target="#addnewitemproduk">Tambah item produk</button>
+                            <a href="/admin/products/item/add-product" class="btn btn-primary">Tambah item produk</a>
                         </div>
                         <!-- Modal Tambah products -->
                         <div class="modal fade" id="addnewitemproduk" tabindex="-1" role="dialog"
@@ -471,12 +477,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if(!$itemproduk->isEmpty())
+                                {{-- @if(!$itemproduk) --}}
                                 <?php $no = 1; ?>
                                 @foreach ($itemproduk as $itemproduk)
                                 <tr>
                                     <th scope="row">{{$no++}}</th>
-                                    <td><img src="{!!asset('media/product/item/'.$itemproduk->fileimg)!!}"
+                                    <td>
+                                        <img src="{!!asset('media/product/item/'.$itemproduk->fileimg)!!}"
                                             alt="{!!$itemproduk->nama_item!!}" class="imgprev"></td>
                                     <td>{{$itemproduk->nama_item}}</td>
                                     <td>{{$itemproduk->nama_kategori}}</td>
@@ -564,11 +571,11 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                @else
+                                {{-- @else
                                 <tr>
                                     <td colspan="4" class="text-center">No Data Founded!</td>
                                 </tr>
-                                @endif
+                                @endif --}}
                             </tbody>
                         </table>
                     </div>

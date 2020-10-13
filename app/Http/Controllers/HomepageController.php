@@ -77,21 +77,42 @@ class HomepageController extends Controller
         $item = DB::table('itemproduks')
             ->where('itemproduks.katalog_id', '=', $id)
             ->orderBy('itemproduks.created_at', 'DESC')
+            ->select('itemproduks.*', 'itemproduks.id as itemid')
+            ->get();
+
+        $itemgal = DB::table('itemproduks')
+            // ->join('itemproduks', 'itemgalleris.itemid', 'itemproduks.id')
+            ->where('itemproduks.katalog_id', '=', $id)
+            ->orderBy('itemproduks.created_at', 'DESC')
             ->select('itemproduks.*')
             ->get();
+        foreach ($itemgal as $key => $value) {
+            $itemgal[$key]->thumbnail = DB::table('itemgalleris')
+                ->where('itemid', $value->id)
+                ->first();
+        }
+
         $items = DB::table('itemproduks')
             ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
             ->join('productsdbs', 'itemproduks.katalog_id', '=', 'productsdbs.id')
             ->select('itemproduks.*', 'kategoris.nama_kategori', 'productsdbs.product_name')
             ->get();
+
+        foreach ($items as $itemmodal => $modal) {
+            $items[$itemmodal]->thumbnails = DB::table('itemgalleris')
+                ->where('itemid', $modal->id)
+                ->inRandomOrder()
+                ->get();
+        }
+
         $kategori = DB::table('kategoris')
             ->where('kategoris.product_id', '=', $id)
             ->orderBy('kategoris.created_at', 'DESC')
             ->select('kategoris.*')
             ->get();
         $catalog = productsdb::find($id);
-        return view('homepage.catalog.details', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori, 'items' => $items]);
-        // dd($item);
+        return view('homepage.catalog.details', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori, 'items' => $items, 'itemgal' => $itemgal]);
+        // dd($items);
     }
     public function productcatdetails($id)
     {
@@ -100,18 +121,37 @@ class HomepageController extends Controller
             ->orderBy('itemproduks.created_at', 'DESC')
             ->select('itemproduks.*')
             ->get();
+
+        $itemgal = DB::table('itemproduks')
+            // ->join('itemproduks', 'itemgalleris.itemid', 'itemproduks.id')
+            ->where('itemproduks.kategori_id', '=', $id)
+            ->orderBy('itemproduks.created_at', 'DESC')
+            ->select('itemproduks.*')
+            ->get();
+        foreach ($itemgal as $key => $value) {
+            $itemgal[$key]->thumbnail = DB::table('itemgalleris')
+                ->where('itemid', $value->id)
+                ->first();
+        }
+
         $items = DB::table('itemproduks')
             ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
             ->join('productsdbs', 'itemproduks.katalog_id', '=', 'productsdbs.id')
             ->select('itemproduks.*', 'kategoris.nama_kategori', 'productsdbs.product_name')
             ->get();
+        foreach ($items as $itemmodal => $modal) {
+            $items[$itemmodal]->thumbnails = DB::table('itemgalleris')
+                ->where('itemid', $modal->id)
+                ->inRandomOrder()
+                ->get();
+        }
         $kategori = DB::table('kategoris')
             ->where('kategoris.product_id', '=', $id)
             ->orderBy('kategoris.created_at', 'DESC')
             ->select('kategoris.*')
             ->get();
         $catalog = kategori::find($id);
-        return view('homepage.catalog.catdetails', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori, 'items' => $items]);
+        return view('homepage.catalog.catdetails', ['catalog' => $catalog, 'item' => $item, 'kategori' => $kategori, 'items' => $items, 'itemgal' => $itemgal]);
         // dd($item);
     }
     public function addcart(Request $req, $id)

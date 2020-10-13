@@ -86,7 +86,7 @@
                     <thead>
                         <tr>
                             <th style="width: 30px;" class="cart-product-remove">&nbsp;</th>
-                            <th style="width: 50px;" class="cart-product-thumbnail">&nbsp;</th>
+                            {{-- <th style="width: 50px;" class="cart-product-thumbnail">&nbsp;</th> --}}
                             <th style="width: 250px;" class="cart-product-name">Product</th>
                             <th style="width: 100px;" class="cart-product-quantity">Quantity</th>
                         </tr>
@@ -101,12 +101,10 @@
                                 <button class="btn-light btn-sm btn remove-from-cart" data-id="{{$id}}"
                                     title="Remove this item"><i class="icon-trash2"></i></button>
                             </td>
-
-                            <td class="cart-product-thumbnail">
+                            {{-- <td class="cart-product-thumbnail">
                                 <a><img width="120px" height="120px"
                                         src="{!!asset('media/product/item/'.$details['fileimg'])!!}"></a>
-                            </td>
-
+                            </td> --}}
                             <td class="cart-product-name">
                                 <a>{{$details['nama_item']}}</a>
                             </td>
@@ -121,7 +119,7 @@
                         </tr>
                         @endforeach
                         <tr class="cart_item">
-                            <td colspan="6">
+                            <td colspan="3">
                                 <div class="row">
                                     <div class="col-lg-8 col-8 p-0 offset-4">
                                         {{-- <a href="#" class="button button-3d m-0 float-right">Update Cart</a> --}}
