@@ -132,9 +132,23 @@
                         <div class="product col-md-3 col-sm-6 col-12">
                             <div class="grid-inner">
                                 <div class="product-image">
-                                    <a href="#"><img src="{!!asset('media/product/item/'.$item->thumbnail->fileimg)!!}"
+                                    {{-- <a href="#"><img src="{!!asset('media/product/item/'.$item->thumbnail->fileimg)!!}"
                                             alt="{{$item->nama_item}}"></a>
-                                    <div class="sale-flash badge badge-success p-2">Available</div>
+                                    <div class="sale-flash badge badge-success p-2">Available</div> --}}
+                                    <div class="fslider" data-arrows="false">
+                                        <div class="flexslider">
+                                            <div class="slider-wrap">
+                                                @foreach($item->thumbnail as $tmbl)
+                                                <div class="slide">
+                                                    <a href="#">
+                                                        <img src="{!!asset('media/product/item/'.$tmbl->fileimg)!!}"
+                                                            alt="Item CV Putra Karya Logam Sukses">
+                                                    </a>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="bg-overlay">
                                         <div class="bg-overlay-content align-items-end justify-content-between"
                                             data-hover-animate="fadeIn" data-hover-speed="400">

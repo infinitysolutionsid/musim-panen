@@ -89,7 +89,7 @@ class HomepageController extends Controller
         foreach ($itemgal as $key => $value) {
             $itemgal[$key]->thumbnail = DB::table('itemgalleris')
                 ->where('itemid', $value->id)
-                ->first();
+                ->get();
         }
 
         $items = DB::table('itemproduks')
@@ -131,7 +131,7 @@ class HomepageController extends Controller
         foreach ($itemgal as $key => $value) {
             $itemgal[$key]->thumbnail = DB::table('itemgalleris')
                 ->where('itemid', $value->id)
-                ->first();
+                ->get();
         }
 
         $items = DB::table('itemproduks')

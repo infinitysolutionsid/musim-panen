@@ -138,10 +138,28 @@
                         <div class="product col-md-4 col-sm-6 col-12">
                             <div class="grid-inner">
                                 <div class="product-image">
+                                    {{-- @if(count($items)==1)
+
                                     <a href="#" data-toggle="modal" data-target="#showitem{{$items->id}}"><img
-                                            src="{!!asset('media/product/item/'.$items->thumbnail->fileimg)!!}"
-                                            alt="{{$items->nama_item}}"></a>
+                                        src="{!!asset('media/product/item/'.$items->thumbnail->fileimg)!!}"
+                                        alt="{{$items->nama_item}}"></a>
                                     <div class="sale-flash badge badge-success p-2">Available</div>
+                                    @else --}}
+                                    <div class="fslider" data-arrows="false">
+                                        <div class="flexslider">
+                                            <div class="slider-wrap">
+                                                @foreach($items->thumbnail as $tmbl)
+                                                <div class="slide">
+                                                    <a href="#">
+                                                        <img src="{!!asset('media/product/item/'.$tmbl->fileimg)!!}"
+                                                            alt="Item CV Putra Karya Logam Sukses">
+                                                    </a>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- @endif --}}
                                     <div class="bg-overlay">
                                         <div class="bg-overlay-content align-items-end justify-content-between"
                                             data-hover-animate="fadeIn" data-hover-speed="400">
