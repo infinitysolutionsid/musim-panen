@@ -260,7 +260,7 @@ class DashboardController extends Controller
             ->join('kategoris', 'itemproduks.kategori_id', '=', 'kategoris.id')
             // ->join('itemgalleris', 'itemproduks.id', '=', 'itemgalleris.itemid')
             ->orderBy('itemproduks.nama_item', 'ASC')
-            ->select('kategoris.*', 'itemproduks.*', 'kategoris.description as descriptionItem')
+            ->select('kategoris.*', 'itemproduks.*', 'kategoris.description as descriptionItem', 'itemproduks.id as itemId')
             ->get();
         $itemproduks = [];
         foreach ($itemproduk as $item) {
@@ -393,11 +393,23 @@ class DashboardController extends Controller
     public function updateproduct($id, Request $request)
     {
         $product = productsdb::find($id);
+        // $product->update($request->all());
         $product->product_name = $request->product_name;
         $product->description = $request->description;
         $product->save();
 
         return back()->with('selamat', 'Data produk anda berhasil diupdate.');
+        // dd($product);
+    }
+    public function updateitemproduct($itemId, Request $request)
+    {
+
+        $item = itemproduk::find($itemId);
+        $item->nama_item = $request->nama_item;
+        $item->description = $request->description;
+        // dd($item);
+        $item->save();
+        return back()->with('selamat', 'Data item produk anda berhasil di update');
     }
     // PRODUCT END SECTION
 

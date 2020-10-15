@@ -488,27 +488,29 @@
                                     <td>{{$itemproduk->nama_item}}</td>
                                     <td>{{$itemproduk->nama_kategori}}</td>
                                     <td>
-                                        <a href="" data-toggle="modal" data-target="#viewproducts{{$itemproduk->id}}"
+                                        <a href="" data-toggle="modal"
+                                            data-target="#viewitemproducts{{$itemproduk->itemId}}"
                                             class="btn btn-secondary btn-rounded">
                                             <span style="color:;"><i class="fas fa-question"></i></span>
                                         </a>
-                                        <a href="" data-toggle="modal" data-target="#editproducts{{$itemproduk->id}}"
+                                        <a href="" data-toggle="modal"
+                                            data-target="#edititemproducts{{$itemproduk->itemId}}"
                                             class="btn btn-warning btn-rounded">
                                             <span><i class="fas fa-pen-nib"></i></span>
                                         </a>
-                                        <a href="/admin/products/itemtrash/{{$itemproduk->id}}"
+                                        <a href="/admin/products/itemtrash/{{$itemproduk->itemId}}"
                                             class="btn btn-danger btn-rounded">
                                             <span><i class="fas fa-trash"></i></span>
                                         </a>
                                     </td>
                                 </tr>
                                 <!-- Modal update products -->
-                                <div class="modal fade" id="editproducts{{$itemproduk->id}}" tabindex="-1" role="dialog"
-                                    aria-labelledby="editproducts{{$itemproduk->id}}" aria-hidden="true">
+                                <div class="modal fade" id="edititemproducts{{$itemproduk->itemId}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="editproducts{{$itemproduk->id}}" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="editproducts{{$itemproduk->id}}">Update
+                                                <h5 class="modal-title" id="editproducts{{$itemproduk->itemId}}">Update
                                                     produk
                                                     {{$itemproduk->nama_item}}?</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
@@ -516,7 +518,8 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="/admin/products/update/{{$itemproduk->id}}" method="POST">
+                                            <form action="/admin/products/item-update/{{$itemproduk->itemId}}"
+                                                method="POST">
                                                 @csrf
                                                 <div class="modal-body">
                                                     <div class="form-row">
@@ -546,12 +549,14 @@
                                     </div>
                                 </div>
                                 <!-- Modal view products -->
-                                <div class="modal fade" id="viewproducts{{$itemproduk->id}}" tabindex="-1" role="dialog"
-                                    aria-labelledby="viewproducts{{$itemproduk->id}}" aria-hidden="true">
+                                <div class="modal fade" id="viewitemproducts{{$itemproduk->itemId}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="viewproducts{{$itemproduk->itemId}}"
+                                    aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="view{{$itemproduk->id}}">View data produk
+                                                <h5 class="modal-title" id="view{{$itemproduk->itemId}}">View data
+                                                    produk
                                                     {{$itemproduk->nama_item}}</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">

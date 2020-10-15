@@ -102,6 +102,8 @@ Route::group(['prefix' => 'admin/products', 'middleware' => 'isLogin'], function
     Route::post('/update/{id}', 'DashboardController@updateproduct');
     Route::get('/kategoritrash/{id}', 'DashboardController@kategoritrash');
 
+    Route::post('/item-update/{id}', 'DashboardController@updateitemproduct');
+
     // Tambah item produk
     Route::get('/item/add-product', 'DashboardController@additem')->name('view.item');
     Route::post('/item/add-product', 'DashboardController@prosesitem')->name('proses.item');

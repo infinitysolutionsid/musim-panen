@@ -48,8 +48,8 @@
         <div class="container clearfix">
 
             @foreach ($items as $itemss)
-            <div id="showitem{{$itemss->id}}" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
-                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div id="showitem{{$itemss->id}}" class="modal fade bs-example-modal-lg modalitem" tabindex="-1"
+                role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-body">
                         <div class="modal-content">
@@ -217,4 +217,12 @@
         </div>
     </div>
 </section>
+@endsection
+@section('scripts')
+<script type="text/javascript">
+    $('.modalitem').on('shown.bs.modal', function () {
+        $('.flexslider.slide').resize();
+    });
+
+</script>
 @endsection
