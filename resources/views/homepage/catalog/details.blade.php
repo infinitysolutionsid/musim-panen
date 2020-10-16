@@ -220,9 +220,10 @@
 @endsection
 @section('scripts')
 <script type="text/javascript">
-    $('.modalitem').on('shown.bs.modal', function () {
+    $selected = $('.modalitem').on('shown.bs.modal', function () {
         $('.flexslider.slide').resize();
     });
+    console.log($selected);
 
 </script>
 @endsection
