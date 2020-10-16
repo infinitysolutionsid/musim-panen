@@ -411,6 +411,14 @@ class DashboardController extends Controller
         $item->save();
         return back()->with('selamat', 'Data item produk anda berhasil di update');
     }
+    public function kategoriproses($kategoriId, Request $request)
+    {
+        $kategori = kategori::find($kategoriId);
+        $kategori->nama_kategori = $request->nama_kategori;
+        $kategori->description = $request->description;
+        $kategori->save();
+        return back()->with('selamat', 'Kategori item produk anda berhasil di update');
+    }
     // PRODUCT END SECTION
 
     // EMAILS SECTION

@@ -330,7 +330,7 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="/admin/products/update/{{$kategori->kategoriId}}"
+                                            <form action="/admin/products/kategori-update/{{$kategori->kategoriId}}"
                                                 method="POST">
                                                 @csrf
                                                 <div class="modal-body">
