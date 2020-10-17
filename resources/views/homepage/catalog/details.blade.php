@@ -221,7 +221,9 @@
 @section('scripts')
 <script type="text/javascript">
     $selected = $('.modalitem').on('shown.bs.modal', function () {
-        $('.flexslider.slide').resize();
+        setTimeout(function () {
+            $('.flexslider .slide').resize();
+        }, 500);
     });
     console.log($selected);
 
