@@ -393,7 +393,7 @@ class DashboardController extends Controller
     public function updateproduct($id, Request $request)
     {
         $product = productsdb::find($id);
-        // $product->update($request->all());
+        $product->update($request->all());
         $product->product_name = $request->product_name;
         $product->description = $request->description;
         $product->save();
