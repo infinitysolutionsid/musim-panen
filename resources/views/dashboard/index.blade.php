@@ -19,7 +19,7 @@
                             <div class="stat-text">Total Quotations </div>
                             <div class="stat-digit">{{$quotation}}</div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                             <div class="stat-text">Total Catalog Item</div>
                             <div class="stat-digit">{{$catalog}}</div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                             <div class="stat-text">Total Categories Item</div>
                             <div class="stat-digit">{{$kategori}}</div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -50,9 +50,9 @@
                     <div class="stat-widget-two">
                         <div class="stat-content">
                             <div class="stat-text">Total Item Produk</div>
-                        <div class="stat-digit">{{$item}}</div>
+                            <div class="stat-digit">{{$item}}</div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>

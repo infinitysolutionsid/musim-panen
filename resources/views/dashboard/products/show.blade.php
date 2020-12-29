@@ -83,39 +83,40 @@
                             <tbody>
                                 @if(!$products->isEmpty())
                                 <?php $no = 1; ?>
-                                @foreach ($products as $products)
+                                @foreach ($products as $productdata)
                                 <tr>
                                     <th scope="row">{{$no++}}</th>
-                                    <td>{{$products->product_name}}</td>
+                                    <td>{{$productdata->product_name}}</td>
                                     <td>
-                                        <a href="" data-toggle="modal" data-target="#viewproducts{{$products->id}}"
+                                        <a data-toggle="modal" data-target="#viewproducts{{$productdata->id}}"
                                             class="btn btn-secondary btn-rounded">
                                             <span style="color:;"><i class="fas fa-question"></i></span>
                                         </a>
-                                        <a href="" data-toggle="modal" data-target="#editproducts{{$products->id}}"
+                                        <a data-toggle="modal" data-target="#editproducts{{$productdata->id}}"
                                             class="btn btn-warning btn-rounded">
                                             <span><i class="fas fa-pen-nib"></i></span>
                                         </a>
-                                        <a href="/admin/products/trash/{{$products->id}}"
+                                        <a href="/admin/products/trash/{{$productdata->id}}"
                                             class="btn btn-danger btn-rounded">
                                             <span><i class="fas fa-trash"></i></span>
                                         </a>
                                     </td>
                                 </tr>
                                 <!-- Modal update products -->
-                                <div class="modal fade" id="editproducts{{$products->id}}" tabindex="-1" role="dialog"
-                                    aria-labelledby="editproducts{{$products->id}}" aria-hidden="true">
+                                <div class="modal fade" id="editproducts{{$productdata->id}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="editproducts{{$productdata->id}}" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="editproducts{{$products->id}}">Update produk
-                                                    {{$products->product_name}}?</h5>
+                                                <h5 class="modal-title" id="editproducts{{$productdata->id}}">Update
+                                                    produk
+                                                    {{$productdata->product_name}}?</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="/admin/products/update/{{$products->id}}" method="POST">
+                                            <form action="/admin/products/update/{{$productdata->id}}" method="POST">
                                                 @csrf
                                                 <div class="modal-body">
                                                     <div class="form-row">
@@ -123,7 +124,7 @@
                                                             <div class="form-group">
                                                                 <input type="text" placeholder="Nama Produk"
                                                                     name="product_name" id="name" class="form-control"
-                                                                    required value="{{$products->product_name}}">
+                                                                    required value="{{$productdata->product_name}}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -132,7 +133,7 @@
                                                             <div class="form-group">
                                                                 <textarea name="description" id="" cols="30" rows="10"
                                                                     class="form-control"
-                                                                    placeholder="Deskripsi Produk">{{$products->description}}</textarea>
+                                                                    placeholder="Deskripsi Produk">{{$productdata->description}}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -145,13 +146,13 @@
                                     </div>
                                 </div>
                                 <!-- Modal view products -->
-                                <div class="modal fade" id="viewproducts{{$products->id}}" tabindex="-1" role="dialog"
-                                    aria-labelledby="viewproducts{{$products->id}}" aria-hidden="true">
+                                <div class="modal fade" id="viewproducts{{$productdata->id}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="viewproducts{{$productdata->id}}" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="view{{$products->id}}">View data produk
-                                                    {{$products->product_name}}</h5>
+                                                <h5 class="modal-title" id="view{{$productdata->id}}">View data produk
+                                                    {{$productdata->product_name}}</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -161,8 +162,8 @@
                                                 <div>
                                                     <h5>Informasi umum</h5>
                                                     <p>
-                                                        Nama Produk: {{$products->product_name}} <br>
-                                                        Deskripsi Produk: <br>{!!$products->description!!} <br>
+                                                        Nama Produk: {{$productdata->product_name}} <br>
+                                                        Deskripsi Produk: <br>{!!$productdata->description!!} <br>
                                                     </p>
                                                 </div>
                                             </div>
@@ -263,38 +264,38 @@
                             <tbody>
                                 @if(!$kategori->isEmpty())
                                 <?php $no = 1; ?>
-                                @foreach ($kategori as $kategori)
+                                @foreach ($kategori as $kategoriData)
                                 <tr>
                                     <th scope="row">{{$no++}}</th>
-                                    <td>{{$kategori->nama_kategori}}</td>
-                                    <td>{{$kategori->product_name}}</td>
+                                    <td>{{$kategoriData->nama_kategori}}</td>
+                                    <td>{{$kategoriData->product_name}}</td>
                                     <td>
                                         <a href="" data-toggle="modal"
-                                            data-target="#viewkategori{{$kategori->kategoriId}}"
+                                            data-target="#viewkategori{{$kategoriData->kategoriId}}"
                                             class="btn btn-secondary btn-rounded">
                                             <span style="color:;"><i class="fas fa-question"></i></span>
                                         </a>
                                         <a href="" data-toggle="modal"
-                                            data-target="#editkategori{{$kategori->kategoriId}}"
+                                            data-target="#editkategori{{$kategoriData->kategoriId}}"
                                             class="btn btn-warning btn-rounded">
                                             <span><i class="fas fa-pen-nib"></i></span>
                                         </a>
-                                        <a href="/admin/products/kategoritrash/{{$kategori->kategoriId}}"
+                                        <a href="/admin/products/kategoritrash/{{$kategoriData->kategoriId}}"
                                             class="btn btn-danger btn-rounded">
                                             <span><i class="fas fa-trash"></i></span>
                                         </a>
                                     </td>
                                 </tr>
                                 <!-- Modal view products -->
-                                <div class="modal fade" id="viewkategori{{$kategori->kategoriId}}" tabindex="-1"
-                                    role="dialog" aria-labelledby="viewkategori{{$kategori->kategoriId}}"
+                                <div class="modal fade" id="viewkategori{{$kategoriData->kategoriId}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="viewkategori{{$kategoriData->kategoriId}}"
                                     aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="view{{$kategori->kategoriId}}">View data
+                                                <h5 class="modal-title" id="view{{$kategoriData->kategoriId}}">View data
                                                     kategori
-                                                    {{$kategori->nama_kategori}}</h5>
+                                                    {{$kategoriData->nama_kategori}}</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -304,9 +305,9 @@
                                                 <div>
                                                     <h5>Informasi umum</h5>
                                                     <p>
-                                                        Nama Produk: {{$kategori->nama_kategori}} <br>
-                                                        Kategori Induk Produk: {{$kategori->product_name}} <br>
-                                                        Deskripsi Produk: <br>{!!$kategori->descriptionKat!!} <br>
+                                                        Nama Produk: {{$kategoriData->nama_kategori}} <br>
+                                                        Kategori Induk Produk: {{$kategoriData->product_name}} <br>
+                                                        Deskripsi Produk: <br>{!!$kategoriData->descriptionKat!!} <br>
                                                     </p>
                                                 </div>
                                             </div>
@@ -314,21 +315,21 @@
                                     </div>
                                 </div>
                                 <!-- Modal update products -->
-                                <div class="modal fade" id="editkategori{{$kategori->kategoriId}}" tabindex="-1"
-                                    role="dialog" aria-labelledby="editproducts{{$kategori->kategoriId}}"
+                                <div class="modal fade" id="editkategori{{$kategoriData->kategoriId}}" tabindex="-1"
+                                    role="dialog" aria-labelledby="editproducts{{$kategoriData->kategoriId}}"
                                     aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="editproducts{{$kategori->kategoriId}}">
+                                                <h5 class="modal-title" id="editproducts{{$kategoriData->kategoriId}}">
                                                     Update produk
-                                                    {{$kategori->nama_kategori}}?</h5>
+                                                    {{$kategoriData->nama_kategori}}?</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <form action="/admin/products/kategori-update/{{$kategori->kategoriId}}"
+                                            <form action="/admin/products/kategori-update/{{$kategoriData->kategoriId}}"
                                                 method="POST">
                                                 @csrf
                                                 <div class="modal-body">
@@ -337,7 +338,7 @@
                                                             <div class="form-group">
                                                                 <input type="text" placeholder="Nama Produk"
                                                                     name="nama_kategori" id="name" class="form-control"
-                                                                    required value="{{$kategori->nama_kategori}}">
+                                                                    required value="{{$kategoriData->nama_kategori}}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -346,7 +347,8 @@
                                                             <div class="form-group">
                                                                 <textarea name="description" id="" cols="30" rows="10"
                                                                     class="form-control"
-                                                                    placeholder="Deskripsi Produk">{{$kategori->description}}</textarea>
+                                                                    placeholder="Deskripsi
+                                                                    Produk">{{$kategoriData->descriptionKat}}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
